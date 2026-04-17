@@ -101,3 +101,10 @@ If you're also learning MERN, feel free to explore, fork, or contribute!
 ---
 
 ⭐ Stay tuned for more updates!
+
+---
+
+## Daily commit via - 
+* git add .
+* git commit -m "Added new feature / notes"
+* git push
