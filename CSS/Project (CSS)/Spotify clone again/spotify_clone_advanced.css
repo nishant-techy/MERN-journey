@@ -1,0 +1,327 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* main div which have all the container */
+.main_div {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding: 1rem;
+}
+
+/* sidebar div */
+.sidebar_div {
+  width: 22vw;
+  margin-right: 0.65rem;
+  border-radius: 1.2rem;
+}
+
+.icons_and_text {
+  width: 100%;
+  border-radius: 1.2rem;
+  background-color: #121212;
+  height: 20%;
+  padding: 1rem;
+  margin: 0 0 0.65rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.nav_items ul {
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+.nav_items ul:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.nav_items ul li i {
+  margin-right: 1.3rem;
+  font-size: 1.5rem;
+}
+
+.heading_and_boxes {
+  width: 100%;
+  border-radius: 1.2rem;
+  background-color: #121212;
+  height: 80%;
+  padding: 1rem;
+}
+.flex_box_for_arrows_and_image {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.15rem;
+}
+.image_and_heading {
+  opacity: 0.7;
+}
+.image_and_heading:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.image_and_heading img {
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+.icons_arrows i {
+  margin-right: 1.5rem;
+}
+.boxes_have_content {
+  background-color: #292929;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  border-radius: 0.65rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.boxes_have_content p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.boxes_have_content span {
+  font-size: 0.85rem;
+  margin: 1rem 0;
+}
+.btn_feature {
+  width: fit-content;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem 1.1rem;
+  border-radius: 1.2rem;
+  appearance: none;
+  cursor: pointer;
+}
+
+/* main content which have music div */
+.main_content_div {
+  border-radius: 1.2rem;
+  background-color: #121212;
+  padding: 1rem;
+  /* the most important and cool property */
+  flex: 1;
+  overflow-x: auto;
+  /* the below three are just for good styling, I don't remember any of these */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+.navbar_of_main_content {
+  padding: 0.5rem 0px;
+  position: sticky;
+  top: -1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #121212;
+  z-index: 99;
+  height: fit-content;
+}
+.button_in_right > button {
+  margin-left: 1rem;
+}
+.button_in_right > i {
+  margin-left: 1rem;
+}
+.image_left img {
+  margin-right: 1.5rem;
+}
+.btn_feature i {
+  margin-right: 0.2rem;
+}
+
+.music_playlist {
+  width: 100%;
+}
+.music_playlist h2 {
+  margin: 2rem 0 0 1rem;
+}
+.scrollable_music_div {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card_box {
+  width: 250px;
+  height: 355px;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem 1rem 1rem 0;
+}
+.card_box h2 {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+}
+.card_box p {
+  font-size: 0.9rem;
+}
+.card_box img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.spacer {
+  width: 100%;
+  height: 30vh;
+}
+hr {
+  opacity: 0.6;
+}
+
+/* music playing div */
+.music_player_div {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* I want that it height should be fixed even the screen changes that's why I give it the size to pixels */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  padding: 0 1rem 0 1rem;
+}
+.music_name {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+.music_name img {
+  width: 50px;
+}
+.container_music {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+}
+.music_ka_name span {
+  font-size: 0.65rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 0.35rem 0;
+}
+.container_music img,
+.container_music .music_ka_name,
+.container_music i {
+  margin: 0 0.43rem;
+}
+
+/* 50% width middle */
+.music_player_half_div {
+  width: 50%;
+}
+.music_player {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.music_line {
+  width: 35%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: rgb(177, 177, 177);
+}
+.music_icon_all {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.music_icon_all:hover {
+  opacity: 1;
+}
+#music_icon_1 {
+  height: 16px;
+}
+
+#music_icon_2 {
+  height: 17px;
+}
+
+#music_icon_3 {
+  height: 35px;
+}
+
+#music_icon_4 {
+  height: 17px;
+}
+
+#music_icon_5 {
+  height: 16px;
+}
+
+/* music player line */
+.music_player {
+  width: 100%;
+}
+.ball_and_line {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+#line {
+  appearance: none;
+  height: 4px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+}
+.together_flex {
+  width: 60%; /* this decide the width of my music line */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.together_flex span {
+  margin: 0 5px;
+}
+
+/* 25% width last one */
+.music_vol_and_range {
+  width: 25%;
+}
+.music_icons_of_last_container {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.music_icons_of_last_container i,
+.container_music i {
+  opacity: 0.7;
+}
+.music_icons_of_last_container i:hover,
+.container_music i:hover {
+  opacity: 1;
+  cursor: pointer;
+}

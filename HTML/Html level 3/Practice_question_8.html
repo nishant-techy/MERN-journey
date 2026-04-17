@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Question 8 - Complete Form and Search query by Google & Youtube</title>
+</head>
+<body>
+    <!-- 1st form -->
+    <form action="/action">
+        <div>
+            <label for="username">Enter Username : </label>
+            <input type="text" name="username" id="username" placeholder="username">
+        </div>
+        <div>
+            <label for="password">Enter Password : </label>
+            <input type="password" name="password" id="password" placeholder="password">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <br><br>
+    <!-- 2nd form for Google search -->
+    <form action="https://www.google.com/search">
+        <label for="google_search">Enter what you want to search on Google : </label>
+        <input type="text" id="google_search" placeholder="Enter your query" name="q">
+        <button type="submit">Search</button>
+    </form>
+
+    <br><br>
+    <!-- 3rd form for Youtube search -->
+     <form action="https://www.youtube.com/results">
+        <label for="youtube_search">Enter what you want to search on Youtube : </label>
+        <input type="text" id="youtube_search" placeholder="Enter your query" name="search_query">
+        <button type="submit">Search</button>
+     </form>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables in HTML</title>
+    <style>
+        table {
+            width: 100%;
+        }
+        table, tr, th, td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        td {
+            padding: 10px;
+        }
+        caption {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    
+    <!-- table content -->
+    <h1>Let's try to build this table :-</h1>
+    <img src="https://mrkremerscience.com/wp-content/uploads/2013/08/data-table-example1.png" alt="the table image" style="width: 90%;">
+        <br><br><br><br>
+    <!-- let's build it -->
+     <table style="width: 100%;">
+        <caption>Salt Concentration and Light Transmittance</caption>
+            <!-- Table Heading -->
+            <tr>
+                <th rowspan="2">Salt Concentration</th>
+                <th colspan="5">Transmittance</th>
+            </tr>
+
+            <tr>
+                <th>Trial #1</th>
+                <th>Trial #2</th>
+                <th>Trial #3</th>
+                <th>Trial #4</th>
+                <th>Trial #5</th>
+            </tr>
+            
+            <!-- Table data -->
+             <tr>
+                <td>0</td>
+                <td>77.23</td>
+                <td>74.50</td>
+                <td>64.88</td>
+                <td>75.27</td>
+                <td>54.66</td>
+             </tr>
+
+             <!-- Table data 2 -->
+             <tr>
+                <td>3</td>
+                <td>77.23</td>
+                <td>74.50</td>
+                <td>64.88</td>
+                <td>75.27</td>
+                <td>54.66</td>
+             </tr>
+            
+             <!-- Table data 3 -->
+             <tr>
+                <td>6</td>
+                <td>77.23</td>
+                <td>74.50</td>
+                <td>64.88</td>
+                <td>75.27</td>
+                <td>54.66</td>
+             </tr>
+            
+             <!-- Table data 4 -->
+             <tr>
+                <td>9</td>
+                <td>77.23</td>
+                <td>74.50</td>
+                <td>64.88</td>
+                <td>75.27</td>
+                <td>54.66</td>
+             </tr>
+            
+             <!-- Table data 5 -->
+             <tr>
+                <td>12</td>
+                <td>77.23</td>
+                <td>74.50</td>
+                <td>64.88</td>
+                <td>75.27</td>
+                <td>54.66</td>
+             </tr>
+
+             <!-- Table data 6 -->
+             <tr>
+                <td>15</td>
+                <td>77.23</td>
+                <td>74.50</td>
+                <td>64.88</td>
+                <td>75.27</td>
+                <td>54.66</td>
+             </tr>
+     </table>
+     <br><br><br>
+
+
+     <!-- new table -->
+      <table>
+        <thead>
+            <caption>Food Menu</caption>
+            <tr>
+                <th rowspan="3">
+                    Item
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    Price
+                </th>
+            </tr>
+            <tr>
+                <th>INR</th>
+                <th>USD</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Frooti</td>
+                <td>10</td>
+                <td>0.14</td>
+            </tr>
+
+            <tr>
+                <td>Samosa</td>
+                <td>12</td>
+                <td>0.16</td>
+            </tr>
+
+            <tr>
+                <td>Chips</td>
+                <td>20</td>
+                <td>0.34</td>
+            </tr>
+        </tbody>
+      </table>
+      <br><br><br>
+    </center>
+</body>
+</html>

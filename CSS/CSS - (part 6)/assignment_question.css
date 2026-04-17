@@ -1,0 +1,87 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+  text-align: center;
+  background-color: black;
+}
+#main_box_grid {
+  display: grid;
+  width: 90vw;
+  height: 90vh;
+  margin: 0 auto;
+  grid-gap: 10px;
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-columns: repeat(12, 1fr);
+  font-size: 2em;
+  color: white;
+}
+.oneAndtwelve {
+  background-color: red;
+  grid-row: 1; /* it will tell from where should we start this row line */
+  grid-column: 1 / 13; /* it will cover all 13 lines means 12 columns */
+}
+.tenAndtwelve_middle_container {
+  display: grid;
+  grid-gap: 10px;
+  grid-column: 1 / 13;
+  grid-row: 2;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+}
+.oneAndtwelveAgain {
+  background-color: rgb(0, 96, 48);
+  grid-column: 1 / 13; /* it will cover all 13 lines means 12 columns */
+  grid-row: 3;
+}
+/* container into container */
+
+/* ye jo hm baad me likh rhe h number 1 / 5 or 4 / 11 (isme first to ye h ki shuru konsi line se krna h but baad wala number btata h ki cover kitni lines krni h wo ye nhi bta rha ki konsi line tak phunchna h wo bta rha h cover kitni lines ko krna h */
+#tenAndThree {
+  background-color: brown;
+  grid-row: 1 / 11; /* grid row - 1 se grid row - 10 tak cover kregi (means full cover, its fine) */
+  grid-column: 1 / 4; /* grid column - 1 se grid column - 3 tak cover krlenge mtlb next ko shuru hone k liye 4 se shuru hona pdega mtlb 4th line se */
+}
+#oneAndSix {
+  background-color: rgb(119, 71, 0);
+  grid-row: 1; /* phli hi row me 4 se 10 columns tak h iss box k pass */
+  grid-column: 4 / 10; /* 4 column se start krenge kyoki phle k 3 to above wale k pass h na and we have to cover 6 more lines, so, 4 + 6 = 10 means 10th line tak ko cover kro means columns cover kro */
+}
+#nineAndSix {
+  background-color: darkcyan;
+  grid-row: 2 / 11; /* middle row me 2nd row se start krke 10th row tak ka hissa h iske pass and first row above k pass h isiliye */
+  grid-column: 4 / 10; /* wahi same 4 se 10 tak lena pdega kyoki phle 4 to tenAndThree k pass h na, nhi to overlap ho jayega */
+}
+#tenAndThreeAgain {
+  background-color: deeppink;
+  grid-row: 1 / 11; /* row to puri hi leni pdegi agr pura cover krna h to, main kaam saara column ka h */
+  grid-column: 10 / 13; /* how should I provide you 3 columns agr m 11 tak hi phunch gya hu to, ohh wait, 13 means 12th column right so, yeah, we can write 11 / 13, gotcha */
+}
+p {
+  color: white;
+  font-size: 15px;
+}
+
+/*  see the problem in the above code is that we cannot make that responsive because I already made the different container for the middle and for doing everything right, 
+I have to play with positions and for good coder, it is not a good thing to do for anyone and it will not be beneficial for me in my later life, so, what we should do, 
+I must have to rewrite all the code in another css file, you can read that if you want */
+/* change layout when screen goes below to 720px */
+@media (max-width: 720px) {
+  #oneAndSix {
+    grid-row: 2;
+    grid-column: 1 / 13; /* 1 se shuru hoke 12 column cover */
+  }
+  #tenAndThree {
+    /* grid-row: 3; */
+    grid-column: 1 / 4; /* 1 se shuru hoke 3 column cover */
+  }
+  #nineAndSix {
+    grid-column: 4 / 10; /* 9 column cover krne h to jitne cover krne h wo likhna h last me (mtlb 1 jyada kyoki wo line gin rha h na) aur jaha se shuru hoga wo likhna h phle pe */
+  }
+  #tenAndThreeAgain {
+    grid-column: 1 / 4;
+  }
+  #oneAndtwelveAgain {
+    grid-column: 4 / 10;
+  }
+}

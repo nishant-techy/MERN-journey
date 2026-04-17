@@ -1,0 +1,66 @@
+body {
+  background-color: rgb(57, 57, 57);
+  color: white;
+  margin: 0;
+  padding: 10px;
+}
+#main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: orange;
+  font-family: cursive;
+}
+h2 {
+  color: yellow;
+  text-align: center;
+}
+.input_buttons {
+  text-align: center;
+}
+.flex_direction_outer_div {
+  border: 2px solid grey;
+  width: 45%;
+  position: relative;
+  margin: 30px;
+}
+.playground,
+.playground1 {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  border: 2px solid pink;
+  display: flex;
+}
+.playground_child,
+.playground_child1 {
+  width: 200px;
+  height: 100px;
+  border: 1px solid plum;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 10px;
+}
+.playground_child1 {
+  width: 400px;
+}
+.black {
+  background-color: rgb(34, 31, 31);
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.purple {
+  background-color: purple;
+}
+.violet {
+  background-color: violet;
+}

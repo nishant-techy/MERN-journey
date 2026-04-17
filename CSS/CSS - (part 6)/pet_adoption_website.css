@@ -1,0 +1,47 @@
+h2 {
+  color: rgb(196, 10, 10);
+}
+h1 span {
+  color: rgb(225, 105, 0);
+}
+
+#pets {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.card {
+  width: 30vw;
+  height: auto;
+  border: 2px solid black;
+  padding: 15px;
+  border-radius: 20px;
+  margin: 20px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+h4 {
+  color: red;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (min-width: 550px) and (max-width: 700px) {
+  #pets {
+    justify-content: space-around;
+  }
+  .card {
+    width: 40vw;
+  }
+}
+@media (max-width: 550px) {
+  .card {
+    width: 90vw;
+  }
+  #pets {
+    flex-wrap: wrap;
+  }
+}

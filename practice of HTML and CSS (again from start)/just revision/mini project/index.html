@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- main container for the whole page which contains the image as the background -->
+    <div class="main_box">
+      
+<!-- the checkbox that will help to open and close the sidebar in the page -->
+        <input type="checkbox" id="check" />
+      <div class="btn_one">
+        <label for="check" style="color: white">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </div>
+
+
+      <!-- sidebar menu that contains every sidebar element -->
+      <div class="sidebar_menu">
+        
+        <div class="logo">
+          <a href="#">Apna College</a>
+        </div>
+
+        <div class="btn_two">
+          <label for="check" style="color: grey">
+            <i class="fa-solid fa-xmark"></i>
+          </label>
+          <!-- the logo and cross section ends here -->
+        </div>
+
+        <!-- the menu bar option starts from here -->
+        <div class="menu">
+          <ul>
+            <li>
+              <i class="fa-solid fa-image"></i>
+              <a href="#">Gallery</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <a href="#">Shortcuts</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-photo-film"></i>
+              <a href="#">Exhibits</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-calendar-days"></i>
+              <a href="#">Events</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-store"></i>
+              <a href="#">Store</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <i class="fa-regular fa-comments"></i>
+              <a href="#">Feedback</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- social media icons -->
+        <div class="social_media">
+          <ul>
+            <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+
+      // there's some problem in that code, and that is - when the page loads, it'll run and check if the checkbox is checked or not, but for continuous affect, we have to do that
+      // let checkboxChecking = document.getElementById("check").checked; //it will give the true or false result of does that checkbox checked or not
+      // let sidebar = document.querySelector('.sidebar_menu');
+      // if(checkboxChecking) {
+      //   sidebar.style.opacity = 0.3;
+      // } else {
+      //   sidebar.style.opacity = 1;
+      // }
+
+
+
+      // the new modification is - 
+      let checkboxChecking = document.getElementById("check");
+      let sidebar = document.querySelector('.sidebar_menu');
+      let main_btn = document.querySelector('.btn_one')
+      
+      checkboxChecking.addEventListener("change", function() {
+        if (checkboxChecking.checked) {
+          sidebar.style.transform = "translate(0%)";
+          main_btn.style.display = "none";
+        } else {
+          sidebar.style.transform = "translate(-150%)";
+          main_btn.style.display = "block";
+        }
+      })
+    </script>
+  </body>
+</html>

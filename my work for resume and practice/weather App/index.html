@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherNow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div class="card">
+      <h1>WeatherNow</h1>
+      <div class="input-group">
+        <input list="location-suggestions" id="city-input" placeholder="Enter city, state or country" />
+        <datalist id="location-suggestions">
+          <option value="New Delhi"></option>
+          <option value="London"></option>
+          <option value="Tokyo"></option>
+          <option value="California"></option>
+          <option value="Sydney"></option>
+        </datalist>
+      </div>
+      <div id="weather-info" class="weather-info hidden">
+        <h2 id="city-name"></h2>
+        <p id="description"></p>
+        <p><span id="temperature"></span>, Humidity: <span id="humidity"></span>%</p>
+        <p>Wind speed: <span id="wind-speed"></span> m/s</p>
+      </div>
+      <p id="error" class="error hidden">Could not find that location.</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

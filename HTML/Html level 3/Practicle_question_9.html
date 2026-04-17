@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicle Question 9 - Registration form (Input tag helps)</title>
+</head>
+<body>
+    <!-- heading -->
+    <h2>Registration form : </h2>
+    <form action="/server">
+        <!-- input box for entering the name -->
+        <div>
+            <input type="text" name="first_name" id="first_name" placeholder="First name">
+            <input type="text" name="last_name" id="last_name" placeholder="Last name">
+        </div>
+
+        <!-- select your gender -->
+        <div>
+            <label for="gender">Select your gender : </label>
+            <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+            
+        <!-- Terms and services checkbox -->
+        <div>
+            <label>Do you agree to all terms of service?</label>
+            <input type="checkbox" name="terms" id="terms">
+            <label for="terms">Yes, I agree.</label>
+        </div>
+        <button>Register</button>
+    </form>
+</body>
+</html>

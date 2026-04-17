@@ -1,0 +1,13 @@
+/* two ways to apply the css here and it's important */
+
+/* first method */
+/* #myID p {
+  color: green;
+}
+ */
+
+/* second method */
+div[id="myID"] p {
+  /* div id me jinki id bhi myID k equal h uske andrr jitne p h unka color:green krdo */
+  color: green;
+}

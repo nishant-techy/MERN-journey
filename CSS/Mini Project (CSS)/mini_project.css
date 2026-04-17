@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.main_box {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/CSS/mini project (css)/photo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#check {
+  position: absolute;
+  top: 2px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  z-index: 30;
+  cursor: pointer;
+}
+#hamburger {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 6px;
+  left: 25px;
+  cursor: pointer;
+}
+
+/* sidebar menu */
+.sidebar_menu {
+  transform: translateX(-102%);
+  /* display: none; */
+  width: 20vw;
+  height: 100vh;
+  backdrop-filter: blur(4px);
+  box-shadow: grey 1px 0px 10px 3px;
+  color: white;
+  font-size: 30px;
+  transition: transform 0.3s ease;
+}
+
+.sidebar_menu li {
+  list-style-type: none;
+}
+.sidebar_menu a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+}
+/* heading - Apna college */
+.logo {
+  border: 1px solid grey;
+  box-shadow: grey 1px 3px 5px;
+  padding: 20px;
+  text-align: center;
+}
+/* xmas mark */
+.btn_two {
+  text-align: right;
+}
+.btn_two i {
+  position: absolute;
+  right: 10px;
+  top: 29px;
+  cursor: pointer;
+}
+
+/* menu text and icons */
+.menu ul {
+  padding: 0;
+  margin: 0;
+}
+.menu {
+  line-height: 2em;
+  font-size: 20px;
+}
+.menu li {
+  padding: 10px 0;
+}
+.menu li i {
+  margin: 0 15px 0 20px;
+}
+.menu li:hover {
+  border: 1px solid grey;
+  box-shadow: grey 1px 3px 5px;
+}
+
+/* social media buttons */
+.social_media {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  padding-left: 25px;
+}
+.social_media a {
+  padding: 4px;
+  opacity: 0.5;
+  backdrop-filter: sepia(90%);
+}
+.social_media a:hover {
+  backdrop-filter: sepia(0%);
+  opacity: 1;
+  font-size: 22px;
+}
+
+/* let's show and hide the side_bar */
+#check:checked ~ .btn_one {
+  display: none;
+}
+#check:checked ~ .sidebar_menu {
+  transform: translateX(0);
+  display: block;
+}

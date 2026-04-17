@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Question 3</title>
+    <style>
+        table, tr, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- if we do this, that's perfect what we want but there is no tbody or thead or tfooter (not required right now), so, we can do this also (below) -->
+    <!-- Question 1 -->
+     <h2>Student Information</h2>
+     <h4>info without tbody and thead</h4>
+     <table>
+        <!-- table heading -->
+            <tr>
+                <th rowspan="6">Info</th>
+                <th rowspan="2">Name</th>
+                <th colspan="2">Address</th>
+            </tr>
+            <tr>
+                <th>City</th>
+                <th>House</th>
+            </tr>
+        <!-- table body -->
+            <tr>
+                <td>A</td>
+                <td>Delhi</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>Mumbai</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>Kolkata</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>Pune</td>
+                <td>4</td>
+            </tr>
+     </table>
+
+
+
+
+
+<br><br>
+     <!-- 2nd version -->
+    <!-- Question 1 -->
+     <h2>Student Information</h2>
+     <h4>info with tbody and thead</h4>
+     <table>
+        <!-- table heading -->
+        <thead>
+            <tr>
+                <!-- there is a problem using this, because tbody and thead are their own limitations and boundaries, so, using them is a good thing but you can just cross their boundaries by simple row or coloumn span so we should do something like that in which we should split the things and make them looks like they're connected, see below -->
+                <!-- <th rowspan="6">Info</th>   -->            <!-- Not allowed in that way -->
+                <th rowspan="2"></th>                       <!-- so we have to do this -->
+                <th rowspan="2">Name</th>
+                <th colspan="2">Address</th>
+            </tr>
+            <tr>
+                <th>City</th>
+                <th>House</th>
+            </tr>
+        </thead>
+        <!-- table body -->
+         <tbody>
+            <tr>
+                <th rowspan="5">Info</th>             <!-- and this -->
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>Delhi</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>Mumbai</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>Kolkata</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>Pune</td>
+                <td>4</td>
+            </tr>
+         </tbody>
+     </table>
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br>
+     <!-- 2nd Question -->
+      <!-- form for send all the data to be there -->
+  <form action="/server">
+     <!-- input type -->
+      <div>
+          <label for="name">Name: </label>
+          <input type="text" name="name" id="name">
+      </div>
+     <!-- sex (gender) -->
+      <div>
+          <label for="sex">Sex: </label>               <!-- we do not require to write label for='sex' becuase we did not mention any id='sex'-->
+          <input type="radio" name="sex" id="male" value="male">
+          <label for="male">Male</label>
+          <input type="radio" name="sex" id="female" value="female">
+          <label for="female">Female</label>
+      </div>
+
+      <!-- country -->
+       <div>
+           <label for="country">Country: </label>
+           <select name="country" id="country">
+               <option>Select an option</option>
+               <option value="India">India</option>
+               <option value="nep">Nepal</option>
+               <option value="pak">Pakistan</option>
+               <option value="usa">USA</option>
+               <option value="uae">UAE</option>
+            </select>
+        </div>
+
+     <!-- message -->
+      <div>
+          <label for="message">Message: </label>
+          <br>
+          <textarea name="message" id="message" cols="20" rows="7"></textarea>
+      </div>
+
+      <!-- subscribe -->
+       <div>
+           <input type="checkbox" name="subs" id="subs">
+           <label for="subs">Subscribe?</label>  
+       </div>
+      <!-- submit -->
+       <button>Submit</button>
+  </form>
+
+
+
+
+
+
+
+
+
+<br><br><br>
+    <!-- 3rd question -->
+    <h2>Feedback form</h2>
+    <form action="/contact">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" placeholder="Write your name">    <!-- Name sends to server and id used by label to attach-->
+        </div>
+
+        <div>
+            <label for="email">Email: </label>
+            <input type="text" name="email" id="email" placeholder="Write your email">
+        </div>
+
+        <div>
+            <label for="msg">Message: </label>
+            <br>
+            <textarea name="msg" id="msg" cols="20" rows="7"></textarea>
+        </div>
+
+        <div>
+            <label>Rate us out of 5: </label>
+            <br>
+            <!-- 1st value for radio -->
+            <input type="radio" name="rate_value" id="1" value="1">
+            <label for="1">1</label>
+            <br>
+            <!-- 2nd value for radio -->
+            <input type="radio" name="rate_value" id="2" value="2">
+            <label for="2">2</label>
+            <br>
+            <!-- 3rd value for radio -->
+            <input type="radio" name="rate_value" id="3" value="3">
+            <label for="3">3</label>
+            <br>
+            <!-- 4th value for radio -->
+            <input type="radio" name="rate_value" id="4" value="4">
+            <label for="4">4</label>
+            <br>
+            <!-- 5th value for radio -->
+            <input type="radio" name="rate_value" id="5" value="5">
+            <label for="5">5</label>
+        </div>
+
+        <div>
+            <button>send your message</button>
+        </div>
+     </form>
+
+
+
+</body>
+</html>

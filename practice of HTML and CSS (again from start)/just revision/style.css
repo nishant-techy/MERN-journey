@@ -1,0 +1,328 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  place-items: center;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+main {
+  padding: 20px;
+}
+input {
+  padding: 6px;
+  font-size: 15px;
+}
+button {
+  padding: 5px;
+  font-size: 13px;
+  background-color: black;
+  color: white;
+  width: 6rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+tr,
+table,
+th,
+td {
+  border: 2px solid black;
+  padding: 4px;
+  text-align: center;
+}
+input {
+  padding: 3px;
+}
+.border-boxing-here {
+  border: 2px solid black;
+  padding: 20px;
+  min-width: 50%;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+#this_heading {
+  color: orange;
+}
+#this_button {
+  background-color: blue;
+  color: white;
+}
+#this_paragraph {
+  color: white;
+  background-color: black;
+}
+
+#special_heading {
+  font-family: league spartan;
+  color: #ffa511;
+  text-align: center;
+  font-size: 55px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  text-decoration: teal double underline;
+  text-transform: uppercase;
+}
+
+#outer_rectangle {
+  width: 70px;
+  height: 200px;
+  border: 2px solid black;
+}
+.make_me_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner_circle {
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 50%;
+}
+#red_circle {
+  background-color: red;
+}
+#yellow_circle {
+  background-color: yellow;
+}
+#green_circle {
+  background-color: green;
+}
+
+#box {
+  height: 150px;
+  width: 300px;
+  background-color: grey;
+  border: 5px dotted black;
+  margin: 20px 1em 40px 2em;
+  padding: 1em;
+}
+
+.boxes {
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+ul li {
+  display: inline;
+}
+
+/* smiley face */
+#smiley_face_circle {
+  background-color: #ffa511;
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+}
+
+.eyes_of_smiley_circle {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: 50px;
+  left: 40px;
+}
+#eyes_margin {
+  margin-right: 50px;
+}
+
+#tongue_of_smiley_face {
+  position: relative;
+  top: 80px;
+  left: 45px;
+  width: 110px;
+  height: 40px;
+  background-color: red;
+  border-radius: 0 0 100px 100px;
+}
+
+/* 9 single box container */
+.single_box_big_container {
+  width: 600px;
+  border: 2px solid aqua;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.single_box {
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  color: black;
+  font-size: 50px;
+  border: 2px solid black;
+  text-align: center;
+  align-items: center;
+  margin: 20px;
+}
+
+/* navbar */
+.pink_navbar {
+  background-color: pink;
+  padding: 10px;
+  color: black;
+  /* width: 900px; */
+  height: 50px;
+  border: 1px solid black;
+}
+ul li {
+  list-style-type: none;
+  margin: 2px 15px;
+  font-size: 24px;
+}
+
+/* pink sheet - the most outer layer */
+.pink_sheet {
+  display: grid;
+  grid-template-columns: repeat(
+    12,
+    1fr
+  ); /* they already split that-up into 12 pieces, so, we have to just cover them instead of split them again in the child container*/
+  grid-template-rows: repeat(12, 1fr);
+  color: black;
+  gap: 10px;
+}
+
+/* one row taking the whole width */
+.one_twelve {
+  border: 1px solid black;
+  /* grid-template-columns: repeat(12, 1fr); it is not supposed to be like that we do not have to split that-up into 12 pieces again, should cut into 12 pieces now */
+  grid-column: 1 / span 12;
+  background-color: pink;
+  padding: 10px;
+}
+
+.ten_three_sidebar {
+  border: 1px solid black;
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 10; /* let's cover 10 rows and start from the 2nd row because first one is already taken-up */
+  background-color: pink;
+  padding: 10px;
+}
+
+#one_six {
+  grid-row: 2 / span 1; /* it will start from 2nd row and cover the 1 row only */
+  grid-column: 4 / span 6; /* it will start from the 4th row and cover the 6 columns */
+  border: 1px solid black;
+  background-color: pink;
+  padding: 10px;
+}
+
+#nine_six {
+  grid-row: 3 / span 9;
+  grid-column: 4 / span 6;
+  border: 1px solid black;
+  background-color: pink;
+  padding: 10px;
+}
+
+.ten_three_ads {
+  grid-column: 10 / span 3;
+  grid-row: 2 / span 10;
+  border: 1px solid black;
+  background-color: pink;
+  padding: 10px;
+}
+
+.one_twelve_footer {
+  grid-row: 12 / span 1;
+  grid-column: 1 / span 12;
+  border: 1px solid black;
+  background-color: pink;
+  padding: 10px;
+}
+
+@media screen and (max-width: 720px) {
+  #one_six {
+    grid-row: 2 / span 1; /* it will start from 2nd row and cover the 1 row only */
+    grid-column: 1 / span 12; /* it will start from the 4th row and cover the 6 columns */
+    border: 1px solid black;
+    background-color: pink;
+    padding: 10px;
+  }
+
+  .ten_three_sidebar {
+    border: 1px solid black;
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 9; /* let's cover 9 rows and start from the 3nd row because first and second one is already taken-up */
+    background-color: pink;
+    padding: 10px;
+  }
+
+  #nine_six {
+    grid-row: 3 / span 9;
+    grid-column: 4 / span 9;
+    border: 1px solid black;
+    background-color: pink;
+    padding: 10px;
+  }
+
+  .ten_three_ads {
+    grid-row: 12 / span 1;
+    grid-column: 1 / span 3;
+  }
+
+  .one_twelve_footer {
+    grid-row: 12 / span 1;
+    grid-column: 4 / span 9;
+  }
+}
+
+/* loader */
+.loader {
+  border: 16px solid #e4e4e4;
+  border-top: 16px solid goldenrod;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    /* Set rotation to 0 degrees */
+    transform: rotate(0deg);
+  }
+  100% {
+    /* Set rotation to 360 degrees */
+    transform: rotate(360deg);
+  }
+}

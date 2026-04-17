@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex property understanding</title>
+    <link rel="stylesheet" href="Flex_property_understanding.css" />
+  </head>
+  <body>
+    <!-- first one -->
+    <!-- flex direction -->
+    <h1>Flexbox Playground</h1>
+    <!-- main flexbox that will force to become good view -->
+    <div id="main">
+      <div class="flex_direction_outer_div">
+        <h2>Flexbox Direction property</h2>
+        <!-- let's make the playing buttons -->
+        <div class="input_buttons">
+          <input type="radio" name="direction" id="row" checked />
+          <label for="row">Row</label>
+          <input type="radio" name="direction" id="row-reverse" />
+          <label for="row-reverse">Row-reverse</label>
+          <input type="radio" name="direction" id="Column" />
+          <label for="Column">Column</label>
+          <input type="radio" name="direction" id="Column-reverse" />
+          <label for="Column-reverse">Column-reverse</label>
+        </div>
+        <hr />
+        <!-- let's make the playing section -->
+        <div class="playground">
+          <div class="playground_child black">1</div>
+          <div class="playground_child red">2</div>
+          <div class="playground_child green">3</div>
+          <div class="playground_child purple">4</div>
+          <div class="playground_child violet">5</div>
+        </div>
+      </div>
+
+      <!-- second one -->
+      <!-- Flex wrap -->
+
+      <!-- flex direction -->
+      <div class="flex_direction_outer_div">
+        <h2>Flexbox Wrap property</h2>
+        <!-- let's make the playing buttons -->
+        <div class="input_buttons">
+          <input type="radio" name="wrap" id="nowrap" checked />
+          <label for="nowrap">nowrap</label>
+          <input type="radio" name="wrap" id="wrap" />
+          <label for="wrap">wrap</label>
+          <input type="radio" name="wrap" id="wrap-reverse" />
+          <label for="wrap-reverse">wrap-reverse</label>
+        </div>
+        <hr />
+        <!-- let's make the playing section -->
+        <div class="playground1">
+          <div class="playground_child1 black">1</div>
+          <div class="playground_child1 red">2</div>
+          <div class="playground_child1 green">3</div>
+          <div class="playground_child1 purple">4</div>
+          <div class="playground_child1 violet">5</div>
+        </div>
+      </div>
+    </div>
+    <!-- this is what we are going to learn later, we should not use this -->
+    <script>
+      const directionRadios = document.querySelectorAll(
+        'input[name="direction"]'
+      );
+      const playground = document.querySelector(".playground");
+
+      directionRadios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          if (radio.checked) {
+            switch (radio.id) {
+              case "row":
+                playground.style.flexDirection = "row";
+                break;
+              case "row-reverse":
+                playground.style.flexDirection = "row-reverse";
+                break;
+              case "Column":
+                playground.style.flexDirection = "Column";
+                break;
+              case "Column-reverse":
+                playground.style.flexDirection = "Column-reverse";
+                break;
+            }
+          }
+        });
+      });
+
+      //   wrap javascript
+      const wrapRadios = document.querySelectorAll('input[name="wrap"]');
+      const playground1 = document.querySelector(".playground1");
+      wrapRadios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          if (radio.checked) {
+            switch (radio.id) {
+              case "nowrap":
+                playground1.style.flexWrap = "nowrap";
+                break;
+              case "wrap":
+                playground1.style.flexWrap = "wrap";
+                break;
+              case "wrap-reverse":
+                playground1.style.flexWrap = "wrap-reverse";
+                break;
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

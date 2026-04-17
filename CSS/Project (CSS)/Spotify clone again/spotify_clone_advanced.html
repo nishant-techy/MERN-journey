@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="spotify_clone_advanced.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main_div">
+      <!-- sidebar 25% of the screen -->
+      <div class="sidebar_div">
+        <!-- top div which have icon and text -->
+        <div class="icons_and_text">
+          <!-- first item with logo -->
+          <div class="nav_items">
+            <ul style="opacity: 1">
+              <li><i class="fa-solid fa-house"></i>Home</li>
+            </ul>
+          </div>
+          <!-- second item with logo -->
+          <div class="nav_items">
+            <ul>
+              <li><i class="fa-solid fa-magnifying-glass"></i>Search</li>
+            </ul>
+          </div>
+        </div>
+        <!-- bottom div which have heading and boxes -->
+        <div class="heading_and_boxes">
+          <!-- the complete flex box which will set both the div's apart and help to make what I wanted to show  -->
+          <div class="flex_box_for_arrows_and_image">
+            <div class="image_and_heading">
+              <img src="./assets/library_icon.png" alt="library_icon" />
+              <span>Your library</span>
+            </div>
+            <div class="icons_arrows">
+              <i class="fa-solid fa-plus"></i
+              ><i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- the other two boxes in the second div of sidebar -->
+          <div class="boxes_have_content">
+            <p>Create your first playlist</p>
+            <span>It's easy, we'll help you</span>
+            <button class="btn_feature">Create Playlist</button>
+          </div>
+          <!-- second box -->
+          <div class="boxes_have_content">
+            <p>Let's find some podcasts to follow</p>
+            <span>We'll keep you updated on new episodes</span>
+            <button class="btn_feature">Browse podcasts</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main content 75% of the screen -->
+      <div class="main_content_div">
+        <div class="navbar_of_main_content">
+          <!-- image left -->
+          <div class="image_left">
+            <img src="./assets/backward_icon.png" alt="backward_icon" />
+            <img src="./assets/forward_icon.png" alt="forward_icon" />
+          </div>
+          <!-- right button -->
+          <div class="button_in_right">
+            <button class="btn_feature">Upgrade</button>
+            <button
+              class="btn_feature"
+              style="background-color: black; color: white"
+            >
+              <i class="fa-solid fa-circle-down"></i>Install App
+            </button>
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <!-- sticky navbar ends here -->
+        </div>
+
+        <!-- music playlist scroll here -->
+        <div class="music_playlist">
+          <h2>Recently Played</h2>
+          <div class="scrollable_music_div">
+            <div class="card_box">
+              <img src="./assets/card1img.jpeg" alt="music card image" />
+              <h2>Top 50 - Global</h2>
+              <p>Your daily update of the most played tracks right</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- next playlist -->
+        <div class="music_playlist">
+          <h2>Trending now near you</h2>
+          <div class="scrollable_music_div">
+            <!-- first card -->
+            <div class="card_box">
+              <img src="./assets/card2img.jpeg" alt="music card image" />
+              <h2>Indie Indian</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- second card -->
+            <div class="card_box">
+              <img src="./assets/card2img.jpeg" alt="music card image" />
+              <h2>Indie Indian</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- third card -->
+            <div class="card_box">
+              <img src="./assets/card3img.jpeg" alt="music card image" />
+              <h2>Indie Indian</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- fourth card -->
+            <div class="card_box">
+              <img src="./assets/card4img.jpeg" alt="music card image" />
+              <h2>Indie Indian</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- fifth card -->
+            <div class="card_box">
+              <img src="./assets/card3img.jpeg" alt="music card image" />
+              <h2>Indie Indian</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- next playlist -->
+        <div class="music_playlist">
+          <h2>Featured Charts</h2>
+          <div class="scrollable_music_div">
+            <!-- first card -->
+            <div class="card_box">
+              <img src="./assets/card4img.jpeg" alt="music card image" />
+              <h2>Indie Indian</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- second card -->
+            <div class="card_box">
+              <img src="./assets/card5img.jpeg" alt="music card image" />
+              <h2>Indie Indian</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- third card -->
+            <div class="card_box">
+              <img src="./assets/card6img.jpeg" alt="music card image" />
+              <h2>Indie Indian</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- fourth card -->
+            <div class="card_box">
+              <img src="./assets/card1img.jpeg" alt="music card image" />
+              <h2>Indie Indian</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- fifth card -->
+            <div class="card_box">
+              <img src="./assets/card5img.jpeg" alt="music card image" />
+              <h2>Indie Indian</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+          </div>
+        </div>
+        <!-- main content width - flex:1 ends here -->
+        <div class="spacer"></div>
+        <hr />
+        <div class="spacer"></div>
+      </div>
+
+      <!-- Music player 60px bottom of the screen -->
+      <div class="music_player_div">
+        <!-- music name with details -->
+        <div class="music_name">
+          <div class="container_music">
+            <!-- 1st element -->
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/1/1e/David_Kushner-_Daylight.png"
+              alt="song image poster"
+            />
+            <!-- 2nd element -->
+            <div class="music_ka_name">
+              <h5>Daylight</h5>
+              <span>David Kushner</span>
+            </div>
+          </div>
+
+          <div class="container_music">
+            <!-- 3rd element -->
+            <i class="fa-regular fa-heart"></i>
+            <!-- 4th element -->
+            <i class="fa-solid fa-window-maximize"></i>
+          </div>
+        </div>
+
+        <!-- music player 50% -->
+        <div class="music_player_half_div">
+          <div class="music_player">
+            <!-- music line with buttons -->
+            <div class="music_line">
+              <img
+                src="./assets/player_icon1.png"
+                alt="player icon"
+                id="music_icon_1"
+                class="music_icon_all"
+              />
+              <img
+                src="./assets/player_icon2.png"
+                alt="player icon"
+                id="music_icon_2"
+                class="music_icon_all"
+              />
+              <img
+                src="./assets/player_icon3.png"
+                alt="player icon"
+                id="music_icon_3"
+                style="opacity: 1"
+                class="music_icon_all"
+              />
+              <img
+                src="./assets/player_icon4.png"
+                alt="player icon"
+                id="music_icon_4"
+                class="music_icon_all"
+              />
+              <img
+                src="./assets/player_icon5.png"
+                alt="player icon"
+                id="music_icon_5"
+                class="music_icon_all"
+              />
+            </div>
+
+            <!-- player line -->
+            <div class="music_player">
+              <div class="together_flex">
+                <span>00:00</span>
+                <div class="ball_and_line">
+                  <input
+                    type="range"
+                    name="line"
+                    id="line"
+                    min="0"
+                    max="100"
+                    step="1"
+                  />
+                  <div class="ball"></div>
+                </div>
+                <span>03:33</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- music range and volumes and all others 25% -->
+        <div class="music_vol_and_range">
+          <!-- music name with details -->
+          <div class="music_icons_of_last_container">
+            <i class="fa-regular fa-file-video"></i>
+            <i class="fa-regular fa-microphone"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-window-restore"></i>
+            <div class="vol">
+              <i class="fa-solid fa-volume-low"></i>
+              <input type="range" name="vol" id="vol" min="0" max="100" />
+            </div>
+          </div>
+        </div>
+        <!-- music player div that have 3 child with different width sizes -->
+      </div>
+      <!-- main div ends here -->
+    </div>
+  </body>
+</html>

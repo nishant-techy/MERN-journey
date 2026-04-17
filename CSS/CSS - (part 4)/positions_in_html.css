@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+div {
+  background-color: black;
+  color: white;
+  border: 2px solid #00ffff;
+  font-size: 18px;
+  font-family: cursive;
+}
+.main {
+  margin: 0 auto;
+  width: 70vw;
+  padding: 20px;
+}
+
+.div_common {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  background-color: rgb(2, 57, 96);
+  border: 3px solid green;
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 30px;
+  color: saddlebrown;
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+/* static */
+#static {
+  position: static;
+  left: 100px;
+  top: 100px;
+}
+
+/* relative css */
+#relative1 {
+  position: relative;
+  left: 100px;
+  top: 100px;
+}
+
+/* sticky css */
+#sticky1 {
+  position: sticky;
+  top: 100px;
+  left: 100px;
+}
+
+/* fixed css */
+#fixed1 {
+  position: fixed;
+  top: 400px;
+  left: 400px;
+}
+
+/* absolute css */
+#absolute1 {
+  position: absolute;
+  top: 300px;
+  right: 20px;
+  background-color: firebrick;
+}

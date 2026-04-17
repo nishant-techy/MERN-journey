@@ -1,0 +1,47 @@
+.parent {
+  width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 2px solid aqua;
+}
+.child {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  color: black;
+  text-align: center;
+  background-color: rgb(128, 128, 128);
+  padding: 30px;
+  font-weight: bolder;
+  border: 4px solid black;
+  border-radius: 10px;
+}
+
+/* question 2 */
+.navbar {
+  border: 2px solid black;
+  background-color: pink;
+  width: 900px;
+  height: 50px;
+  border-radius: 10px;
+}
+nav ul {
+  margin-top: 0px;
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 24px;
+}
+nav img {
+  padding: 0;
+  width: 1px;
+  height: auto;
+}
+nav ul li {
+  margin: 0 20px 0 20px;
+  list-style: none;
+}

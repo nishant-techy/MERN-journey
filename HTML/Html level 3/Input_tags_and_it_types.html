@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input tags and it types</title>
+</head>
+<body>
+    <form action="/server">
+        <!-- checkbox with submit system -->
+        <input type="checkbox" id="age" name="age" checked>
+        <label for="age">Are you 18+</label>
+        <br>
+        <!-- checkbox with multiple option -->
+        <label>Tell me what fruits you like the most : </label>
+        <input type="checkbox" name="fruits" id="mango" value="aam">
+        <label for="mango">Mango</label>
+        <input type="checkbox" name="fruits" id="apple" value="seb">
+        <label for="apple">Apple</label>
+        <input type="checkbox" name="fruits" id="banana" value="kela">
+        <label for="banana">Banana</label>
+        <input type="checkbox" name="fruits" id="kichu" value="kichu">
+        <label for="kichu">kichu</label>
+        
+
+        <br>
+        <!-- Radio with submit system -->
+         <div>
+            <label for="gender">Tell me your gender : </label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="stri">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="other" value="other">   
+            <label for="other">Other</label> 
+         </div>
+
+         <br><br>
+         <div>
+            <label for="profession">Choose your profession : </label>
+            <select name="profession" id="profession">
+                <option value="stu">Student</option>
+                <option value="dev">Developer</option>
+                <option value="other">Other than this</option>
+            </select>
+         </div>
+
+        <br>
+        <div>
+            <label for="vol">Select your volume level : </label>
+            <input type="range" name="vol" id="vol" min="0" max="100">
+            
+            <label for="vol1">Select your media volume level with different features : </label>
+            <input type="range" name="vol" id="vol1" min="0" max="100" step="15" value="80">
+        </div>
+
+        <div>
+            <label for="textarea">Please submit your valuable feedback : </label>
+            <textarea name="textarea" id="textarea" placeholder="Please enter your feedback here"></textarea>
+        </div>
+
+        <button>submit All</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="spotify_clone.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <!-- sidebar -->
+      <div class="sidebar">
+        <!-- two boxes in column -->
+        <div class="sidebar_box_1">
+          <!-- sidebar text in first column box -->
+          <div class="i_box"><i class="fa-solid fa-house"></i> Home</div>
+          <br />
+          <div class="i_box">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </div>
+          <br />
+        </div>
+        <div class="sidebar_box_2">
+          <!-- sidebar three boxes in second column box -->
+          <div class="sidebar_box_2_child">
+            <div class="box_2_child_one">
+              <div class="box_2_child_one_ka_bhi_child_1">
+                <img src="./assets/library_icon.png" alt="icon" />
+                <span>Your library</span>
+              </div>
+              <div class="box_2_child_one_ka_bhi_child_2">
+                <i class="fa-solid fa-plus"></i
+                ><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+            <br />
+            <!-- sidebar three boxes me second box -->
+            <div class="box_2_child_two_and_three box_2_child_two">
+              <h4>Create your first playlist</h4>
+              <span>It's easy, we'll help you</span>
+              <button class="button_of_white_color">Create Playlist</button>
+            </div>
+            <br />
+            <!-- sidebar three boxes me third box -->
+            <div class="box_2_child_two_and_three box_2_child_three">
+              <h4>let's find some podcasts to follow</h4>
+              <span>we'll keep you updated on new episodes</span>
+              <button class="button_of_white_color">Browse Podcasts</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- main content -->
+      <!-- music playlists -->
+      <div class="main-content">
+        <!-- header bar for showing the nav type something -->
+        <div class="header_bar">
+          <div class="start">
+            <img src="./assets/backward_icon.png" alt="backward_icon" />
+            <img src="./assets/forward_icon.png" alt="forward_icon" />
+          </div>
+          <div class="end">
+            <button class="button_of_white_color">Explore Premium</button>
+            <button class="button_of_white_color" id="black_button">
+              <i class="fa-solid fa-circle-down"></i>Install App
+            </button>
+            <i class="fa-solid fa-user-plus" style="font-size: 1.5rem"></i>
+          </div>
+        </div>
+        <!-- first section -->
+        <!-- the recently played songs playlist -->
+        <div class="recently_played">
+          <!-- heading -->
+          <h1>Recently Played</h1>
+          <!-- scrollable container which will be useful in every section and do not have to make it again, will use that one in next also -->
+          <div class="scrollable_container">
+            <div class="box_container">
+              <img src="./assets/card1img.jpeg" alt="card image" />
+              <h2>Top 50 - Global</h2>
+              <p>Your daily updates of the most played tracks</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- the recently played songs playlist -->
+        <div class="recently_played">
+          <!-- heading -->
+          <h1>Trending now near you</h1>
+          <!-- scrollable container which will be useful in every section and do not have to make it again, will use that one in next also -->
+          <!-- first song -->
+          <div class="scrollable_container">
+            <div class="box_container">
+              <img src="./assets/card2img.jpeg" alt="card image" />
+              <h2>Indie India</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- second song -->
+            <div class="box_container">
+              <img src="./assets/card3img.jpeg" alt="card image" />
+              <h2>Indie India</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- third song -->
+            <div class="box_container">
+              <img src="./assets/card2img.jpeg" alt="card image" />
+              <h2>Indie India</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- fourth song -->
+            <div class="box_container">
+              <img src="./assets/card3img.jpeg" alt="card image" />
+              <h2>Indie India</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- fifth song -->
+            <div class="box_container">
+              <img src="./assets/card4img.jpeg" alt="card image" />
+              <h2>Indie India</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+            <!-- scrollaber container ends here -->
+          </div>
+          <!-- recently playlist ends here which contains text + scrollable container -->
+        </div>
+
+        <!-- the recently played songs playlist -->
+        <div class="recently_played">
+          <!-- heading -->
+          <h1>Featured Charts</h1>
+          <!-- scrollable container which will be useful in every section and do not have to make it again, will use that one in next also -->
+          <!-- first song -->
+          <div class="scrollable_container">
+            <div class="box_container">
+              <img src="./assets/card1img.jpeg" alt="card image" />
+              <h2>Indie India</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- second song -->
+            <div class="box_container">
+              <img src="./assets/card5img.jpeg" alt="card image" />
+              <h2>Indie India</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- third song -->
+            <div class="box_container">
+              <img src="./assets/card6img.jpeg" alt="card image" />
+              <h2>Indie India</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+
+            <!-- fourth song -->
+            <div class="box_container">
+              <img src="./assets/card5img.jpeg" alt="card image" />
+              <h2>Indie India</h2>
+              <p>Best of Indian Indie</p>
+            </div>
+            <!-- scrollaber container ends here -->
+          </div>
+          <!-- recently playlist ends here which contains text + scrollable container -->
+        </div>
+
+        <!-- spacing -->
+        <br />
+        <div class="spacing"></div>
+        <hr />
+        <div class="spacing"></div>
+        <br /><br />
+        <!-- music playlist section ends here -->
+      </div>
+
+      <!-- music player -->
+      <div class="music-player">
+        <!-- music line with buttons -->
+        <div class="music_line">
+          <img
+            src="./assets/player_icon1.png"
+            alt="player icon"
+            id="music_icon_1"
+          />
+          <img
+            src="./assets/player_icon2.png"
+            alt="player icon"
+            id="music_icon_2"
+          />
+          <img
+            src="./assets/player_icon3.png"
+            alt="player icon"
+            id="music_icon_3"
+          />
+          <img
+            src="./assets/player_icon4.png"
+            alt="player icon"
+            id="music_icon_4"
+          />
+          <img
+            src="./assets/player_icon5.png"
+            alt="player icon"
+            id="music_icon_5"
+          />
+        </div>
+
+        <!-- player line -->
+        <div class="music_player">
+          <div class="together_flex">
+            <span>00:00</span>
+            <div class="ball_and_line">
+              <hr />
+              <div class="ball"></div>
+            </div>
+            <span>03:33</span>
+          </div>
+        </div>
+      </div>
+      <!-- main box end here -->
+    </div>
+  </body>
+</html>

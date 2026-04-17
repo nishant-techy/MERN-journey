@@ -1,0 +1,110 @@
+/* do not read the comments of this file coz all of these comments are from previous file and not related to this one, got it? */
+
+/* but one thing span is very useful coz you can directly mention that from which row you want to start your line and how much lines you want to cover, like 
+if you want to cover 9 rows and 12 columns, you can directly say grid-row:1 / span 9 (mtlb ki 1st line se shuru krke 9 lines tak ki row gher lo) and grid-column: 1 / span 12 ( 1
+se shuru krke 12 lines k column gher lo)*/
+body {
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+#main_box_grid {
+  display: grid;
+  width: 90vw;
+  height: 90vh;
+  margin: 0 auto;
+  grid-gap: 10px;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  font-size: 2em;
+  color: white;
+}
+
+/* header */
+.oneAndtwelve {
+  background-color: red;
+  grid-row: 1; /* it will tell from where should we start this row line */
+  grid-column: 1 / span 12; /* it will cover all 13 lines means 12 columns */
+}
+
+/* ye jo hm baad me likh rhe h number 1 / 5 or 4 / 11 (isme first to ye h ki shuru konsi line se krna h but baad wala number btata h ki cover kitni lines krni h wo ye nhi bta rha ki konsi line tak phunchna h wo bta rha h cover kitni lines ko krna h */
+#tenAndThree {
+  background-color: brown;
+  grid-row: 2 / span 10; /* grid row - 2 se grid row - 10 tak cover kregi (means full cover, its fine) */
+  grid-column: 1 / span 3; /* grid column - 1 se grid column - 3 tak cover krlenge mtlb next ko shuru hone k liye 4 se shuru hona pdega mtlb 4th line se */
+}
+#oneAndSix {
+  background-color: rgb(119, 71, 0);
+  grid-row: 2; /* phli hi row me 4 se 10 columns tak h iss box k pass */
+  grid-column: 4 / span 6; /* 4 column se start krenge kyoki phle k 3 to above wale k pass h na and we have to cover 6 more columns, so, cover 7 lines  */
+}
+#nineAndSix {
+  background-color: darkcyan;
+  grid-row: 3 / span 9; /* middle row me 2nd row se start krke 10th row tak ka hissa h iske pass and first row above k pass h isiliye */
+  grid-column: 4 / span 6; /* wahi same 4 se 10 tak lena pdega kyoki phle 4 to tenAndThree k pass h na, nhi to overlap ho jayega */
+}
+#tenAndThreeAgain {
+  background-color: deeppink;
+  grid-row: 2 / span 10; /* row to puri hi leni pdegi agr pura cover krna h to, main kaam saara column ka h */
+  grid-column: 10 / span 3; /* how should I provide you 3 columns agr m 11 tak hi phunch gya hu to, ohh wait, 13 means 12th column right so, yeah, we can write 11 / 13, gotcha */
+}
+
+/* footer */
+.oneAndtwelveAgain {
+  background-color: rgb(0, 96, 48);
+  grid-column: 1 / 13; /* it will cover all 13 lines means 12 columns */
+  grid-row: 12;
+}
+p {
+  color: white;
+  font-size: 15px;
+}
+
+/* Question 2 */
+@media (max-width: 720px) {
+  #oneAndSix {
+    grid-row: 2;
+    grid-column: 1 / span 12; /* 1 se shuru hoke 12 column cover */
+  }
+  #tenAndThree {
+    grid-row: 3 / span 9;
+    grid-column: 1 / span 3; /* 1 se shuru hoke 3 column cover */
+  }
+  #nineAndSix {
+    grid-row: 3 / span 9;
+    grid-column: 4 / span 9; /* 9 column cover krne h to jitne cover krne h wo likhna h last me (mtlb 1 jyada kyoki wo line gin rha h na) aur jaha se shuru hoga wo likhna h phle pe */
+  }
+  #tenAndThreeAgain {
+    grid-row: 12;
+    grid-column: 1 / span 3;
+    z-index: 3;
+  }
+  .oneAndtwelveAgain {
+    grid-row: 12;
+    grid-column: 4 / span 9;
+  }
+}
+
+/* Question 3 */
+#loader {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 20px solid white;
+  border-top: 20px solid goldenrod;
+  position: relative;
+  margin: 0 auto;
+  animation: circle_rotation linear 1s infinite normal;
+}
+
+@keyframes circle_rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

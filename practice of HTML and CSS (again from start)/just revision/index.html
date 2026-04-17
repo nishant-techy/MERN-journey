@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta Basics -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your page description here" />
+    <meta name="author" content="Your Name" />
+
+    <!-- link the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Title -->
+    <title>Everything at once</title>
+
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>My Website</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- table to show the data -->
+      <table>
+        <caption>
+          A test table with merged cells
+        </caption>
+        <tr>
+          <th rowspan="2"></th>
+          <th colspan="2">Average</th>
+          <th rowspan="2">Red Eyes</th>
+        </tr>
+        <tr>
+          <th>Height</th>
+          <th>Weight</th>
+        </tr>
+        <tr>
+          <td>Males</td>
+          <td>1.9</td>
+          <td>0.003</td>
+          <td>40%</td>
+        </tr>
+        <tr>
+          <td>Females</td>
+          <td>1.7</td>
+          <td>0.002</td>
+          <td>43%</td>
+        </tr>
+      </table>
+
+      <br /><hr><br />
+      <!-- search box with button (the google search) -->
+      <div class="border-boxing-here">
+        <form action="https://www.google.com/search">
+          <label for="query">Your query please:</label>
+          <input
+            type="text"
+            placeholder="Enter your query"
+            id="query"
+            name="q"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+
+      <br /><hr><br />
+      <!-- Registeration form -->
+      <div class="border-boxing-here">
+        <form action="/">
+        <h2>Registeration Form</h2>
+        <input type="text" placeholder="First name" name="fname" />
+        <input type="text" placeholder="Last name" name="lname"/>
+        <p>
+          <label for="gender">Please select gender</label>
+          <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </p>
+        <p>
+          Do you agree to all terms of service?
+          <input
+            type="checkbox"
+            name="accept_the_service"
+            id="accept_the_service"
+          />Yes, I agree
+        </p>
+        <button>Register</button>
+      </div>
+
+
+      <br /> <hr><br />
+      <!-- student info -->
+        <div class="border-boxing-here">
+               <table>
+                    <caption>Student Information</caption>
+                    <tr>
+                        <th rowspan="6">Info</th>
+                        <th rowspan="2">Name</th>
+                        <th colspan="2">Address</th>
+                    </tr>
+
+                    <tr>
+                        <th>City</th>
+                        <th>House</th>
+                    </tr>
+
+                    <tr>
+                        <td>A</td>
+                        <td>Delhi</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>B</td>
+                        <td>Mumbai</td>
+                        <td>2</td>
+                    </tr>
+
+                    <tr>
+                        <td>C</td>
+                        <td>Kolkata</td>
+                        <td>3</td>
+                    </tr>
+
+                    <tr>
+                        <td>D</td>
+                        <td>Pune</td>
+                        <td>4</td>
+                    </tr>
+               </table> 
+        </div>
+
+        <!-- another form -->
+         
+        <br> <hr> <br>
+        <div class="border-boxing-here">
+            <form action="/">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="fullname">
+                <br>
+                <label>Sex:</label>
+                <input type="radio" value="male" id="male" name="sex">
+                <label for="male">Male</label>
+                <input type="radio" value="female" id="female" name="sex">
+                <label for="female">Female</label>
+                <br>
+                <label for="country">Country:</label>
+                <select name="country" id="country">
+                    <option value="empty" selected>Select an option</option>
+                    <option value="India">India</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Australia">Australia</option>
+                    <option value="New Zealand">New Zealand</option>
+                </select>
+                <br>
+                <label for="desc">Message:</label><br>
+                <textarea name="message" id="desc" rows="4" cols="30"></textarea>
+                <br>
+                <input type="checkbox" name="subscribe" id="subscribe"> Subscribe? <br>
+                <button>Submit</button>
+            </form>
+        </div>
+
+
+        <br><hr><br>
+
+        <div class="border-boxing-here">
+          <h2 id="this_heading">Hi there!</h2>
+          <p id="this_paragraph">My name is Tom & I am here to help you.</p>
+          <button id="this_button">Need Help</button>
+        </div>
+
+        <br><br><hr><br>
+
+        <div class="border-boxing-here">
+          <h2>Let's Design the text according to how it's given</h2>
+          <h3 id="special_heading">Apna college</h3>
+        </div>
+        
+<br><hr><br>
+        <!-- traffic light -->
+        <div class="border-boxing-here make_me_center">
+          <div id="outer_rectangle">
+            <div class="inner_circle" id="red_circle"></div>
+            <div class="inner_circle" id="yellow_circle"></div>
+            <div class="inner_circle" id="green_circle"></div>
+          </div>
+        </div>
+
+
+<br><hr><br>
+        <!-- create a box using div -->
+        <div class="border-boxing-here">
+            <div id="box"></div>
+            <div class="boxes"></div>
+            <div class="boxes"></div>
+            <div class="boxes"></div>
+        </div>
+
+
+<br><hr><br>
+        <!-- create the list of technologies -->
+        <div class="border-boxing-here">
+          <h2>Technologies</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>NodeJS</li>
+            <li>ReactJS</li>
+            <li>SQL</li>
+            <li>MongoDB</li>
+            <li>Java</li>
+            <li>C++</li>
+            <li>C</li>
+            <li>Python</li>
+          </ul>
+        </div>
+
+
+<br><hr><br>
+        <!-- simple smiley face -->
+         <div class="border-boxing-here make_me_center">
+            <div id="smiley_face_circle">
+              <div class="eyes_of_smiley_circle" id="eyes_margin"></div>
+              <div class="eyes_of_smiley_circle"></div>
+              <div id="tongue_of_smiley_face"></div>
+            </div>
+         </div> 
+
+
+<br><hr><br>
+         <!-- 9 boxes in order -->
+          <div class="border-boxing-here single_box_big_container">
+            <div class="single_box">A</div>
+            <div class="single_box">B</div>
+            <div class="single_box">C</div>
+            <div class="single_box">D</div>
+            <div class="single_box">E</div>
+            <div class="single_box">F</div>
+            <div class="single_box">G</div>
+            <div class="single_box">H</div>
+            <div class="single_box">I</div>
+          </div>
+
+          
+          <br><hr><br>
+          <!-- navbar things -->
+           <div class="pink_navbar">
+                <ul>
+                  <li>logo</li>
+                  <li>Home</li>
+                  <li>About</li>
+                  <li>Contact</li>
+                </ul>
+           </div>
+
+
+           <br><br>
+           <!-- css grid -->
+            <div class="border-boxing-here">
+                <div class="pink_sheet">
+                  <div class="one_twelve">Header (1 row, 12 column)</div>
+                  <!-- three column container -->
+                    <div class="ten_three_sidebar">sidebar (10 row, 3 column)</div>
+                      <div id="one_six">navigation (1 row, 6 column)</div>
+                      <div id="nine_six">main (9 row, 6 column)</div>
+                    <div class="ten_three_ads">ads (10 row, 3 column)</div>
+                    <div class="one_twelve_footer">Footer (1 row, 12 column)</div>
+                  </div>
+                </div>
+                <br><br>
+
+
+
+        <!-- loader circle animation -->
+          <div class="border-boxing-here">
+                          <h1>Loader</h1>
+            <div class="loader"></div>
+          </div>
+
+
+          
+        <!-- <div class="border-boxing-here"></div> -->
+    </main>
+    <br><br><hr><br>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Nishant</p>
+    </footer>
+
+    <!-- Internal JavaScript -->
+    <script></script>
+  </body>
+</html>

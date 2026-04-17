@@ -1,0 +1,26 @@
+#outer_div_cell {
+  border: 2px solid black;
+  padding: 6px;
+  width: 75px;
+}
+#outer_div {
+  height: 200px;
+  width: 70px;
+  border: 2px solid black;
+}
+.inner_div {
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 50%;
+}
+#first_one {
+  background-color: red;
+}
+#second_one {
+  background-color: yellow;
+}
+#third_one {
+  background-color: green;
+}
