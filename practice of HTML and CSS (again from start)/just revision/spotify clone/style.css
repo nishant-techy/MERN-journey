@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+  scrollbar-width: none;
+}
+
+/* main background container for all */
+#main_bg_container {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding: 0 15px 15px 15px;
+}
+
+/* first element starts here -> the first left side box contains home, search and all */
+.first_box {
+  width: 25%;
+  color: #b1b1b1;
+  padding: 12px;
+  /* margin: 0 15px; */
+  display: flex;
+  flex-direction: column;
+}
+
+#disappear_checkbox {
+  display: none;
+}
+#hamburger_menu {
+  display: none;
+  position: relative;
+  top: 25px;
+  color: white;
+  font-size: 20px;
+}
+#disappear_checkbox:checked ~ .first_box {
+  display: block;
+}
+#disappear_checkbox:checked ~ .second_box {
+  display: none;
+}
+
+.first_child_of_first_box {
+  width: 100%;
+  background-color: rgb(16, 16, 16);
+  height: 25%;
+  border-radius: 30px;
+  margin: 0 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 20px;
+  padding: 15px;
+}
+.first_element_of_first_child_of_first_box i,
+.second_element_of_first_child_of_first_box i {
+  margin-right: 8px;
+}
+
+/* another elements starts here -> second child of first box */
+.second_child_of_first_box {
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  background-color: rgb(16, 16, 16);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+/* second child ka first child element css */
+.first_one_of_three_elements_of_second_child_of_first_box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.first_element_of_second_child_of_first_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.first_element_of_second_child_of_first_box img {
+  height: 20px;
+  color: #b1b1b1;
+}
+.first_element_of_second_child_of_first_box span {
+  font-size: 20px;
+  padding-left: 15px;
+}
+
+.second_element_of_second_child_of_first_box {
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.second_element_of_second_child_of_first_box i {
+  font-size: 20px;
+}
+
+/* second child ka second child element css */
+.second_one_of_three_elements_of_second_child_of_first_box,
+.third_one_of_three_elements_of_second_child_of_first_box {
+  border-radius: 20px;
+  background-color: #232323;
+  color: #b1b1b1;
+  display: flex;
+  padding: 20px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.white_btn {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+  width: 50%;
+  font-weight: 500;
+}
+
+.second_one_of_three_elements_of_second_child_of_first_box h5,
+.third_one_of_three_elements_of_second_child_of_first_box h5 {
+  font-size: 18px;
+}
+.second_one_of_three_elements_of_second_child_of_first_box p,
+.third_one_of_three_elements_of_second_child_of_first_box p {
+  font-size: 12px;
+}
+
+/* the next big container (contains everything) -> the second right side box contains other songs cards and all */
+::-webkit-scrollbar {
+  display: none;
+}
+.second_box {
+  flex: 1;
+  background-color: rgb(16, 16, 16);
+  overflow: auto;
+  padding: 15px;
+  scrollbar-width: none;
+}
+.btn_class {
+  background-color: white;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.upper_nav_values {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right_side_values button,
+.right_side_values i {
+  margin-left: 5px;
+}
+button + i {
+  font-size: 25px;
+  height: 100%;
+}
+button > i {
+  color: white;
+}
+#make_me_white {
+  color: white;
+}
+
+/* the song container to show cards in container */
+.song_cards_container {
+  width: 100%;
+  padding: 20px;
+  color: white;
+}
+.song_cards_container h2 {
+  font-size: 35px;
+  margin: 40px 0;
+}
+
+.arrange_the_song_card_in_order {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.song_card {
+  width: 230px;
+  height: 350px;
+  background-color: rgb(35, 35, 35);
+  margin: 20px;
+  padding: 15px;
+  border-radius: 20px;
+}
+.song_card img {
+  width: 100%;
+}
+.song_card h4 {
+  margin: 15px 0;
+}
+
+/* last container to play songs in the bottom of the screen */
+.bottom_song_container {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 13px;
+}
+
+.flex_container_for_music_icons {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+  justify-content: baseline;
+  padding-bottom: 5px;
+}
+
+.music_player_icon {
+  width: 20px;
+  color: white;
+}
+
+#player1,
+#player5 {
+  width: 17px;
+  height: 17px;
+}
+
+#player2,
+#player4 {
+  width: 18px;
+  height: 18px;
+}
+
+#player3 {
+  width: 37px;
+  height: 37px;
+  position: relative;
+  top: -10px;
+}
+
+/* slider to make it more beautiful while playing songs */
+
+.music_player {
+  width: 100vw;
+}
+.slidecontainer {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 15px;
+  color: white;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
+}
+/* music player line ends here */
+
+/* responsiveness */
+@media screen and (max-width: 970px) {
+  .white_btn {
+    width: 100%;
+  }
+
+  .first_box {
+    display: none;
+    width: 100%;
+  }
+  #hamburger_menu {
+    display: block;
+  }
+  .upper_nav_values {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .flex_container_for_music_icons {
+    width: 80%;
+  }
+  .slidecontainer {
+    width: 80%;
+  }
+}

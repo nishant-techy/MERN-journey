@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <!-- bootstrap -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- external css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font-awesome css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- the main container divider -->
+    <div id="main_bg_container">
+      <input type="checkbox" id="disappear_checkbox" />
+      <label for="disappear_checkbox" id="hamburger_menu"
+        ><i class="fa-solid fa-bars"></i
+      ></label>
+      <div class="first_box">
+        <div class="first_child_of_first_box">
+          <!-- first element (home) -->
+          <div class="first_element_of_first_child_of_first_box">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </div>
+          <!-- second element (search) -->
+          <div class="second_element_of_first_child_of_first_box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span>
+          </div>
+        </div>
+
+        <!-- the library, create playlist and all these content -->
+        <div class="second_child_of_first_box">
+          <div class="first_one_of_three_elements_of_second_child_of_first_box">
+            <div class="first_element_of_second_child_of_first_box">
+              <img src="./assets/library_icon.png" alt="library_icon" />
+              <span>Your library</span>
+            </div>
+            <div class="second_element_of_second_child_of_first_box">
+              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <!-- first child element end here -->
+          </div>
+
+          <!-- second child element start here -->
+          <div
+            class="second_one_of_three_elements_of_second_child_of_first_box"
+          >
+            <h5>Create your first playlist</h5>
+            <p>It's easy, we'll help you</p>
+            <button class="white_btn">Create playlist</button>
+            <!-- second child element ends here -->
+          </div>
+
+          <!-- third child element start here -->
+          <div class="third_one_of_three_elements_of_second_child_of_first_box">
+            <h5>let's find some podcasts to follow</h5>
+            <p>we'll keep you updated on new episodes</p>
+            <button class="white_btn">Browse Podcasts</button>
+            <!-- third child element ends here -->
+          </div>
+        </div>
+        <!-- third box ended here -->
+      </div>
+
+      <!-- second majority content box -> contains music cards and all -->
+      <div class="second_box">
+        <!-- first div which have the upper values -->
+        <div class="upper_nav_values">
+          <!-- left side things -->
+          <div class="left_side_values">
+            <img src="./assets/backward_icon.png" alt="backward_icon" />
+            <img src="./assets/forward_icon.png" alt="forward_icon" />
+          </div>
+          <!-- right side things -->
+          <div class="right_side_values">
+            <button class="btn_class">Explore Premium</button>
+            <button
+              class="btn_class"
+              style="background-color: black; color: white"
+            >
+              <i class="fa-solid fa-circle-arrow-down"></i>Install App
+            </button>
+            <i class="fa-solid fa-user-plus" id="make_me_white"></i>
+          </div>
+          <!-- first div which have the upper values ends here -->
+        </div>
+
+        <!-- the main container where the cards of songs appear -->
+        <div class="song_cards_container">
+          <!-- recently played section -->
+          <h2>Recently Played</h2>
+
+          <!-- first - arranging cards in order div -->
+          <div class="arrange_the_song_card_in_order">
+            <div class="song_card">
+              <img src="./assets/card1img.jpeg" alt="card 1 image for song" />
+              <h4>Top 50 - Global</h4>
+              <p>Your daily updates of the most played tracks</p>
+            </div>
+          </div>
+          <br />
+
+          <!-- second - Trending now near you -->
+          <h2>Trending now near you</h2>
+
+          <!-- arranging cards in order div -->
+          <div class="arrange_the_song_card_in_order">
+            <!-- first song card -->
+            <div class="song_card">
+              <img src="./assets/card2img.jpeg" alt="card 2 image for song" />
+              <h4>Indie India</h4>
+              <p>Best of India Indie</p>
+            </div>
+
+            <!-- second song card -->
+            <div class="song_card">
+              <img src="./assets/card6img.jpeg" alt="card 3 image for song" />
+              <h4>Indie India</h4>
+              <p>Best of India Indie</p>
+            </div>
+
+            <!-- third song card -->
+            <div class="song_card">
+              <img src="./assets/card3img.jpeg" alt="card 4 image for song" />
+              <h4>Indie India</h4>
+              <p>Best of India Indie</p>
+            </div>
+
+            <!-- fourth song card -->
+            <div class="song_card">
+              <img src="./assets/card4img.jpeg" alt="card 5 image for song" />
+              <h4>Indie India</h4>
+              <p>Best of India Indie</p>
+            </div>
+
+            <!-- fifth song card -->
+            <div class="song_card">
+              <img src="./assets/card5img.jpeg" alt="card 6 image for song" />
+              <h4>Indie India</h4>
+              <p>Best of India Indie</p>
+            </div>
+          </div>
+
+          <!-- third - Featured charts -->
+          <h2>Featured charts</h2>
+
+          <!-- arranging cards in order div -->
+          <div class="arrange_the_song_card_in_order">
+            <!-- first song card -->
+            <div class="song_card">
+              <img src="./assets/card1img.jpeg" alt="card 2 image for song" />
+              <h4>Indie India</h4>
+              <p>Best of India Indie</p>
+            </div>
+
+            <!-- second song card -->
+            <div class="song_card">
+              <img src="./assets/card5img.jpeg" alt="card 3 image for song" />
+              <h4>Indie India</h4>
+              <p>Best of India Indie</p>
+            </div>
+
+            <!-- third song card -->
+            <div class="song_card">
+              <img src="./assets/card6img.jpeg" alt="card 4 image for song" />
+              <h4>Indie India</h4>
+              <p>Best of India Indie</p>
+            </div>
+
+            <!-- fourth song card -->
+            <div class="song_card">
+              <img src="./assets/card1img.jpeg" alt="card 5 image for song" />
+              <h4>Indie India</h4>
+              <p>Best of India Indie</p>
+            </div>
+
+            <!-- fifth song card -->
+            <div class="song_card">
+              <img src="./assets/card5img.jpeg" alt="card 6 image for song" />
+              <h4>Indie India</h4>
+              <p>Best of India Indie</p>
+            </div>
+          </div>
+          <!-- the song container ends here -->
+          <br /><br /><br /><br />
+          <hr />
+        </div>
+        <!-- the main container (the whole second one) ends here -->
+      </div>
+
+      <!-- the last song container (which helps to play song and show which song is exactly playing) -->
+      <div class="bottom_song_container">
+        <div class="flex_container_for_music_icons">
+          <img
+            src="./assets/player_icon1.png"
+            class="music_player_icon"
+            id="player1"
+            alt="player icon"
+          />
+          <img
+            src="./assets/player_icon2.png"
+            class="music_player_icon"
+            id="player2"
+            alt="backward icon"
+          />
+          <img
+            src="./assets/player_icon3.png"
+            class="music_player_icon"
+            id="player3"
+            alt="play"
+          />
+          <img
+            src="./assets/player_icon4.png"
+            class="music_player_icon"
+            id="player4"
+            alt="forward icon"
+          />
+          <img
+            src="./assets/player_icon5.png"
+            class="music_player_icon"
+            id="player5"
+            alt="player"
+          />
+          <!-- icons container ends here -->
+        </div>
+
+        <!-- music player range line -->
+        <div class="music_player">
+          <div class="slidecontainer">
+            <span id="demo"></span>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="17"
+              class="slider"
+              id="myRange"
+            />
+            <span>3:49</span>
+          </div>
+          <!-- music player line ends here -->
+        </div>
+        <!-- bottom song container ends here -->
+      </div>
+      <!-- main black background ends here -->
+    </div>
+
+    <!-- script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+
+      var totalDuration = 229; // 3 min 49 sec = 229 seconds
+
+      function formatTime(seconds) {
+        var mins = Math.floor(seconds / 60);
+        var secs = seconds % 60;
+
+        if (secs < 10) secs = "0" + secs;
+        if (mins < 10) mins = "0" + mins;
+
+        return mins + ":" + secs;
+      }
+
+      // initial value
+      var currentTime = Math.floor((slider.value / 100) * totalDuration);
+      output.innerHTML = formatTime(currentTime);
+
+      slider.oninput = function () {
+        var currentTime = Math.floor((this.value / 100) * totalDuration);
+        output.innerHTML = formatTime(currentTime);
+      };
+    </script>
+  </body>
+</html>
