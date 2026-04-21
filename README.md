@@ -107,4 +107,5 @@ If you're also learning MERN, feel free to explore, fork, or contribute!
 ## Daily commit via - 
 * git add .
 * git commit -m "Added new feature / notes"
+* git pull --rebase   # only if needed (when your local data stay behind from the server)
 * git push
