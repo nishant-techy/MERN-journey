@@ -33,12 +33,16 @@
       <div class="first_box">
         <div class="first_child_of_first_box">
           <!-- first element (home) -->
-          <div class="first_element_of_first_child_of_first_box">
+          <div
+            class="first_element_of_first_child_of_first_box opacity_changer"
+          >
             <i class="fa-solid fa-house"></i>
             <span>Home</span>
           </div>
           <!-- second element (search) -->
-          <div class="second_element_of_first_child_of_first_box">
+          <div
+            class="second_element_of_first_child_of_first_box opacity_changer"
+          >
             <i class="fa-solid fa-magnifying-glass"></i>
             <span>Search</span>
           </div>
@@ -47,13 +51,15 @@
         <!-- the library, create playlist and all these content -->
         <div class="second_child_of_first_box">
           <div class="first_one_of_three_elements_of_second_child_of_first_box">
-            <div class="first_element_of_second_child_of_first_box">
+            <div
+              class="first_element_of_second_child_of_first_box opacity_changer"
+            >
               <img src="./assets/library_icon.png" alt="library_icon" />
               <span>Your library</span>
             </div>
             <div class="second_element_of_second_child_of_first_box">
-              <i class="fa-solid fa-plus"></i>
-              <i class="fa-solid fa-arrow-right"></i>
+              <i class="fa-solid fa-plus opacity_changer"></i>
+              <i class="fa-solid fa-arrow-right opacity_changer"></i>
             </div>
             <!-- first child element end here -->
           </div>
@@ -85,19 +91,30 @@
         <div class="upper_nav_values">
           <!-- left side things -->
           <div class="left_side_values">
-            <img src="./assets/backward_icon.png" alt="backward_icon" />
-            <img src="./assets/forward_icon.png" alt="forward_icon" />
+            <img
+              src="./assets/backward_icon.png"
+              alt="backward_icon"
+              class="opacity_changer"
+            />
+            <img
+              src="./assets/forward_icon.png"
+              alt="forward_icon"
+              class="opacity_changer let_me_handle_it"
+            />
           </div>
           <!-- right side things -->
           <div class="right_side_values">
-            <button class="btn_class">Explore Premium</button>
+            <button class="btn_class let_me_handle_it">Explore Premium</button>
             <button
               class="btn_class"
               style="background-color: black; color: white"
             >
               <i class="fa-solid fa-circle-arrow-down"></i>Install App
             </button>
-            <i class="fa-solid fa-user-plus" id="make_me_white"></i>
+            <i
+              class="fa-solid fa-user-plus opacity_changer"
+              id="make_me_white"
+            ></i>
           </div>
           <!-- first div which have the upper values ends here -->
         </div>
@@ -201,62 +218,111 @@
           <!-- the song container ends here -->
           <br /><br /><br /><br />
           <hr />
+          <br /><br /><br /><br />
         </div>
         <!-- the main container (the whole second one) ends here -->
       </div>
 
       <!-- the last song container (which helps to play song and show which song is exactly playing) -->
       <div class="bottom_song_container">
-        <div class="flex_container_for_music_icons">
-          <img
-            src="./assets/player_icon1.png"
-            class="music_player_icon"
-            id="player1"
-            alt="player icon"
-          />
-          <img
-            src="./assets/player_icon2.png"
-            class="music_player_icon"
-            id="player2"
-            alt="backward icon"
-          />
-          <img
-            src="./assets/player_icon3.png"
-            class="music_player_icon"
-            id="player3"
-            alt="play"
-          />
-          <img
-            src="./assets/player_icon4.png"
-            class="music_player_icon"
-            id="player4"
-            alt="forward icon"
-          />
-          <img
-            src="./assets/player_icon5.png"
-            class="music_player_icon"
-            id="player5"
-            alt="player"
-          />
-          <!-- icons container ends here -->
+        <!-- 1st - music name container -->
+        <div class="details_of_the_song">
+          <div class="first_container_of_details">
+            <div class="image_container">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b27395ca6a9b4083a86c149934ae"
+                alt="album cover"
+              />
+            </div>
+            <div class="name_of_the_song">
+              <h5>Daylight</h5>
+              <p>David Kushnar</p>
+            </div>
+          </div>
+          <div class="second_container_of_details">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-credit-card"></i>
+          </div>
         </div>
 
-        <!-- music player range line -->
-        <div class="music_player">
-          <div class="slidecontainer">
-            <span id="demo"></span>
+        <!-- 2nd - music player container -->
+        <div class="music_player_bar">
+          <div class="flex_container_for_music_icons">
+            <img
+              src="./assets/player_icon1.png"
+              class="music_player_icon opacity_changer"
+              id="player1"
+              alt="player icon"
+            />
+            <img
+              src="./assets/player_icon2.png"
+              class="music_player_icon opacity_changer"
+              id="player2"
+              alt="backward icon"
+            />
+            <img
+              src="./assets/player_icon3.png"
+              class="music_player_icon"
+              id="player3"
+              alt="play"
+              style="cursor: pointer"
+            />
+            <img
+              src="./assets/player_icon4.png"
+              class="music_player_icon opacity_changer"
+              id="player4"
+              alt="forward icon"
+            />
+            <img
+              src="./assets/player_icon5.png"
+              class="music_player_icon opacity_changer"
+              id="player5"
+              alt="player"
+            />
+            <!-- icons container ends here -->
+          </div>
+
+          <!-- music player range line -->
+          <div class="music_player">
+            <div class="slidecontainer">
+              <span id="demo"></span>
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value="17"
+                class="slider"
+                id="myRange"
+              />
+              <span>3:49</span>
+            </div>
+          </div>
+          <!-- music player line ends here -->
+        </div>
+
+        <!-- 3rd - icons container  -->
+        <div class="song_icons_container">
+          <!-- all icons in that container -->
+          <div class="icons">
+            <i class="fa-solid fa-file-video"></i>
+            <i class="fa-solid fa-microphone"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-traffic-light"></i>
+          </div>
+          <!-- range input to adjust the volume should be in that container -->
+          <div class="range">
+            <i class="fa-solid fa-volume-off"></i>
             <input
               type="range"
               min="1"
               max="100"
-              value="17"
+              value="50"
               class="slider"
               id="myRange"
             />
-            <span>3:49</span>
           </div>
-          <!-- music player line ends here -->
         </div>
+
         <!-- bottom song container ends here -->
       </div>
       <!-- main black background ends here -->

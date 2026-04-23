@@ -20,7 +20,8 @@ body {
 /* first element starts here -> the first left side box contains home, search and all */
 .first_box {
   width: 25%;
-  color: #b1b1b1;
+  /* color: #b1b1b1; */
+  color: white;
   padding: 12px;
   /* margin: 0 15px; */
   display: flex;
@@ -77,12 +78,14 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
 }
 
 .first_element_of_second_child_of_first_box {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
 }
 .first_element_of_second_child_of_first_box img {
   height: 20px;
@@ -106,7 +109,8 @@ body {
 .third_one_of_three_elements_of_second_child_of_first_box {
   border-radius: 20px;
   background-color: #232323;
-  color: #b1b1b1;
+  /* color: #b1b1b1; */
+  color: white;
   display: flex;
   padding: 20px;
   margin-top: 30px;
@@ -213,20 +217,68 @@ button > i {
   width: 100%;
   background-color: black;
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
   color: white;
-  padding: 13px;
+  padding: 13px 10px 0 10px;
+  align-items: center;
+}
+
+/* 1st - song details */
+.details_of_the_song {
+  width: 25%;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first_container_of_details {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.first_container_of_details .name_of_the_song h5 {
+  font-size: 1.2rem;
+}
+.first_container_of_details .name_of_the_song p {
+  font-size: 0.85rem;
+}
+.image_container {
+  width: 80px;
+  margin: 0 1rem 0 0;
+}
+.first_container_of_details img {
+  width: 100%;
+}
+.name_of_the_song {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.second_container_of_details {
+  display: flex;
+  flex-direction: row;
+  margin-right: 0.5rem;
+}
+.second_container_of_details i {
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+
+/* 2nd - music player bar */
+.music_player_bar {
+  width: 50%;
+  padding: 0 1rem;
 }
 
 .flex_container_for_music_icons {
   display: flex;
   justify-content: space-around;
-  width: 25%;
-  justify-content: baseline;
+  width: 60%;
   padding-bottom: 5px;
+  margin: 0 auto;
 }
 
 .music_player_icon {
@@ -254,12 +306,11 @@ button > i {
 }
 
 /* slider to make it more beautiful while playing songs */
-
 .music_player {
-  width: 100vw;
+  width: 80%;
+  margin: 0 auto;
 }
 .slidecontainer {
-  width: 40%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -304,6 +355,51 @@ button > i {
 }
 /* music player line ends here */
 
+/* 3rd - song component (extra options) */
+.song_icons_container {
+  width: 25%;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+i {
+  opacity: 0.7;
+}
+i:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.icons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.3rem;
+}
+.range {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+/* opacity change whenever hover */
+.opacity_changer {
+  opacity: 0.7;
+}
+.opacity_changer:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
 /* responsiveness */
 @media screen and (max-width: 970px) {
   .white_btn {
@@ -317,14 +413,36 @@ button > i {
   #hamburger_menu {
     display: block;
   }
-  .upper_nav_values {
-    flex-direction: column;
-    gap: 20px;
-  }
+
   .flex_container_for_music_icons {
     width: 80%;
   }
   .slidecontainer {
     width: 80%;
+  }
+  .let_me_handle_it {
+    display: none;
+  }
+
+  /* 1st - song details */
+  .details_of_the_song {
+    display: none;
+  }
+
+  /* 2nd - music player bar */
+  .music_player_bar {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .flex_container_for_music_icons {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .music_player {
+    width: 100%;
+  }
+  /* 3rd - song component (extra options) */
+  .song_icons_container {
+    display: none;
   }
 }
