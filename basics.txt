@@ -796,3 +796,34 @@ and for the "num", the value is also 7, because it was 6 and incremented by 1
 
 
 
+*Undefined*
+A variable that not assigned a value is of type undefined.
+eg: 
+Entering in console:
+let a; -------> undefined
+a -------------> undefined
+
+*Null*
+The null value represent the intentional absence of any object value. 
+eg: 
+Entering in console: 
+let a = null; -------------> undefined
+a --------------> null 
+
+
+null ek value jo maine apne aap se di h ki ye chij khali na rhe aur iski value abhi mujhe nhi pta to garbage value bhrne se acha usko "null" krdiya
+
+but undefined me value hi nhi pta machine ko, usko smjh hi nhi aa rha ki value h kya, isiliye undefined 
+
+
+
+
+
+
+
+
+
+
+
+
+
