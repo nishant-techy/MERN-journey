@@ -1,0 +1,798 @@
+*Display:flex;*
+
+align-items:center;        sending the object from top to bottom (vertical)
+align-items:start;
+
+
+justify-content:center;
+justify-content:flex-end;      sending the object from left to right (horizontal)
+
+
+
+
+
+
+
+
+
+*Align-items property*
+
+
+The align-content property modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines. Property values:
+center lines stretch to take up the remaining space.
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+flex-start lines are packed toward the start of the flex container.
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+flex-end lines are packed toward the end of the flex container.
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+space-between lines are evenly distributed in the flex container.
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+space-around lines are evenly distributed in the flex container, with half-size spaces on either end.
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+*GRID*
+/* it will make the container repeating, like with the same size and distribute it to sizes */
+grid-template-rows:repeat(3, 1fr);       
+grid-template-columns:repeat(4, 1fr);
+
+
+
+
+
+
+
+
+
+
+/* *Animation Shorthand* */
+animation: widthAnimate 3s ease-in 0s infinite alternate;
+animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction (the properties really applied in shorthand)
+
+
+@keyframes widthAnimate (- name of the animation) {
+	from {
+		width:30px;
+	}
+	to {
+		width:90px;
+	}
+}
+
+
+or 
+
+@keyframes widthAnimate {
+	0% {
+		font-size:10px;
+	}
+	50% {
+		font-size:50px;
+	}
+	100% {
+		font-size:100px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+*Z-index*
+it decides the stack level of the elements, means it decides the layer which element is going to show on the top layer and which one goes to the downside. 
+
+overlapping elements with a larger z-index cover those with a smaller one. 
+z-index:auto / 0; (the default value is 0 or auto for every element). 
+
+z-index:1/2/3.... (how large positive value you provide, it'll show as that much upper level compared to other related elements)
+
+and the position: static / default (if the position is static or default, the z-index property will not be applied, it must be something else to come into action)
+
+
+
+
+
+
+
+
+
+
+*POSITIONS*
+static - top/left/right/bottom (nothing works here)
+relative
+absolute - completely remove the normal flow
+fixed - never leave its space
+sticky - relative at first → When you scroll to a limit → it sticks
+_eg: Header scrolls normally_
+When it reaches top of screen → it sticks there
+👉 top: 0 is REQUIRED
+Without it, sticky won’t work
+
+
+and 
+*Core idea of position: relative*
+👉 It does 2 things at the same time:
+1. It stays in normal flow
+2. It can move visually using top/left/right/bottom
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Selector	Meaning
+.logo > a	Direct child only
+.logo a	Any descendant (any depth)
+.logo + a	Adjacent sibling → the next <a> right after .logo
+.logo ~ a	General sibling → all <a> elements after .logo (same parent)
+
+
+
+
+
+
+
+
+
+
+
+
+*Bootstrap*
+
+_🧠 Core idea (super important)_
+
+Bootstrap grid = 12 columns system
+
+Think:
+|----|----|----|------|-----|-----|-----|----|-----|-----|-----|-------|
+ 1    2    3    4    5    6    7    8    9   10   11   12
+Everything is about how many columns you occupy out of 12.
+
+🔍 What g-col-6 means
+g-col-6 = take 6 out of 12 columns
+
+👉 That’s 50% width
+
+So each div is:
+Half the container width
+
+
+
+<!-- so, coding would be like -->
+<div class="grid text-center">
+  <div class="g-col-12 g-col-md-6 g-col-lg-4">Free</div>
+  <div class="g-col-12 g-col-md-6 g-col-lg-4">Pro</div>
+  <div class="g-col-12 g-col-md-12 g-col-lg-4">Enterprise</div>
+</div>
+
+
+
+when there's nothing simply 
+g-col-12, it's for small screen sizes (<768px), 
+
+and for medium size (>768px):
+g-col-md-6, it's for medium screen sizes, 
+
+and for large size (>992px): 
+g-col-lg-4, it's for large screen sizes
+
+
+
+
+
+
+🔹 On small screens (<768px)
+Only this applies:
+g-col-4
+
+Each div = 4/12 = 33%
+
+Layout:
+[ 33% ][ 33% ][ 33% ]
+👉 All 3 fit in one row
+
+
+
+
+🔹 On medium screens (≥768px)
+
+Now g-col-md-* overrides:
+1st div → g-col-md-6 → 50%
+2nd div → g-col-md-6 → 50%
+3rd div → g-col-md-12 → 100%
+
+Layout becomes:
+[ 50% ][ 50% ]
+[     100%     ]
+
+👉 First row: 2 items
+👉 Second row: last item takes full width
+
+
+
+
+Mobile:
+[ A ][ B ][ C ]
+
+Tablet/Desktop:
+[ A ][ B ]
+[    C    ]
+
+
+
+
+
+
+
+
+
+
+
+
+*Bootstrap*
+
+🧠 Core idea (super important)
+
+Bootstrap grid = 12 columns system
+
+Think:
+
+|----|----|----|------|-----|-----|-----|----|-----|-----|-----|-------|
+  1    2    3    4    5    6    7    8    9   10   11   12
+Everything is about how many columns you occupy out of 12.
+
+🔍 What col-6 means
+col-6 = take 6 out of 12 columns
+
+👉 That’s 50% width
+
+So each div is:
+Half the container width
+
+
+
+
+<!-- so, coding would be like -->
+<div class="container text-center">
+  <h1>Pricing</h1>
+  <p>Please checkout our most effective payment models</p>
+
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4">Free</div>
+    <div class="col-12 col-md-6 col-lg-4">Pro</div>
+    <div class="col-12 col-md-12 col-lg-4">Enterprise</div>
+  </div>
+</div>
+
+
+When there's nothing (default):
+col-12 → for small screen sizes (<768px)
+
+For medium size (≥768px):
+col-md-6 → medium screens
+
+For large size (≥992px):
+col-lg-4 → large screens
+
+
+
+
+
+
+
+
+🔹 On small screens (<768px)
+
+Only this applies:
+col-12
+Each div = 12/12 = 100%
+
+Layout:
+[ Free ]
+[ Pro ]
+[ Enterprise ]
+
+
+
+
+🔹 On medium screens (≥768px)
+
+Now col-md-* overrides:
+1st div → col-md-6 → 50%
+2nd div → col-md-6 → 50%
+3rd div → col-md-12 → 100%
+
+Layout becomes:
+[ Free ][ Pro ]
+[   Enterprise   ]
+
+
+
+
+
+🔹 On large screens (≥992px)
+
+Now col-lg-* applies:
+All → col-lg-4 → 33%
+
+Layout:
+[ Free ][ Pro ][ Enterprise ]
+
+
+
+
+
+🎯 Final visualization
+Mobile:
+[ A ]
+[ B ]
+[ C ]
+
+Tablet:
+[ A ][ B ]
+[    C    ]
+
+Desktop:
+[ A ][ B ][ C ]
+
+
+
+🧠 Key rule to remember
+
+Bootstrap is mobile-first
+That means:
+col-12 → default (mobile)
+col-md-* → overrides on medium
+col-lg-* → overrides on large
+
+⚡ Bonus mental trick
+
+Always think:
+12 → full width
+6 → half
+4 → one-third
+👉 And rows automatically wrap when total exceeds 12.
+
+
+
+
+
+
+
+
+
+
+
+Path	                       Meaning
+image.png	            same folder
+./image.png	            same folder (explicit) [Look in the SAME folder as this file]
+assets/image.png    inside folder
+../image.png	             one level up
+/assets/image.png   from root
+
+
+
+1)    ./ → current folder
+<img src="./image.png">
+
+👉 Means:
+“Look in the SAME folder as this file”
+
+
+
+
+
+2)    / → root folder
+<img src="/assets/image.png">
+
+👉 Means:
+“Start from the ROOT of the project”
+
+⚠️ Important:
+In plain HTML → root = your project folder
+In frameworks (React, Express) → root = public folder / server root
+
+
+
+
+
+
+
+
+
+
+Checkbox button - multiple box check possible ✅✅✅✅ 
+
+Radio button - single option you have to choose from multiple options ✅
+
+Radio buttons me hmesha name = "whatever" but sabhi me name = jo bhi ho same hona chaiye tabhi wo group ho payenge 
+Otherwise, how would the browser know which elements are supposed to be in that group..
+
+And also give value in those input tags, so, whenever it will send and pass somewhere then that can show it (where it is supposed to display) (for whomsoever may concern)
+
+
+
+
+
+
+
+
+
+
+
+Line-height: normal (normal ho jayega jo default hota h)
+
+Line-height: 2.5 (it means it'll be considered as the (2.5 × of the normal size), yes without any px, em, rem or any other property, it's simply written like that)
+
+
+
+
+
+
+
+
+
+
+
+*Font size units in css*
+
+Absolute               Relative 
+    *Px*                            *%*
+    Pt                             *em*
+    Pc                            *rem*
+    Cm                           ch 
+    mm                          vh
+    in                             vw 
+
+              etc, etc...
+
+
+*96px = 1 inch* (most important and useful)
+
+72pt = 1 inch 
+
+12pt = 1 pc
+
+
+*em* means the size defined in the relation of current size 
+
+*rem* means the size defined in the relation of your parents block size
+
+
+
+
+
+
+
+
+
+
+
+
+*SPECIFICITY*
+
+Id > class, attribute & pseudo-class > element & pseudo element 
+
+
+h1, h2, p, div, span, ul, li, a, button
+Are the examples of elements 
+
+
+
+
+Pseudo elements (also least priority, same level as elements) 
+::before
+::after
+::first-letter
+::first-line
+::selection
+
+
+
+
+Class selection: 
+.box
+.container
+.title
+.active
+
+
+
+
+
+Target elements based on attributes.
+
+Examples:
+[type="text"]
+[href]
+[disabled]
+CSS:
+input[type="text"] {
+  border: 1px solid black;
+}
+
+
+
+Pseudo class: 
+:hover
+:focus
+:active
+:first-child
+:last-child
+:nth-child()
+
+
+
+
+
+ID selectors (highest specificity)
+
+Examples:
+#header
+#main
+#logo
+
+
+
+
+
+
+
+
+
+
+So, if we have to put 3 divs in the same single line, we have to use 
+*Display: inline-block* property
+
+
+
+
+
+
+
+
+
+
+Opacity will apply on all of the elements, but alpha value that will only apply on the color, it means the visibility of the thing depends upon the property we use, 
+
+
+To baat ye h ki agr kisi element ki opacity hm bta rhe h to saare elements pe wo lg jayegi 
+
+But kisi ki RGB value me uski alpha value kam krdi hmne, like RGB(103, 10, 203, 0.6), to ye 0.6 opacity me iska color set ho jayega
+
+
+
+
+
+
+
+
+
+
+
+*SHORTHANDS* 
+
+margin: 10px 4px 6px 9px;
+
+Transition: property name | duration | timing-funtion | delay
+transition: margin-top 2s ease-in-out 0.2s;
+
+
+
+
+
+
+
+
+
+
+
+
+
+Box-shadow: 2px 2px 10px green;
+
+First 2px is x-offset 
+Second 2px is y-offset 
+Mtlb ki x-axis aur y-axis se kitni dur hogi shadow 
+
+Then 10px is blur-radius
+Mtlb kitne me faile gyi koi chij 
+
+Green is the color of the shadow..
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box2 {
+  transform: translate(200px, 200px) rotate(90deg) scale(1.2) skew(10deg);
+}
+Key points:
+You can chain many transform functions:
+translate(), rotate(), scale(), skew(), etc.
+
+They are applied from left to right (order matters ⚠️)
+
+
+
+
+
+Move group horizontally → justify-content
+Move group vertically → align-items
+Move rows spacing → align-content
+Move individual item → align-self
+
+| Property        | Applies To | Axis  | Scope       |
+| --------------- | ---------- | ----- | ----------- |
+| justify-content | container  | main  | all items   |
+| align-items     | container  | cross | all items   |
+| align-content   | container  | cross | rows/lines  |
+| justify-items   | container  | main  | each item   |
+| align-self      | item       | cross | single item |
+| justify-self    | item       | main  | single item |
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jusify-content:baseline (it'll make the text into one line)
+no matter what is the size and all, it just makes the written text in the single straight line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*CONSOLE*
+
+it works with the method of REPL:
+Read - evaluate - print - loop
+
+Read: it'll read the value
+Evaluate: it'll evaluate the symbol or whatever calculations is required 
+print: it'll print the value of whatever evaluated 
+loop: and it goes on and on
+
+
+
+
+
+
+
+
+
+
+
+-------------------- *Unary Operator* ---------------------------
+The operator which have the concept of 
+a++ (post increment), 
+++a (pre increment)
+
+a-- (post decrement),
+--a (pre decrement)
+
+so, the increment and decrement thing, also affect the value of that own number, 
+it means if the value of 
+_a = 10_;
+and if I do 
+a++, then even the immediately returned value still 10, but eventually the value updated, and 
+next time you print the value of 
+_a = 11_ now
+
+
+and for _++a_, the increment happened before then we can use it later, 
+_a = 5;_
+++a ---> 
+
+it updated instantly and print the value
+_a = 6_,  and if we print the value later, it would still be
+a = 6
+
+
+
+
+
+---------------- Practice Question -----------------
+
+*Value of each variable in each line of code?*
+let num = 5; 
+let newNum = num++; 
+newNum = ++num;
+
+
+//first line - num = 5, normal
+
+//second line - newNum = 5 (because value didn't increment at that point)
+and num = 6, (because it incremented by 1)
+
+//third line - newNum = 7 (because num value is already 6 and ++num make it pre-increment, so, value of num increment by 1 before use, num value is assigned to newNum variable and it become 7)
+
+and for the "num", the value is also 7, because it was 6 and incremented by 1
+
+
+
+
+
+
+
+
+
+
+
+
+
