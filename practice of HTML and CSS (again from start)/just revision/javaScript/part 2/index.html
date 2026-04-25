@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript (Part - 2) Practice Question</title>
+  </head>
+  <body>
+    <!-- javaScript (part - 2) Practice Question -->
+    <script>
+      // Traffic light
+      let traffic_light = "yellow";
+      if (traffic_light == "red") {
+        console.log("Stop now!");
+      } else if (traffic_light == "yellow") {
+        console.log("Slow down");
+      } else if (traffic_light == "green") {
+        console.log("Let's Go!!");
+      } else {
+        console.log("Traffic light is broken!");
+      }
+
+      //   Practice Question - 2
+      // Popcorn question
+      let size = "xl";
+      if (size === "xl") {
+        console.log("size is xtra large, Price is rs.250 for that");
+      } else if (size === "l") {
+        console.log("size is large, Price is rs.200 for that");
+      } else if (size === "m") {
+        console.log("size is medium, Price is rs.100 for that");
+      } else if (size === "s") {
+        console.log("size is small, Price is rs.50 for that");
+      } else {
+        console.log("Popcorn counter is closed, Please find something online!");
+      }
+
+      //   Nested if-else Question
+      let marks = 81;
+      if (marks >= 33) {
+        if (marks >= 80) {
+          console.log("Grade: O");
+        } else if (marks < 80) {
+          console.log("Grade: A");
+        } else {
+          console.log("Better luck, next time!");
+        }
+      }
+
+      //   Practice Question
+      let str = "This is just an example";
+      if (str[0] === "a" && str.length > 3) {
+        console.log(`${str} is a good string`);
+      } else {
+        console.log(
+          "Doesn't fulfill all of the criteria to be the good string",
+        );
+      }
+
+      //   Practice Question
+      let num = 12;
+      if (num % 3 === 0 && (num + 1 == 15 || num - 1 == 11)) {
+        console.log("safe");
+      } else {
+        console.log("unsafe");
+      }
+    </script>
+  </body>
+</html>
