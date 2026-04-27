@@ -827,3 +827,59 @@ but undefined me value hi nhi pta machine ko, usko smjh hi nhi aa rha ki value h
 
 
 
+
+
+
+
+
+
+
+
+
+
+	*IndexOf*
+indexOf returns the first index of occurrence of some value in string or gives -1 if not found. 
+ya to jaha bhi jo chij hogi uska phla index value de dega ya agr nhi mili to -1 de dega.
+let sttrr = "Ilovecoding";
+
+sttrr.indexOf("love");   //1
+sttrr.indexOf("J");     // -1 (not found)
+sttrr.indexOf("o");     // 2 (sirf first position btayega wo, dubara bhi aage present h ya nhi ise mtlb nhi h
+
+
+
+
+       *SLICE*
+Return the part of the original string as a new string,
+usme generally starting and ending point btana hota hai phir wo ek slice kaat k de deta hai as a new string k roop me without touching the old file.
+
+
+let stri = "Ilovecoding";
+stri.slice(1, 5); //isme start 1st value se ho rha h aur ending 5th value pe ho rhi h lekin wo exclusive h mtlb 5th include nhi hota to value 1-4 tak rhegi, so, the extracted part is "love"
+
+
+
+
+       *REPLACE*
+replace search a value and once found it'll return a new string with value replaced. 
+let string = "Ilovecoding";
+string.replace("love", "do");
+----> "Idocoding"
+
+
+
+
+
+      *REPEAT*
+Returns a string with the number of copies of the string 
+let strig = "mango"
+strig.repeat(3);     //"mangomangomango"
+
+
+
+
+
+
+strings are immutable, means they cannot change once declare and cannot be updated or anything, we just get the new string after few operations.
+
+as the same way the arrays are mutable, which can be changed by indexing.
