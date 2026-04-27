@@ -104,8 +104,77 @@
         case 7:
           console.log("Today is Sunday");
           break;
-	default:
-	  console.log("day value is wrong");
+        default:
+          console.log("day value is wrong");
+      }
+
+      // JS (part-2) practice question sheet
+      // 1st question:
+      let num1 = 300;
+      if (num1 % 10 == 0) {
+        console.log("1). Good value");
+      } else {
+        console.log("2). Bad value");
+      }
+
+      // 2nd question:
+      // let age = window.prompt("Enter your age: ");
+      // let userName = window.prompt("Enter your name: ");
+      let age = 3;
+      let userName = "Remove me"; // uncomment the above ones whenever you have to see the real solution
+      // substituting the value
+      let replace = age;
+      age = userName;
+      userName = replace;
+      console.log(`${userName} is ${age} years old`);
+
+      // 3rd question
+      let quarter = 2;
+      switch (quarter) {
+        case 1:
+          console.log("January, February, March");
+          break;
+        case 2:
+          console.log("April, May, June");
+          break;
+        case 3:
+          console.log("July, August, September");
+          break;
+        case 4:
+          console.log("October, November, December");
+          break;
+        default:
+          console.log("Not a valid quarter");
+      }
+
+      // 4th question
+      let strr = "Any random string";
+      if ((strr[0] === "a" || strr[0] === "A") && strr.length > 5) {
+        console.log("That's a Golden string");
+      } else {
+        console.log("It is not a Golden string");
+      }
+
+      // 5th question
+      let a = 44;
+      let b = 90;
+      let c = 2;
+      if (a > b && a > c) {
+        console.log(`${a} is the biggest from ${b} and ${c}`);
+      } else if (b > c) {
+        console.log(`${b} is the biggest number from ${a} and ${c}`);
+      } else {
+        console.log(`${c} is the biggest number from ${a} and ${b}`);
+      }
+
+      // 6th question
+      let first = 353436;
+      let second = 336;
+      let aa = first % 10;
+      if (first % 10 === second % 10) {
+        console.log(`${aa} is in the last of both of the digits`);
+      } else {
+        console.log(`Last digit doesn't matched, try again`);
       }
     </script>
   </body>
