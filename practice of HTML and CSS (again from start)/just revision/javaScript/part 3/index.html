@@ -20,6 +20,55 @@
 
       //   3rd question
       console.log(name.slice(4, name.length).replace("l", "t"));
+
+      // Practice Question
+      let start = ["January", "July", "march", "august"];
+      // first method
+      start[0] = "July";
+      start[1] = "June";
+      console.log("first one: ");
+      console.log(start);
+
+      // second method
+      let start1 = ["January", "July", "march", "august"];
+      start1.shift();
+      start1.shift();
+      start1.unshift("June");
+      start1.unshift("July");
+      console.log("second one: ");
+      console.log(start1);
+
+      // third method
+      let start3 = ["January", "July", "march", "august"];
+      start3.shift();
+      start3.unshift("June");
+      start3[4] = start3[0];
+      start3[0] = start3[1];
+      start3[1] = start3[4];
+
+      start3.pop();
+      console.log("third one: ");
+      console.log(start3);
+
+      // slice method - it'll cut-out the piece of an array, and return it.
+      let arrays = ["Jan", "feb", "march"];
+      arrays.slice(1, 2); // it will return the feb
+      // slice return the new array with changes (original array stays unaffected)
+
+      // splice method - it is kinda all-in-one tool that gives you the functionality to remove/replace/add elements in places
+      // splice (start, delete, item0... itemN)
+      let colors = ["red", "yellow", "blue", "orange", "pink", "white"];
+      colors.splice(4); // pink, white
+      // splice array affect the original array and changes happened in original array directly
+
+      // practice question
+      let start5 = ["January", "July", "March", "August"];
+      start5.splice(0, 2, "J,uly", "June"); //start with 0th index and delete the two elements, and another the other two in those places
+
+      let lang = ["c, c++, html, javascript, python, java, c#, sql"];
+      lang.reverse();
+      console.log(lang);
+      console.log(lang.indexOf("javascript"));
     </script>
   </body>
 </html>
