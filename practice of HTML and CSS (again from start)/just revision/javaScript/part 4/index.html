@@ -3,22 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS - Part 3</title>
+    <title>JS - Part 4</title>
   </head>
   <body>
     <!-- practice question -->
+    <h1>Write "quit" to quit the game</h1>
     <script>
       // favorite movie program
-      let favMovie = "avatar";
-      let userInput = prompt("Enter the movie name: ");
-      userInput = userInput.toLowerCase();
-      while (userInput !== favMovie && userInput !== "quit") {
-        userInput = prompt("Wrong movie! Guess again: ");
+      setTimeout(() => {
+        let favMovie = "avatar";
+        let userInput = prompt("Enter the movie name: ");
         userInput = userInput.toLowerCase();
-        if (userInput == "quit") {
-          break;
+        while (userInput !== favMovie && userInput !== "quit") {
+          userInput = prompt("Wrong movie! Guess again: ");
+          userInput = userInput.toLowerCase();
+          if (userInput == "quit") {
+            break;
+          }
+          if (userInput === favMovie) {
+            alert("Congratulations, correct guess");
+          }
         }
-      }
+      }, 100);
     </script>
   </body>
 </html>
