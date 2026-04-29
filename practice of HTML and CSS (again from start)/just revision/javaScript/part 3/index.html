@@ -77,6 +77,66 @@
       ];
       console.log(lang.reverse());
       console.log(lang.indexOf("javascript"));
+
+      // practice question
+      let array = [
+        ["X", null, "O"],
+        [null, "X", null],
+        ["O", null, "X"],
+      ];
+      console.log(array);
+
+      // Assignment Questions
+      // Question - 1
+      let n = 5;
+      // let n = prompt("Enter the value: ");
+      let arr = [7, 9, 0, -3, -34, 6, 23, 66, 3, 22, 5, 11, 64, 26, 35, 77];
+
+      // I'm trying to put some conditions that if number is positive only, then this program will run otherwise
+      // not and then if given number is not bigger than the length of the array, kabhi number hi aesa de diya
+      // jitne elements hi nhi h array me to uss case me abhi new condions aayengi
+
+      if (n > 0) {
+        if (n < arr.length) {
+          console.log(arr.slice(0, n));
+        } else {
+          for (let i = 0; i < n; i++) {
+            arr.push(Math.floor(Math.random() * 100));
+          }
+          console.log(arr.slice(0, n));
+        }
+      } else {
+        console.log("Only +ve numbers (numbers > 0) allowed");
+      }
+
+      // Question - 2
+      console.log(arr.slice(-n)); //it will return the last elements of an array from the total length
+
+      // Question - 3
+      let str = " ";
+      if (str.length > 0) {
+        console.log("String is not empty");
+      } else {
+        console.log("String is empty");
+      }
+
+      // Question - 4
+      let stringg = "AsfsDGBds sds  AA sdgdFF   DR          ";
+      if (stringg.charAt(n) == stringg.charAt(n).toLowerCase()) {
+        console.log("Character is lowerCase");
+      } else {
+        console.log("Character is not lowerCase");
+      }
+
+      // Question - 5
+      console.log(stringg.trim());
+
+      // Question - 6
+      if (arr.includes(n)) {
+        console.log(`Yes, the element ${n} exists in an array list`);
+      } else {
+        console.log("No such element exist in that array");
+      }
     </script>
   </body>
 </html>
