@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS - Part 3</title>
+  </head>
+  <body>
+    <!-- practice question -->
+    <script>
+      // favorite movie program
+      let favMovie = "avatar";
+      let userInput = prompt("Enter the movie name: ");
+      userInput = userInput.toLowerCase();
+      while (userInput !== favMovie && userInput !== "quit") {
+        userInput = prompt("Wrong movie! Guess again: ");
+        userInput = userInput.toLowerCase();
+        if (userInput == "quit") {
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>
