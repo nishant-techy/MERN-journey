@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <!-- prompt input in To do App -->
+    <h2>Enter "list" to show all the tasks</h2>
+    <h2>Enter "add" to add a task</h2>
+    <h2>Enter "delete" to delete the task</h2>
+    <h2>Enter "quit" to quit todo</h2>
+
+    <script>
+      let tasks = [];
+      let userInput = prompt("Enter input to do some actions: ");
+      userInput = userInput.toLowerCase();
+      do {
+        if (userInput === "list") {
+          let i = 1;
+          for (let task of tasks) {
+            console.log(`${i}). ${task}`); //it will print all of the tasks, one by one
+            i++;
+          }
+        } else if (userInput === "add") {
+          let addMe = prompt("Enter the task to add in the task list: ");
+          tasks.push(addMe);
+        } else if (userInput === "delete") {
+          alert(
+            "Select the task number from the front of the task you want to delete and enter it.",
+          );
+          let i = 1;
+          for (let task of tasks) {
+            console.log(`${i}). ${task}`);
+            i++;
+          }
+
+          let count = prompt("How many tasks you want to delete: ");
+          for (let i = 1; i <= count; i++) {
+            let deleteMe = prompt("Enter the number to delete the task: ");
+            tasks.splice(deleteMe - 1, 1);
+          }
+        } else if (userInput === "quit") {
+          console.log("You quit the game");
+          break;
+        }
+
+        userInput = prompt("Enter task: ");
+        userInput = userInput.toLowerCase();
+      } while (true);
+    </script>
+  </body>
+</html>
