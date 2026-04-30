@@ -13,8 +13,20 @@
     <h2>Enter "quit" to quit todo</h2>
 
     <script>
-      let tasks = [];
-      let userInput = prompt("Enter input to do some actions: ");
+      let tasks = [
+        "1st",
+        "2nd",
+        "3rd",
+        "4th",
+        "5th",
+        "6th",
+        "7th",
+        "8th",
+        "9th",
+      ];
+      let userInput = prompt(
+        "Enter list/add/delete/quit to perform some actions: ",
+      );
       userInput = userInput.toLowerCase();
       do {
         if (userInput === "list") {
@@ -31,22 +43,33 @@
             "Select the task number from the front of the task you want to delete and enter it.",
           );
           let i = 1;
+          console.log("Here's the list: ");
           for (let task of tasks) {
             console.log(`${i}). ${task}`);
             i++;
           }
 
-          let count = prompt("How many tasks you want to delete: ");
-          for (let i = 1; i <= count; i++) {
-            let deleteMe = prompt("Enter the number to delete the task: ");
-            tasks.splice(deleteMe - 1, 1);
+          // let count = prompt("How many tasks you want to delete: ");
+          // for (let j = 1; j <= count; j++) {
+          let deleteMe = prompt("Enter the number to delete the task: ");
+          tasks.splice(deleteMe - 1, 1);
+          console.log("Deleted successfully");
+          let k = 1;
+          console.log("Here's the updated list: ");
+          for (let task of tasks) {
+            console.log(`${k}). ${task}`);
+            k++;
           }
+          // console.log(deleteMe);
+          // }
         } else if (userInput === "quit") {
           console.log("You quit the game");
           break;
         }
 
-        userInput = prompt("Enter task: ");
+        userInput = prompt(
+          "Enter list/add/delete/quit to perform some actions: ",
+        );
         userInput = userInput.toLowerCase();
       } while (true);
     </script>
