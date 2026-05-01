@@ -5,5 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment Question - JS (part-4)</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Question - 1 -->
+    <script>
+      let arr = [1, 2, 3, 4, 5, 6, 2, 3];
+      let num = 2;
+      let newArr = [];
+
+      for (let no of arr) {
+        if (no === num) {
+          continue;
+        } else {
+          newArr.push(no);
+        }
+      }
+      console.log(newArr);
+
+      // Question - 2
+      let number = 287512;
+      let numStr = number.toString(); // it will convert number to string
+      console.log(numStr.length);
+      numStr = parseInt(numStr);
+      console.log(typeof numStr); // it will convert string to number
+
+      // Question - 3
+      numStr = number.toString(); // it will convert number to string
+      let sum = 0;
+      for (strr of numStr) {
+        strr = parseInt(strr);
+        sum += strr;
+      }
+      console.log(sum);
+
+      // Question - 4 => Factorial!
+      let numb = 9;
+      let factorial = 1;
+      for (i = numb; i >= 1; i--) {
+        factorial *= i;
+      }
+      console.log(factorial);
+
+      // Question - 5 =>
+      let largest = 0;
+      let aarr = [3, 56, 32, 65.4, 6, 23, 11, 66, 43, 17, 99, 19];
+      for (let j = 0; j < aarr.length; j++) {
+        let first = aarr[j];
+        if (first > largest) {
+          largest = first;
+        }
+      }
+      console.log("The largest number in an array: ", largest);
+    </script>
+  </body>
 </html>
