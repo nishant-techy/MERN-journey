@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - (Part 6)</title>
+  </head>
+  <body>
+    <script>
+      //  Poem with functions
+      function poemPrint() {
+        let poem = `Twinkle Twinkle little star, 
+how i wonder what you are,
+up above the word so high,
+like a diamond in the sky.`;
+        console.log(poem);
+      }
+
+      poemPrint();
+
+      //   Generate the random number through the dice function
+      function rollingDice() {
+        let diceNo = Math.floor(Math.random() * 6) + 1;
+        console.log(diceNo);
+      }
+
+      rollingDice();
+      rollingDice();
+      rollingDice();
+      rollingDice();
+      rollingDice();
+      rollingDice();
+
+      //   Function that gives us the average of 3 numbers
+      function avgOfNum(a, b, c) {
+        let avg = (a + b + c) / 3;
+        console.log(`The average of the numbers ${a}, ${b}, ${c} is ${avg}`);
+      }
+
+      avgOfNum(4, 10, 13);
+
+      //   function that prints the table of a number
+      function printTable(n) {
+        for (let i = 1; i <= 10; i++) {
+          console.log(`${n} * ${i} = ${n * i}`);
+        }
+      }
+
+      printTable(2);
+
+      //   return the sum of the number from 1 to n
+      function sumOfNum(j) {
+        let sum = 0;
+        for (let i = 1; i <= j; i++) {
+          sum += i;
+        }
+        return sum; // we use the return because the return in the function hand-over me the value of function which i can re-use it anywhere, anytime after that
+      }
+
+      let result = sumOfNum(30); // now the sum value which is returned by the function stored in that result variable
+      console.log(`The sum of the numbers is ${result}`);
+    </script>
+  </body>
+</html>
