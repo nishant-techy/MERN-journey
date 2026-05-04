@@ -7,7 +7,78 @@
   </head>
   <body>
     <script>
-      // JavaScript (part - 7)
+      // 1st practice question
+      let square = (n) => {
+        console.log(n * n);
+      };
+
+      square(42);
+
+      //   2nd practice question
+      let id1 = setInterval(() => {
+        console.log("Hello world");
+      }, 2000);
+
+      setTimeout(() => {
+        clearInterval(id1);
+        console.log("I stopped it, successfully.");
+      }, 10000);
+
+      //  Assignment question
+      //   1st question
+
+      let sum = 0;
+      let avg = 0;
+
+      let arrayAverage = (arr) => {
+        for (let i of arr) {
+          sum += i;
+        }
+        console.log("The sum of those numbers are", sum);
+        avg = sum / arr.length;
+        console.log(`The average of these values are ${avg}`);
+      };
+
+      arrayAverage([
+        2, 35, 3, 22, 54, 21, 3, 66, 43, 17, 11, 12, 10, 19, 100, 199, 1, 5, 33,
+      ]);
+
+      //   2nd question
+      let isEven = (n) => {
+        if (n % 2 == 0) {
+          console.log("It is even");
+        } else if (!(n % 2 == 0)) {
+          console.log("It is odd");
+        } else {
+          console.log("Not a number");
+        }
+      };
+      isEven(5);
+
+      //   3rd question
+      const object = {
+        message: "Hello, World!",
+        logMessage() {
+          console.log(this.message);
+        },
+      };
+      setTimeout(object.logMessage, 1000);
+
+      //   4th question
+      let length = 4;
+
+      function callback() {
+        console.log(this.length);
+      }
+
+      const object1 = {
+        length: 5,
+        method(callback) {
+          callback();
+        },
+      };
+
+      object1.method(callback, 1, 2);
     </script>
   </body>
 </html>
