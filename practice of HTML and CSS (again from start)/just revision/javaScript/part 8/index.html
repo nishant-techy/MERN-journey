@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS - (part 8)</title>
+  </head>
+  <body>
+    <script>
+      // practice question
+      let arr = [10, 20, 30, 40, 60, 50, 1100, 330, 100];
+      let result = arr.every((n) => {
+        return n % 10 == 0;
+      });
+
+      //   or
+
+      //   let result;
+      //   for (let i = 0; i < arr.length; i++) {
+      //     result = arr[i] % 10 == 0;
+      //   }
+
+      console.log(result);
+      if (result) {
+        console.log("Every element is multiple of 10 in this array");
+      } else {
+        console.log("No, every element in this array is not multiple of 10");
+      }
+
+      //   practice question
+      function minNum(arr) {
+        let min = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] < min) {
+            min = arr[i];
+          } else {
+            console.log(`${arr[i]} is bigger.`);
+          }
+        }
+        console.log("Minimum value in that array is", min);
+        return min;
+      }
+
+      minNum([10, 20, 30, 40, 60, 50, 1100, 8, 330, 100]);
+    </script>
+  </body>
+</html>

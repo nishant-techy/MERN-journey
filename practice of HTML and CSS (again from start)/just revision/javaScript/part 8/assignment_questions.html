@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Questions - JS (part - 8)</title>
+  </head>
+  <body>
+    <script>
+      // 1st question
+      let arr = [11, 21, 13, 4, 6, 5, 12, 33, 15];
+      let sum = 0;
+      arr.forEach((el) => {
+        let square = el * el;
+        console.log(`The square of the number ${el} is ${square}`);
+        sum += square;
+      });
+      let avg = sum / arr.length;
+      console.log(`The average of the number is ${avg}.`);
+
+      //   2nd question
+      let newArr = [];
+      arr.map((el) => {
+        newArr.push((el += 5));
+      });
+      console.log("Incremented by 5: ", newArr);
+
+      //   3rd question
+      let originalArr = ["a", "b", "e", "t"];
+      let newUpperArr = [];
+      originalArr.forEach((el) => {
+        newUpperArr.push(el.toUpperCase());
+      });
+      console.log(`New array: ${newUpperArr}`);
+
+      //   4th question
+      let newAr = [];
+      function doubleAndReturnArgs(arr, ...arg) {
+        newAr = arr;
+        console.log("The new Array is ", newAr);
+
+        console.log("& the rest ones are: ");
+        let rest = arg;
+        console.log(rest);
+      }
+    </script>
+  </body>
+</html>
