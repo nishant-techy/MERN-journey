@@ -36,13 +36,70 @@
       //   4th question
       let newAr = [];
       function doubleAndReturnArgs(arr, ...arg) {
-        newAr = arr;
-        console.log("The new Array is ", newAr);
-
-        console.log("& the rest ones are: ");
-        let rest = arg;
-        console.log(rest);
+        let result = arg.map((el) => {
+          return el * 2;
+        });
+        return [...arr, ...result];
       }
+
+      let result = doubleAndReturnArgs([11, 21, 13, 4], 2, 55, 3, 21, 33);
+      console.log(result);
+
+      // 5th question
+      function mergeObjects(obj1, obj2) {
+        return { ...obj1, ...obj2 };
+      }
+      console.log(mergeObjects({ a: 1 }, { b: 2 }));
+
+      console.log("--------------- AGAIN -----------------");
+
+      // let's do the same again
+      // 1st question again
+      // arr.map((el) => {el * el}); //square
+      let doubleA = arr.map((el) => {
+        return el * el;
+      }); //let's store this value somewhere to use it later
+      // let's add all of those values which is in that doubleA array we can use "reduce" method
+      let sumA = doubleA.reduce((acc, current) => {
+        return acc + current;
+      }, 0); // the 0 in the end is the starting point of accumulator value,
+      // the real concept looks like -
+      // --------------------- reduce() syntax -----------------------
+      //       array.reduce((acc, curr) => {
+      //   // logic
+      //   return updatedAcc;
+      // }, initialValue);
+      console.log(sumA);
+      let avgA = sumA / arr.length;
+      console.log("The average of those numbers are: ", avgA);
+
+      // 2nd question again
+      console.log("Old array: ", arr);
+      console.log(arr.map((el) => el + 5));
+
+      // 3rd question again
+      let newArrA = originalArr.map((el) => {
+        return el.toUpperCase();
+      });
+      console.log(newArrA);
+
+      // 4th question again
+      let doubleAndReturnArgsA = (arrr, ...argg) => {
+        let doubleAgain = argg.map((element) => element * 2);
+        let concat = [...arrr, ...doubleAgain];
+        return concat;
+      };
+
+      console.log(
+        doubleAndReturnArgsA([3, 5, 3, 5, 33], 4, 2, 5, 54, 64, 22, 66, 1),
+      );
+
+      // 5th question again
+      function mergeObjectsA(a, b) {
+        return { ...a, ...b };
+      }
+
+      console.log(mergeObjectsA({ a: 1 }, { b: 2 }));
     </script>
   </body>
 </html>
