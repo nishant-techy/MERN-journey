@@ -4,6 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript - part 10 || Practice Questions</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      body {
+        text-align: center;
+        align-items: center;
+      }
+
+      button {
+        margin: 40px 4px;
+      }
+
+      .color_div {
+        border: 1px solid black;
+        text-align: center;
+        align-items: center;
+        width: 50%;
+        margin: 0 auto;
+        height: 30vh;
+        font-size: 20px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h2>Generate a random color</h2>
+    <button>Generate Color</button>
+    <div class="color_div">This is your new color</div>
+    <script>
+      // assign everything to use them as the variables
+      let heading = document.querySelector("h2");
+      let btn = document.querySelector("button");
+      let color_div = document.querySelector(".color_div");
+
+      //   now assign them to function
+      btn.addEventListener("click", function () {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        let color = `rgb(${r}, ${g}, ${b})`;
+        color_div.style.backgroundColor = color;
+        heading.innerText = color;
+      });
+    </script>
+  </body>
 </html>
