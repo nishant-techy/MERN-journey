@@ -14,5 +14,63 @@
       <li>Eat</li>
       <li>Sleep</li>
     </ul>
+    <script>
+      let btn = document.querySelector("#add_task");
+      let input = document.querySelector("#input");
+      let ul = document.querySelector("ul");
+      /*
+
+// working perfectly fine, no issue just trying the new approach
+
+      btn.addEventListener("click", function () {
+        let list = document.querySelectorAll("li"); // if i do not put that here, it'll take the elements from the beginning and never updated again, so, we have to select all of the elements each time
+        input.value = input.value.toLowerCase();
+        let str = "";
+        for (let li of list) {
+          str += li.innerText.toLowerCase() + " ";
+          alert(str);
+        }
+        let found = false;
+        if (!str.includes(input.value)) {
+          let addMe = document.createElement("li");
+          addMe.innerText = input.value;
+          ul.insertAdjacentElement("beforeend", addMe);
+          //   input.value = "";
+        } else {
+          alert("task already present in the list");
+        }
+      });
+
+*/
+
+      btn.addEventListener("click", function () {
+        alert("start");
+        let list = document.querySelectorAll("li"); // if i do not put that here, it'll take the elements from the beginning and never updated again, so, we have to select all of the elements each time
+        input.value = input.value.toLowerCase();
+        let found = false;
+        for (let i = 0; i <= list.length; i++) {
+          if (input.value === list[i].innerText.toLowerCase()) {
+            found = true;
+            console.log("entered");
+          } else {
+            alert("Task already present in the list");
+            break;
+          }
+        }
+
+        if (true) {
+          let addMe = document.createElement("li");
+          addMe.innerText = input.value;
+          ul.insertAdjacentElement("beforeend", addMe);
+          for (let i = 0; i <= 2; i++) {
+            alert(list[i].innerText.toLowerCase());
+          }
+          //   input.value = "";
+        } else {
+          alert("task already present in the list");
+        }
+        alert("end");
+      });
+    </script>
   </body>
 </html>
