@@ -56,6 +56,11 @@
       />
     </div>
 
+    <!-- Question 2 -->
+    <!-- no need for HTML, it's JS time -->
+
+    <!-- Question 3 -->
+
     <script>
       // 1st element - 1st property
       document
@@ -75,10 +80,27 @@
         console.log("Kitna h aesa");
       });
 
-      // 3rd element - 4th property
-      text_container.addEventListener("load", function () {
-        alert("Load completely");
+      // 4th property on full body
+      //   window.addEventListener("load", function () {
+      //     alert("Load completely");
+      //   });
+
+      //   2nd Question
+      let btn = document.createElement("button");
+      btn.innerText = "click me!";
+      btn.style.width = "150px";
+      btn.style.height = "30px";
+      btn.addEventListener("click", function () {
+        this.style.backgroundColor = "green";
+        this.style.fontWeight = "bold";
+        this.style.color = "white";
       });
+
+      document
+        .querySelector(".scroll_container")
+        .insertAdjacentElement("afterend", btn);
+
+      // 3rd question
     </script>
   </body>
 </html>
