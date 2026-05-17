@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice JS (part 10)</title>
+    <style>
+      #properties {
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+      }
+      .scroll_container {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        overflow: auto;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Question 1 -->
+    <div id="properties"></div>
+    <br />
+    <input type="text" name="username" />
+    <br />
+    <div class="scroll_container">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum soluta
+      molestiae fuga nemo incidunt provident distinctio enim debitis non dolore
+      id, nisi delectus, dolorem ipsa quo vel. Sapiente fugit sequi voluptatem
+      optio porro culpa, corporis beatae cupiditate voluptas autem nobis
+      pariatur minus sunt dolore iure quibusdam ipsa? Rerum, vel. Illo
+      consequatur ratione, amet esse asperiores exercitationem fugiat suscipit
+      aperiam corporis ea nostrum maxime reiciendis temporibus saepe quibusdam
+      neque minus culpa commodi molestiae cupiditate quidem quo. Nostrum culpa,
+      alias excepturi pariatur libero in fuga quae nemo facilis esse labore
+      reiciendis doloremque distinctio officia, hic placeat, adipisci sapiente
+      dolores necessitatibus. Qui enim laudantium aliquid tenetur quibusdam ea
+      perferendis, explicabo optio est inventore, molestiae reiciendis ut
+      mollitia sapiente. Vero voluptas corporis temporibus odio repellat cumque
+      consectetur vel laboriosam velit unde architecto repudiandae dolorum
+      reiciendis neque, inventore cum, nesciunt perspiciatis quod omnis aliquid
+      voluptatum. Similique ea laboriosam perspiciatis porro autem expedita hic.
+      Reiciendis, minima esse minus cumque eum saepe error doloribus maxime
+      natus vel tempora nam laborum unde sequi corrupti et soluta quasi earum.
+      Deserunt nisi natus inventore beatae tenetur, corporis omnis voluptate
+      quidem adipisci delectus ea voluptas? Maiores voluptates molestiae quas
+      architecto vel sint suscipit, maxime eveniet amet fuga perferendis,
+      laborum blanditiis cumque?
+      <img
+        src="https://plus.unsplash.com/premium_photo-1689551670902-19b441a6afde?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fHww"
+        alt="random women"
+        width="100%"
+      />
+    </div>
+
+    <script>
+      // 1st element - 1st property
+      document
+        .getElementById("properties")
+        .addEventListener("mouseout", function () {
+          this.style.backgroundColor = "yellow";
+        });
+
+      // 2nd element - 2nd property
+      document.querySelector("input").addEventListener("keypress", function () {
+        console.log(`The value now: ${this.value}`);
+      });
+
+      // 3rd element - 3rd property
+      let text_container = document.querySelector(".scroll_container");
+      text_container.addEventListener("scroll", function () {
+        console.log("Kitna h aesa");
+      });
+
+      // 3rd element - 4th property
+      text_container.addEventListener("load", function () {
+        alert("Load completely");
+      });
+    </script>
+  </body>
+</html>
