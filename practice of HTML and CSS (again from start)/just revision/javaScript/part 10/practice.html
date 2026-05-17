@@ -24,7 +24,7 @@
     <!-- Question 1 -->
     <div id="properties"></div>
     <br />
-    <input type="text" name="username" />
+    <input type="text" name="username" id="username" />
     <br />
     <div class="scroll_container">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum soluta
@@ -60,6 +60,13 @@
     <!-- no need for HTML, it's JS time -->
 
     <!-- Question 3 -->
+    <h2 id="pure_char"></h2>
+    <br />
+    <input
+      type="text"
+      placeholder="enter your text"
+      id="pure_character_input"
+    />
 
     <script>
       // 1st element - 1st property
@@ -70,9 +77,11 @@
         });
 
       // 2nd element - 2nd property
-      document.querySelector("input").addEventListener("keypress", function () {
-        console.log(`The value now: ${this.value}`);
-      });
+      document
+        .querySelector("#username")
+        .addEventListener("keypress", function () {
+          console.log(`The value now: ${this.value}`);
+        });
 
       // 3rd element - 3rd property
       let text_container = document.querySelector(".scroll_container");
@@ -101,6 +110,18 @@
         .insertAdjacentElement("afterend", btn);
 
       // 3rd question
+      let pure_character_heading = document.querySelector("#pure_char");
+      let pure_character_input = document.querySelector(
+        "#pure_character_input",
+      );
+      pure_character_input.addEventListener("input", function () {
+        // Remove everything except letters and spaces
+        let cleanValue = this.value.replace(/[^a-zA-Z ]/g, "");
+        // Update input field (removes invalid chars instantly)
+        this.value = cleanValue;
+        // Show in heading
+        pure_character_heading.innerText = cleanValue;
+      });
     </script>
   </body>
 </html>
