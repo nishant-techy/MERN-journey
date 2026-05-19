@@ -80,21 +80,21 @@
           input.value = "";
 
           // insert button
-          let btn = document.createElement("button");
-          addMe.insertAdjacentElement("beforeend", btn);
-          btn.innerText = "Completed";
-          btn.classList.add("completed");
+          let bitun = document.createElement("button");
+          addMe.insertAdjacentElement("beforeend", bitun);
+          bitun.innerText = "Completed";
+          bitun.classList.add("completed");
 
           // insert another button
           let butt = document.createElement("button");
           butt.innerText = "Deleted";
-          btn.insertAdjacentElement("afterend", butt);
+          bitun.insertAdjacentElement("afterend", butt);
         } else {
           console.log("task already present in the list");
         }
         console.log("end");
 
-        btn.addEventListener("click", function () {
+        bitun.addEventListener("click", function () {
           list.style.textDecoration = "line-through";
         });
       });
