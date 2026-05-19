@@ -44,32 +44,32 @@
 */
 
       btn.addEventListener("click", function () {
-        alert("start");
         let list = document.querySelectorAll("li"); // if i do not put that here, it'll take the elements from the beginning and never updated again, so, we have to select all of the elements each time
         input.value = input.value.toLowerCase();
         let found = false;
-        for (let i = 0; i <= list.length; i++) {
-          if (input.value === list[i].innerText.toLowerCase()) {
-            found = true;
-            console.log("entered");
-          } else {
-            alert("Task already present in the list");
+        for (let i = 0; i < list.length; i++) {
+          if (
+            input.value.trim() === list[i].innerText.trim().toLowerCase() ||
+            input.value.trim() === ""
+          ) {
+            // if they match means the item is present in the list, right?
+            found = true; // if found then don't add it (makes sense, right)
+            console.log("Task already present in the list");
             break;
+          } else {
+            console.log("Not found, adding it...");
           }
         }
 
-        if (true) {
+        if (!found) {
           let addMe = document.createElement("li");
           addMe.innerText = input.value;
           ul.insertAdjacentElement("beforeend", addMe);
-          for (let i = 0; i <= 2; i++) {
-            alert(list[i].innerText.toLowerCase());
-          }
-          //   input.value = "";
+          input.value = "";
         } else {
-          alert("task already present in the list");
+          console.log("task already present in the list");
         }
-        alert("end");
+        console.log("end");
       });
     </script>
   </body>
