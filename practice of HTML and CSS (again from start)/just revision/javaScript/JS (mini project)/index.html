@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS (mini project)</title>
+    <style>
+      .completed {
+        margin: 8px;
+      }
+    </style>
   </head>
   <body>
     <h1>Todo App</h1>
@@ -11,37 +16,43 @@
     <input type="text" name="text" id="input" />
     <button id="add_task">Add task</button>
     <ul>
-      <li>Eat</li>
-      <li>Sleep</li>
+      <li>
+        Eat <button class="completed">Completed</button>
+        <button class="delete">Deleted</button>
+      </li>
+      <li>
+        Sleep <button class="completed">Completed</button>
+        <button class="delete">Deleted</button>
+      </li>
     </ul>
     <script>
       let btn = document.querySelector("#add_task");
       let input = document.querySelector("#input");
       let ul = document.querySelector("ul");
+      let del = document.querySelector(".delete");
+
+      // working perfectly fine, no issue just trying the new approach
       /*
+            btn.addEventListener("click", function () {
+              let list = document.querySelectorAll("li"); // if i do not put that here, it'll take the elements from the beginning and never updated again, so, we have to select all of the elements each time
+              input.value = input.value.toLowerCase();
+              let str = "";
+              for (let li of list) {
+                str += li.innerText.toLowerCase() + " ";
+                alert(str);
+              }
+              let found = false;
+              if (!str.includes(input.value)) {
+                let addMe = document.createElement("li");
+                addMe.innerText = input.value;
+                ul.insertAdjacentElement("beforeend", addMe);
+                //   input.value = "";
+              } else {
+                alert("task already present in the list");
+              }
+            });
 
-// working perfectly fine, no issue just trying the new approach
-
-      btn.addEventListener("click", function () {
-        let list = document.querySelectorAll("li"); // if i do not put that here, it'll take the elements from the beginning and never updated again, so, we have to select all of the elements each time
-        input.value = input.value.toLowerCase();
-        let str = "";
-        for (let li of list) {
-          str += li.innerText.toLowerCase() + " ";
-          alert(str);
-        }
-        let found = false;
-        if (!str.includes(input.value)) {
-          let addMe = document.createElement("li");
-          addMe.innerText = input.value;
-          ul.insertAdjacentElement("beforeend", addMe);
-          //   input.value = "";
-        } else {
-          alert("task already present in the list");
-        }
-      });
-
-*/
+      */
 
       btn.addEventListener("click", function () {
         let list = document.querySelectorAll("li"); // if i do not put that here, it'll take the elements from the beginning and never updated again, so, we have to select all of the elements each time
@@ -54,7 +65,7 @@
           ) {
             // if they match means the item is present in the list, right?
             found = true; // if found then don't add it (makes sense, right)
-            console.log("Task already present in the list");
+            alert("Task already present in the list");
             break;
           } else {
             console.log("Not found, adding it...");
@@ -62,14 +73,30 @@
         }
 
         if (!found) {
+          // insert list items
           let addMe = document.createElement("li");
           addMe.innerText = input.value;
           ul.insertAdjacentElement("beforeend", addMe);
           input.value = "";
+
+          // insert button
+          let btn = document.createElement("button");
+          addMe.insertAdjacentElement("beforeend", btn);
+          btn.innerText = "Completed";
+          btn.classList.add("completed");
+
+          // insert another button
+          let butt = document.createElement("button");
+          butt.innerText = "Deleted";
+          btn.insertAdjacentElement("afterend", butt);
         } else {
           console.log("task already present in the list");
         }
         console.log("end");
+
+        btn.addEventListener("click", function () {
+          list.style.textDecoration = "line-through";
+        });
       });
     </script>
   </body>
