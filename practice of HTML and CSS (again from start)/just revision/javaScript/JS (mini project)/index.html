@@ -5,8 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS (mini project)</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+        color: wheat;
+        font-size: 20px;
+      }
       .completed {
         margin: 8px;
+        background-color: black;
+        color: red;
+        padding: 5px 15px;
+        border-radius: 10px 15px;
+        border: 1px solid white;
+        cursor: pointer;
+      }
+      .delete {
+        background-color: red;
+        color: black;
+        padding: 5px 15px;
+        border-radius: 15px 10px;
+        cursor: pointer;
+      }
+      .done {
+        text-decoration: line-through;
+        opacity: 0.6;
       }
     </style>
   </head>
@@ -18,11 +43,11 @@
     <ul>
       <li>
         Eat <button class="completed">Completed</button>
-        <button class="delete">Deleted</button>
+        <button class="delete">Delete</button>
       </li>
       <li>
         Sleep <button class="completed">Completed</button>
-        <button class="delete">Deleted</button>
+        <button class="delete">Delete</button>
       </li>
     </ul>
     <script>
@@ -76,27 +101,62 @@
           // insert list items
           let addMe = document.createElement("li");
           addMe.innerText = input.value;
-          ul.insertAdjacentElement("beforeend", addMe);
+          ul.appendChild(addMe);
           input.value = "";
 
           // insert button
-          let bitun = document.createElement("button");
-          addMe.insertAdjacentElement("beforeend", bitun);
-          bitun.innerText = "Completed";
-          bitun.classList.add("completed");
+          let strikeBtn = document.createElement("button");
+          addMe.appendChild(strikeBtn);
+          strikeBtn.innerText = "Completed";
+          strikeBtn.classList.add("completed");
 
           // insert another button
-          let butt = document.createElement("button");
-          butt.innerText = "Deleted";
-          bitun.insertAdjacentElement("afterend", butt);
+          let delBtn = document.createElement("button");
+          delBtn.innerText = "Delete";
+          delBtn.classList.add("delete");
+          strikeBtn.insertAdjacentElement("afterend", delBtn);
         } else {
           console.log("task already present in the list");
         }
         console.log("end");
+      });
 
-        bitun.addEventListener("click", function () {
-          list.style.textDecoration = "line-through";
-        });
+      // let strikeThroughBtn = document.querySelectorAll(".completed");
+      // for (let strikeBtns of strikeThroughBtn) {
+      //   strikeBtns.addEventListener("click", function () {
+      //     this.parentElement.classList.toggle("done");
+      //     if (this.parentElement.classList.contains("done")) {
+      //       this.innerText = "Undo";
+      //     } else {
+      //       this.innerText = "Completed";
+      //     }
+      //   });
+      // }
+
+      // event delegation method
+      ul.addEventListener("click", function (event) {
+        console.log(event.target);
+        console.dir(event.target);
+        if (
+          event.target.nodeName === "BUTTON" &&
+          event.target.classList.contains("delete")
+        ) {
+          event.target.parentElement.remove();
+        } else if (
+          event.target.nodeName === "BUTTON" &&
+          event.target.classList.contains("completed")
+        ) {
+          console.log("acha krya");
+          let li = event.target.parentElement;
+          li.classList.toggle("done");
+          if (li.classList.contains("done")) {
+            event.target.innerText = "Undo";
+          } else {
+            event.target.innerText = "Completed";
+          }
+        } else {
+          console.log("you pressed wrong");
+        }
       });
     </script>
   </body>
