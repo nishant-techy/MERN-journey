@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS function</title>
+    <style>
+      div {
+        background-color: yellow;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        font-size: 40px;
+      }
+      ul {
+        background-color: purple;
+        width: 200px;
+      }
+      li {
+        background-color: rgb(5, 133, 97);
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+      </ul>
+    </div>
+
+    <script>
+      let div = document.querySelector("div");
+      let ul = document.querySelector("ul");
+      let list = document.querySelectorAll("li");
+
+      div.addEventListener("click", function (event) {
+        console.log("div is clicked");
+        event.stopPropagation(); // we can stop that just by use this single line
+      });
+      ul.addEventListener("click", function (event) {
+        console.log("ul is clicked");
+        event.stopPropagation(); // we can stop that just by use this single line
+      });
+      for (let li of list) {
+        li.addEventListener("click", function (event) {
+          console.log("li is clicked");
+          event.stopPropagation(); // we can stop that just by use this single line
+        });
+      }
+    </script>
+  </body>
+</html>

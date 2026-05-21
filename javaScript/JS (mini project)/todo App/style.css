@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  color: wheat;
+  font-size: 20px;
+}
+.completed {
+  margin: 8px;
+  background-color: black;
+  color: red;
+  padding: 5px 15px;
+  border-radius: 10px 15px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.delete {
+  background-color: red;
+  color: black;
+  padding: 5px 15px;
+  border-radius: 15px 10px;
+  cursor: pointer;
+}
+.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}

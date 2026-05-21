@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Questions - JS (part 6)</title>
+  </head>
+  <body>
+    <script>
+      // Assignment Questions
+      //   1st question
+      let n = 10;
+      let arr = [
+        2, 35, 3, 22, 54, 21, 3, 66, 43, 17, 11, 12, 10, 19, 100, 199, 1, 5, 33,
+      ];
+      let newArr = [];
+      for (let element of arr) {
+        if (element > n) {
+          newArr.push(element);
+        } else {
+          console.log(`smaller than ${n}: ${element}`);
+        }
+      }
+      console.log(newArr);
+
+      //   2nd question
+      let str = "abcdabcdefgggh";
+      let newStr = "";
+      for (let i = 0; i < str.length; i++) {
+        if (newStr.includes(str[i])) {
+          console.log(`${str[i]} already present in the string`);
+        } else {
+          newStr += str[i];
+        }
+      }
+      console.log(`New string is ${newStr}`);
+
+      //   3rd question
+      let countriesArr = [
+        "Australia",
+        "Germany",
+        "Sweden",
+        "Atlantic island",
+        "United States of America",
+        "Turmontize",
+      ];
+      let biggestCountryOutput = [" "]; // we have to assign something so, it can read the length of the biggestCountryOutput in the starting of this loop otherwise the length property is not working
+      for (let countries of countriesArr) {
+        if (biggestCountryOutput[0].length < countries.length) {
+          //it means if the new-array (biggestCountryOutput) length is smaller than the each element we are passing from original array
+          biggestCountryOutput[0] = countries; //then we simply have to replace that element with the new one to find the biggest one, because if we push it, it'll add as the new element but instead if we replace it, we find the new one.
+          console.log(`New one is ${countries}.`);
+        } else {
+          console.log(`${countries} is smaller.`);
+        }
+      }
+      console.log("The biggest country name is:", biggestCountryOutput);
+
+      //   4th question
+      function vowelCount(strr) {
+        let count = 0;
+        strr = strr.toLowerCase();
+        for (let el of strr) {
+          if (
+            el === "a" ||
+            el === "e" ||
+            el === "i" ||
+            el === "o" ||
+            el === "u"
+          ) {
+            console.log(`The vowel we found in that string is ${el}`);
+            count++;
+          }
+        }
+        console.log(`Total number of vowels in that string are ${count}`);
+      }
+
+      //   calling the function
+      vowelCount("it is somethIng which wE shOuld not wait About.");
+
+      //   5th question
+      function randomNo(start, end) {
+        console.log(Math.floor(Math.random() * (end - start + 1)) + start);
+      }
+
+      randomNo(20, 39);
+    </script>
+  </body>
+</html>

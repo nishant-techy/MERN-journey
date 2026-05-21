@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  margin: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+
+.all_boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 350px;
+  height: auto;
+  margin: 50px auto;
+}
+.boxes {
+  width: 150px;
+  height: 150px;
+  border: 5px solid rgb(227, 227, 227);
+  border-radius: 20px;
+}
+
+#red {
+  background-color: rgb(167, 26, 26);
+  margin: 0 1px 15px 0;
+}
+
+#aqua {
+  background-color: rgb(17, 129, 129);
+  margin: 0 0 15px 0;
+}
+
+#yellow {
+  background-color: rgb(220, 153, 8);
+}
+
+#blue {
+  background-color: rgb(2, 129, 193);
+}
