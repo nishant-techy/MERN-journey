@@ -11,6 +11,94 @@ let gameSequence = [];
 let userSequence = [];
 let level = 0;
 
+// literally the brain of the game, most important function and things running according to that
+function checkAnswer() {
+  let currentIndex = userSequence.length - 1;
+  if (gameSequence[currentIndex] === userSequence[currentIndex]) {
+    console.log("correct click");
+    if (gameSequence.length === userSequence.length) {
+      console.log("Level completed");
+      setTimeout(() => {
+        level++;
+        textChange.innerText = `Level ${level}`;
+        userSequence = [];
+        let randomBoxChosen = boxNumberGeneration();
+        console.log("choosen number is:", randomBoxChosen);
+        flickerMe(randomBoxChosen);
+      }, 500);
+    }
+  } else {
+    textChange.innerHTML = `Game over. Your score is <b>${gameSequence.length}</b>. <br>Please any key to try again.`;
+    gameSequence = [];
+    userSequence = [];
+    level = 0;
+  }
+}
+
+for (let box of allBoxes) {
+  box.addEventListener("click", function () {
+    if (level > 0) {
+      let oldColor = box.style.backgroundColor;
+      box.style.backgroundColor = "white";
+      setTimeout(() => {
+        box.style.backgroundColor = oldColor;
+      }, 50);
+      // if i can find which box click by user, I can add that number to my userSequence, according to that
+      let findTheBoxWhichClicks = box.getAttribute("id");
+      console.log(findTheBoxWhichClicks);
+      if (findTheBoxWhichClicks === "red") {
+        userSequence.push(1);
+      } else if (findTheBoxWhichClicks === "aqua") {
+        userSequence.push(2);
+      } else if (findTheBoxWhichClicks === "yellow") {
+        userSequence.push(3);
+      } else if (findTheBoxWhichClicks === "blue") {
+        userSequence.push(4);
+      }
+      checkAnswer();
+    }
+  });
+}
+
+function flickering(realBox) {
+  let puranaColor = realBox.style.backgroundColor;
+  realBox.style.backgroundColor = "white";
+  setTimeout(() => {
+    realBox.style.backgroundColor = puranaColor;
+  }, 100);
+}
+
+function flickerMe(boxNumber) {
+  gameSequence.push(boxNumber);
+  if (boxNumber === 1) {
+    flickering(firstBox);
+  } else if (boxNumber === 2) {
+    flickering(secondBox);
+  } else if (boxNumber === 3) {
+    flickering(thirdBox);
+  } else {
+    flickering(fourthBox);
+  }
+}
+
+function boxNumberGeneration() {
+  let randomBoxChoose = Math.floor(Math.random() * 4 + 1);
+  return randomBoxChoose;
+}
+
+// what are the things that should happen, when we start the game everything run according to that:-
+document.addEventListener("keydown", function () {
+  if (level === 0) {
+    level++;
+    textChange.innerText = `Level ${level}`;
+    let randomBoxChosen = boxNumberGeneration();
+    console.log("choosen number is:", randomBoxChosen);
+    flickerMe(randomBoxChosen);
+  }
+});
+
+// another previous method
+/*
 function boxNumberGeneration() {
   let randomBoxChosen = Math.floor(Math.random() * 4 + 1);
   return randomBoxChosen;
@@ -111,6 +199,9 @@ function levelIncremented() {
   }
 }
 
+
+
+// previous method
 /*
 function boxGlitter() {
   let randomBoxChosen = Math.floor(Math.random() * 4 + 1);
