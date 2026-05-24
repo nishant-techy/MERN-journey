@@ -29,6 +29,10 @@ function checkAnswer() {
     }
   } else {
     textChange.innerHTML = `Game over. Your score is <b>${gameSequence.length}</b>. <br>Please any key to try again.`;
+    document.querySelector("body").style.backgroundColor = "red";
+    setTimeout(() => {
+      document.querySelector("body").style.backgroundColor = "black";
+    }, 150);
     gameSequence = [];
     userSequence = [];
     level = 0;
