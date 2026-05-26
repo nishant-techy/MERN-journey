@@ -62,6 +62,9 @@ changeColor("red", 1000)
     console.log("Grey was applied successfully.");
     return changeColor("yellow", 1000);
   })
+  .then(() => {
+    console.log("Yellow is applied successfully.");
+  })
   .catch(() => {
     console.log("Something went wrong");
   });
