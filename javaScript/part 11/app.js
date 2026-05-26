@@ -1,5 +1,6 @@
 // javascript (part - 11)
 
+/*
 let h1 = document.querySelector("h1");
 h1.style.color = "red";
 h1.style.fontSize = "80px";
@@ -11,8 +12,7 @@ function changeColor(color, delay, nextColorFunction) {
     nextColorFunction();
   }, delay);
 }
-
-/*
+  
 // callback nesting (= callback hell)
 changeColor("silver", 1000, () => {
   changeColor("purple", 1000, () => {
@@ -25,6 +25,46 @@ changeColor("silver", 1000, () => {
 });
 
 */
+
+// let's try to make this one also the help of "promises"
+
+let h1 = document.querySelector("h1");
+h1.style.fontSize = "80px";
+document.querySelector("body").style.backgroundColor = "black";
+
+function changeColor(color, delay) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      h1.style.color = color;
+      resolve();
+    }, delay);
+  });
+}
+
+changeColor("red", 1000)
+  .then(() => {
+    console.log("Red was applied successfully.");
+    return changeColor("orange", 1000);
+  })
+  .then(() => {
+    console.log("Orange was applied successfully.");
+    return changeColor("silver", 1000);
+  })
+  .then(() => {
+    console.log("Silver was applied successfully.");
+    return changeColor("purple", 1000);
+  })
+  .then(() => {
+    console.log("Purple was applied successfully.");
+    return changeColor("grey", 1000);
+  })
+  .then(() => {
+    console.log("Grey was applied successfully.");
+    return changeColor("yellow", 1000);
+  })
+  .catch(() => {
+    console.log("Something went wrong");
+  });
 
 // it can be one way, but the thing is we cannot do things like that especially when we have better way to do such things
 //   so, what we gonna use, we name it "callback hell", the thing you can see above of this line
