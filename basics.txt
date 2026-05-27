@@ -883,3 +883,86 @@ strig.repeat(3);     //"mangomangomango"
 strings are immutable, means they cannot change once declare and cannot be updated or anything, we just get the new string after few operations.
 
 as the same way the arrays are mutable, which can be changed by indexing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------- EVENT DELEGATION -----------------
+Event Delegation is the method in which some event/function which are supposed to apply on every element which only applies to those element which are already present in the DOM and not to the upcoming or later add-on ones, 
+i mean if we add the function to the every button who have the class "done", then if we create another button later by any other method without changing the code or something like that, then those function will not apply on these new buttons, 
+but
+that event delegation is the thing where we solve this problem, it is kind of phenomenon where we use the bubbling property with the help of that we apply every function to every necessary elements (no matter if they are new coming or old ones), 
+aur isme kya hota h ki jo function/feature hme uss naye element pe lgana tha to uspe wo apply nhi hota to instead of doing on that, we'll apply the same for our parent element, 
+for example:
+ul > li > button
+
+if we append the buttons with all of the li's, so, instead of choose the new element to trigger the functions, let's choose the "ul" element, to trigger that function.
+
+
+
+_*short summary:*_
+ul.addEventListener("click", function (event) {
+
+Instead of adding click listeners to every button separately, you added one listener to the parent <ul>.
+
+Why this works:
+
+clicks on child elements bubble upward
+button click travels to <ul>
+<ul> catches it
+
+This is called event bubbling.
+
+
+
+
+:::::::::: remember one thing :::::::::::
+
+when you click on any element jispe ye "event.target" property apply ho rhi h to aap jis chij pe click krte ho, usi chij ko ye capture krta h only, so, remember it, jispe parent element pe aapne ye property di h, jaruri nhi h ki wahi dikhega hmesha, jo bhi element hoga jispe click hoga wo apni jimedari khud lega by the help of this event.target
+
+
+
+
+
+------------ _*IMPORTANT*_ -------------
+
+Once an addEventListener() is attached, it stays active until one of these happens:
+
+you manually remove it
+the page reloads
+the element is removed from DOM
