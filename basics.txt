@@ -1,4 +1,4 @@
-*Display:flex;*
+**Display:flex;**
 
 align-items:center;        sending the object from top to bottom (vertical)
 align-items:start;
