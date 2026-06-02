@@ -966,3 +966,322 @@ Once an addEventListener() is attached, it stays active until one of these happe
 you manually remove it
 the page reloads
 the element is removed from DOM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------- MORE TOPICS ------------------------------------
+
+
+
+*EVENT BUBBLING* : event bubbling me click ka effect child to parent tak jaata hai, to, child se parent call bhi ho jaata hai like - 
+
+<div id="grandparent">
+    Grandparent
+
+    <div id="parent">
+        Parent
+
+        <button id="child">
+            Click Me
+        </button>
+
+    </div>
+</div>
+
+child.addEventListener("click", () => {
+    console.log("Child");
+});
+
+parent.addEventListener("click", () => {
+    console.log("Parent");
+});
+
+grandparent.addEventListener("click", () => {
+    console.log("Grandparent");
+});
+
+_if you only click button, then still:_
+Child
+Parent
+Grandparent
+
+Why?
+Because event moves upward.
+Like:
+
+Button
+  ↑
+Parent
+  ↑
+Grandparent
+
+_This upward travel = Event Bubbling._
+
+
+
+
+so, we can stop it by stopPropogation(), 
+
+button.addEventListener("click",(e)=>{
+   e.stopPropagation();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*EVENT DELEGATION:* event delegation ka mtlb hai har kisi child ko ek ek chij eventListener dene k bjaye parent ki help lena, yaha event bubbling ka real useful case dikhta hai, jisse pta chlta h ki kitna shi h ki event parent tak travel kr rha h kyoki iski help se hum - 
+
+Imagine Instagram
+Suppose Instagram has:
+1000 posts
+
+Each post has:
+Like button
+Comment button
+Share button
+
+Without Event Delegation:
+1000 Like listeners
+1000 Comment listeners
+1000 Share listeners
+
+_(3000 listeners!), Too much, right!!_
+
+
+_*Smart Approach:*_
+
+Put one listener on parent.
+
+<div id="posts">
+   all posts here
+</div>
+posts.addEventListener("click",(e)=>{
+   console.log(e.target);
+});
+
+Now every click bubbles up.
+Only one listener handles everything.
+
+To ab sidha jo parent k pass event bubble hoga hum event.target ki help se pta lga lenge har ek k liye alg alg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*CALL STACK:* Call stack ka mtlb h ki ek queue ya guffa maan skte hai, jisme items insert hote h aur phir aage se bandh hone k karn back me hi bahr niklte hai, as LAST IN FIRST OUT [LIFO], 
+For example::
+
+Imagine a Stack of Plates
+Plate C
+Plate B
+Plate A
+
+You can only remove from top.
+
+
+_Example:_
+function wakeUp() {
+   brush();
+}
+
+function brush() {
+   breakfast();
+}
+
+function breakfast() {
+   console.log("Eating");
+}
+
+wakeUp();
+
+
+
+
+----------- Stack Movement -------------
+
+Initially:
+wakeUp
+
+
+Then:
+breakfast
+brush
+wakeUp
+
+
+After breakfast finishes:
+brush
+wakeUp
+
+
+After brush finishes:
+wakeUp
+
+
+Then empty.
+
+
+so, javaScript will only do one task at a time and also it uses the stack method to do those things at a time, one by one, layer by layer, by Last In First Out (LIFO) method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*PROMISE:*  Promises solve callback hell.
+
+Real Life Promise
+Friend says:
+I promise I'll send notes tonight.
+
+Current state:
+Pending
+
+If notes arrive:
+Resolved
+
+If friend forgets:
+Rejected
+
+
+
+
+
+let notesPromise =
+new Promise((resolve,reject)=>{
+
+   let sent = true;
+
+   if(sent){
+      resolve("Notes received");
+   }else{
+      reject("No notes");
+   }
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*PROMISE CHAINING:* Promise chaining is the thing in which we promise to provide some result after each task, like if we try login first, then we will definitely tell you what happened, we logged in successfully or not, and we'll not proceed further before doing that, so, we promise that we'll tell you, no matter if it's a good new or bad one, but yeah.
+
+Bad:
+
+login(()=>{
+   getProfile(()=>{
+      getPosts(()=>{
+         getComments(()=>{
+         });
+      });
+   });
+});
+
+
+
+Good:
+
+login()
+.then(getProfile)
+.then(getPosts)
+.then(getComments)
+.catch(handleError);
+
+Much cleaner.
