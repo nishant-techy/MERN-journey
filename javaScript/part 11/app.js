@@ -8,7 +8,7 @@ document.querySelector("body").style.backgroundColor = "black";
 
 function changeColor(color, delay, nextColorFunction) {
   setTimeout(() => {
-    h1.style.color = color; sd
+    h1.style.color = color; 
     nextColorFunction();
   }, delay);
 }
