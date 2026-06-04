@@ -1,10 +1,11 @@
 // Js - part 12
 
-let url = "https://cataas.com/doc.html";
+let url = "https://www.reddit.com/r/Wallstreetbets/top.json";
 
 async function access() {
   let res = await fetch(url);
-  console.log(res);
+  let data = res.json();
+  console.log(data);
 }
 
 access();
