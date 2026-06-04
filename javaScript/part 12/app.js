@@ -1,6 +1,6 @@
 // Js - part 12
 
-let url = "https://corsproxy.io/?https://cataas.com/api/cats?limit=10&skip=0";
+let url = "https://world.openfoodfacts.org/api/v0/product/737628064502.json";
 
 async function access() {
   let res = await fetch(url);
