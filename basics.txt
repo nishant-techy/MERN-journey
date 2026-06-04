@@ -1285,3 +1285,61 @@ login()
 .catch(handleError);
 
 Much cleaner.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------Async vs await------------------
+1. async: used for telling the JS that this function will work with asynchronous operations and will always return a Promise.
+
+When you put async before a function:
+async function getFact() {
+}
+
+Example:
+
+async function hello() {
+    return "Hello";
+}
+
+it will prints "Hello"
+
+
+
+
+2. Await: pause this async function until the promise finishes
+
+Example:
+let response = await fetch(url);
+JavaScript waits for the API request to complete before moving to the next line.
+
+
+Without await:
+let response = fetch(url);
+console.log(response);
+
+You'll see a Promise object instead of the actual result.
+
+
+*await* can only be used::
+Inside an async function, or
+At top level in environments that support top-level await.
+
+So::
+async function getFact() {
+    let response = await fetch(url);
+}
+
+is valid.
