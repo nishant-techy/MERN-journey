@@ -1,2 +1,2 @@
-?? auto_push.bat
-?? temp.txt
+ M "javaScript/part 13/index.html"
+ M temp.txt
