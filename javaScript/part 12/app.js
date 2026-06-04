@@ -1,11 +1,12 @@
 // Js - part 12
 
-let url = "https://world.openfoodfacts.org/api/v0/product/737628064502.json";
+let url = "https://v2.jokeapi.dev/joke/Any?safe-mode";
 
 async function access() {
   let res = await fetch(url);
   let data = await res.json();
-  console.log(data);
+  console.log(data.setup);
+  console.log(data.delivery);
 }
 
 access();
