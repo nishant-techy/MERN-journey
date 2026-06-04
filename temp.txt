@@ -1,2 +1,3 @@
+ M "javaScript/part 12/app.js"
+ M "javaScript/part 12/index.html"
  M temp.txt
-?? "javaScript/part 12/"
