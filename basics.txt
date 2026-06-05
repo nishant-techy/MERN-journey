@@ -1343,3 +1343,152 @@ async function getFact() {
 }
 
 is valid.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------- *NODE JS* ---------------
+let's start with the node js:
+well, start with the node.js, it is not the language, framework or anything like that, it is the tool that provide environment to JS to run outside of the browser, mtlb iske aane se phle browser php, python aesi chijo ka use krte the, lekin ye aate hi ek dum popular hogyi kyoki isne JS ko extreme power di aur usko iss kabil bna diya ki bina kisi ki madad k sirf isi environment me kahi pe chl ske. 
+
+to isme chije saari wahi rhengi, bs apna koi file se kisi aur file me koi properties transfer krni ho to, uska use krte h, 
+
+
+module.export = 
+(ab ye return to object krta h default behaviour of node.js, but hm chaye to kuch bhi return kra skte h jaise 
+module.export = "hello";
+to string return krdi, 
+module.export = 123;
+to number return krdiya, etc, etc. 
+
+so, the thing is agr kisi ek file me ek chij h aur uski wo chij waha se access krke mujhe apni dusri file me chaiye kyoki ek hi chij baar baar thodi likhoge, to hm iska use kr skte hain, like 
+
+------------ math.js ------------
+const sum = (a,b) => a+b;
+const mul = (a,b) => a*b; 
+const g = 9.8;
+const PI = 3.14;
+module.export = "hello bro";
+
+
+and --------------- script.js --------------
+we have to access the same here - 
+so, we can do that - 
+
+
+const someValue = require("./math");    // to access that math.js property to this script.js
+console.log(someValue);
+
+
+
+and there are few ways we can access all of that, like: 
+
+
+------------ math.js ------------
+const sum = (a,b) => a+b;
+const mul = (a,b) => a*b; 
+const g = 9.8;
+const PI = 3.14;
+
+let obj = {
+	sum: sum,
+	mul: mul, 
+	g: g,
+	PI: PI
+};
+module.export = obj;
+
+
+and --------------- script.js --------------
+we have to access the same here - 
+so, we can do that - 
+
+
+const mathValue = require("./math");    // to access that math.js property to this script.js
+console.log(mathValue);
+// we can also use the function of this file 
+console.log(mathValue.sum(2,3));    // 5
+console.log(mathValue.PI);         // 3.14
+
+
+-------- so, that's the module & require case where we learn how to transfer one file property to another file ---------
+
+
+
+
+
+
+
+
+
+---------------- ab ye to hogyi ek file se dusri file me property transfer krne ki baat, what about the big projects, jaha hundreds of files hongi to thodi hamesha ek file ek data dusre me aur teesre me bhejte rhenge, so, we name it as: "export in directories", mtlb puri directory me jitni 3,4,8,10,50 jitni files ho unka data agr kisi dusre file/folder me bhejna ho to kaise krenge ------------
+so, let's assume we have 3 files - 
+apple.js, banana.js, orange.js in the folder of "fruits" and there is another file like script.js in the parent directory, sibling of Fruits folder, 
+so, if script.js wanted to access the data from these files, then how can we do that, 
+
+so, it would be run like that, first things first, every file should export all of their data through module.export in each file, 
+
+
+-------- apple.js ---------
+module.exports = {
+	name: "apple",
+	color: "red"
+}
+
+-------- banana.js ---------
+module.exports = {
+	name: "banana",
+	color: "yellow"
+}
+
+-------- orange.js ---------
+module.exports = {
+	name: "orange",
+	color: "orange"
+}
+
+so, we have to create the index.js file, that can collect all of their data in their own and then we will take it from there, 
+
+so, 
+
+-------- index.js ---------
+const apple = require["./apple"];
+const orange = require["./orange"];
+const banana = require["./banana"];
+
+let fruit = [apple, orange, banana];
+
+module.exports = fruit;
+
+
+
+so, the main part is, we can use the information of index.js file - 
+
+--------- script.js -----------
+const info = require("./Fruits");  // now, we have to access the whole directory, to ab ye ek file nahi puri directory ko acquire kr rhi h to ab wo saari information waha se gather karlegi, aur wo sabse phle index.js file ko dhundhte h taaki saari information waha se utha li jaye jo bhi usme present ho 
+
+console.log(info);
