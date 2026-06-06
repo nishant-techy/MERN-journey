@@ -1730,7 +1730,22 @@ app.get("/banana", (req, res)=> {
 so, all of the defined path above work fine but what happened if user enter something else, then we also have the method: 
 
 app.get("*", (req, res) => {
-	res.send("this path does not exist. 404 page not found.");
+	res.send("this path does not exist. 404 page not found. ");
 });
 
 
+
+
+
+
+
+
+
+
+
+
+and the same way, we can do the "post" request - 
+
+app.post("/", (req, res)=> {  // in this method, we handle the post request and send the response according to it 
+	res.send("you send the post request to root");
+});
