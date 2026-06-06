@@ -1585,3 +1585,28 @@ eg: express
 
 mtlb library and framework dono hi aese code h jo kisi ne hmare liye phle hi likh k rkhe huye hain, but library use hoti h kisi specific tasks ko pura krne k liye, jaise API ko call lgane k liye hmne axios ko use krna pda tha taaki task easily ho ske,
 likewise, framework ek aesa pre-written code hai, jo btata hai ki software application bnane me structure aakhir rkhna kaisa hai, like neev hilane wali baatein.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------- Express.js --------------------
+Node.js ka web application framework jo help krta hai to make web applications, and used for server side programming. 
+
+
+	 (request)
+       ------------>
+client               server
+       <------------
+	 (response)
+
+
