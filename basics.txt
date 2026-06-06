@@ -1739,13 +1739,14 @@ app.get("*", (req, res) => {
 
 
 
-
-
-
-
-
 and the same way, we can do the "post" request - 
 
 app.post("/", (req, res)=> {  // in this method, we handle the post request and send the response according to it 
 	res.send("you send the post request to root");
 });
+
+
+
+
+
+there's the software called "nodemon" which we can install in our system, so, we do not have to restart our node.js again and again after each changes, and whenever we change and save it, it'll automatically save those changes and restart our server.
