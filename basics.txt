@@ -1657,6 +1657,6 @@ app.use((req, res) => {
 	res.send("This is just an example of basic response");
 });
 
-
+so, it will send the string this time, 
 
 
