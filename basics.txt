@@ -1576,3 +1576,12 @@ and then we have to enter that module thing in our project to run this properly.
 
 
 --------------------- Library vs framework ----------------------
+Library: A library is the collection of pre-written code that can be used to perform specific tasks.
+eg: axios
+
+Framework: A framework is also the set of pre-written code that provide the structure for developing software applications.
+eg: express
+
+
+mtlb library and framework dono hi aese code h jo kisi ne hmare liye phle hi likh k rkhe huye hain, but library use hoti h kisi specific tasks ko pura krne k liye, jaise API ko call lgane k liye hmne axios ko use krna pda tha taaki task easily ho ske,
+likewise, framework ek aesa pre-written code hai, jo btata hai ki software application bnane me structure aakhir rkhna kaisa hai, like neev hilane wali baatein.
