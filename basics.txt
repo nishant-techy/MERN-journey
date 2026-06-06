@@ -1709,5 +1709,18 @@ Example:
 Express.js mein routing ki help se hum different URLs ke liye different responses bhej sakte hain.
 
 
+so, we have to do it through .get method, 
+
+app.get("/", (req, res) => {
+	res.send("you contacted root path");
+});
 
 
+app.get("/apple". (req, res)=> {
+	res.send("you contacted apple path");
+});
+
+
+app.get("/banana", (req, res)=> {
+	res.send("you contacted banana path");
+});
