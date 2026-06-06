@@ -1725,8 +1725,12 @@ app.get("/banana", (req, res)=> {
 	res.send("you contacted banana path");
 });
 
-// so, it will connect according to whatever the things i mentioned here, so, if we access the home page, it will re-route to the root 
+// so, it will connect according to whatever the things i mentioned here, so, if we access the home page, it will access the root directory, and print the line of "you contacted the root path", and for /apple path, it will mentioned the apple path contact, and so on. 
 
+so, all of the defined path above work fine but what happened if user enter something else, then we also have the method: 
 
+app.get("*", (req, res) => {
+	res.send("this path does not exist. 404 page not found.");
+});
 
 
