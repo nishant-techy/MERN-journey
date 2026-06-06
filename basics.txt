@@ -1724,3 +1724,9 @@ app.get("/apple". (req, res)=> {
 app.get("/banana", (req, res)=> {
 	res.send("you contacted banana path");
 });
+
+// so, it will connect according to whatever the things i mentioned here, so, if we access the home page, it will re-route to the root 
+
+
+
+
