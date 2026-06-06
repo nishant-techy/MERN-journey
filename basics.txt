@@ -1634,3 +1634,6 @@ let port = 3000;
 app.listen(port, ()=> {
 	console.log(`App is listening on port ${port}`);
 });
+
+//so, now, server is able to listen the request, and if we started it by "node file_name.js", it'll start to listen that request and recieve that request 
+for further process, we just not have to recieve the 
