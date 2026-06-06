@@ -1610,3 +1610,16 @@ client                server
 	 (response)
 
 abhi tak hmne kiya tha ki client request bhejta hai server k pass aur response ko capture krta hai jo server se aata hai, aur ab express.js (server side language hai), jo hame dikhayegi/btayegi ki uss side kya chl rha h mtlb jo request hum aage se bhej rhe hai ab uska yaha aake kya ho rha h 
+
+
+
+
+
+there are 4 major work of express.js - 
+a). Listen for incoming request
+b). parse
+c). match response with routes
+d). response
+
+
+A).
