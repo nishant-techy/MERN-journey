@@ -1621,5 +1621,16 @@ b). parse
 c). match response with routes
 d). response
 
+-------- let's discuss each one by one --------
+A). listen for incoming request: 
+so, whenever we send the request, for an example, we send the request in which we want to access any url, 
+that request goes to server, 
+server recieves it, but for server recieving that request we need to setup the server, so, the first thing is "let's listen when will user send the request to us", 
+const express = require("express");
+const app = express();
 
-A).
+let port = 3000;
+
+app.listen(port, ()=> {
+	console.log(`App is listening on port ${port}`);
+});
