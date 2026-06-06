@@ -1560,3 +1560,19 @@ but the most important part is, we can export and import the things from that no
 in our package.json file to use it. 
 and we do not have package.json file in our project, we can create it by the command with "npm init"
 and then we have to enter that module thing in our project to run this properly. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------- Library vs framework ----------------------
