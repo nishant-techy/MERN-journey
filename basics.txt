@@ -1644,4 +1644,14 @@ for further process, we just not have to recieve the request, we also have to re
 
 
 
-B). Parse: actually the data what user pass is in text form, so, the express.js convert that data into json format to understand it and parse it 
+B). Parse: actually the data what user pass is in text form (like the https request we send it is always in text form), so, the express.js convert that data into object, so, that what the express did, this is what we call the "parsing". 
+and text based hoti hai kyoki har jagah log server different different languages (php, python, node, etc). me bna rhe h to text based sabko smjh bhi aa jati h aur sabhi usko apne according parse bhi kr skte hain aur user ko bhi kuch sochna nhi pdta.
+
+
+
+
+
+
+
+
+
