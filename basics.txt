@@ -1542,3 +1542,11 @@ and file run successfully.
 
 
 
+
+
+
+
+---------------- Import module ----------------
+before ES6 update, we used the method 'require', where we have to do the export the same way and then require the whole file, so, everything will load up, according to whatever we exported.
+so, they introduce the new feature, 
+The import module, it is the new technology and it gives few features like we do not have to import the whole file, we can just import the things of whatever is required for us, like if the file have thousands of line of code and 
