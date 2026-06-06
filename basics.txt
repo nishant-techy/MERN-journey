@@ -1635,6 +1635,10 @@ app.listen(port, ()=> {
 	console.log(`App is listening on port ${port}`);
 });
 
+app.use((req, res) => {      // this is the method which can accept every request send by user - (post, get, etc. etc.)
+	console.log("Request recieved"); 
+});
+
 //so, now, server is able to listen the request, and if we started it by "node file_name.js", it'll start to listen that request and recieve that request 
 for further process, we just not have to recieve the request, we also have to return the response of that request, so, let's discuss our next step for that: 
 
