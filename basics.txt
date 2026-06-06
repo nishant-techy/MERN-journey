@@ -1492,3 +1492,53 @@ so, the main part is, we can use the information of index.js file -
 const info = require("./Fruits");  // now, we have to access the whole directory, to ab ye ek file nahi puri directory ko acquire kr rhi h to ab wo saari information waha se gather karlegi, aur wo sabse phle index.js file ko dhundhte h taaki saari information waha se utha li jaye jo bhi usme present ho 
 
 console.log(info);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+so, the "package.json" is the most important file, and we do not require the folder of node_modules because whenever we enter the command - "npm install", it will automatically download that node_module folder in our project according to our package.json dependencies, and we can install any new project with the command - "npm install (name of that project according to their repo listed in npm website)", and 
+
+if we install the project in any directory and if we try to access and use that, it'll throw the error, because what we installed is present in local space and we can access all that locally (in the same directory or where that software present, and it's also a good practice), but still, if we have to use it globally, we can do it too - 
+
+for global access, we have to enter few commands like: 
+sudo chown -R $USER/usr/local/lib/node_modules
+(this commands helps to get the admin access, so, we can install it globally).
+
+and for installing in global we have to enter command like: 
+"npm install -g (package name)"
+
+and we also have to link that globally, so, next command is:
+"npm link (package name)"
+
+now, we can access and use it globally: 
+"node file_name.js"
+
+and file run successfully.
+
+
+
+
+
+
+
+
