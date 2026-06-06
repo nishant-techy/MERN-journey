@@ -1640,4 +1640,4 @@ for further process, we just not have to recieve the request, we also have to re
 
 
 
-B). Parse: the parsing method is the method in which 
+B). Parse: actually the data what user pass is in text form, so, the express.js convert that data into json format to understand it and parse it 
