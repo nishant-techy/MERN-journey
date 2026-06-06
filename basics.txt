@@ -1550,13 +1550,3 @@ and file run successfully.
 before ES6 update, we used the method 'require', where we have to do the export the same way and then require the whole file, so, everything will load up, according to whatever we exported.
 so, they introduce the new feature, 
 The import module, it is the new technology and it gives few features like we do not have to import the whole file, we can just import the things of whatever is required for us, like if the file have thousands of line of code and we just need two to three function from it, so, we can just import those two to three function specifically but in that require case, we can't do that, we have to specifically load all of those functions in our project and it was not very efficient for memory.
-
-loading is synchronous for 'require' but can be asynchronous for 'import'
-
-but the most important part is, we can export and import the things from that normally, but we have to write 
-{
-"type": "module"
-} 
-in our package.json file to use it. 
-and we do not have package.json file in our project, we can create it by the command with "npm init"
-and then we have to enter that module thing in our project to run this properly. 
