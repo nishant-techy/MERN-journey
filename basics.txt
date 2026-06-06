@@ -1689,6 +1689,24 @@ so, the response.send (.send), is the function we used to send the response from
 
 
 
+------------ Routing ---------------
+
+Routing is the process of defining how an application responds to different URLs (routes).
+
+Actually, jo hmare domain name ke piche "/" (slash) ke baad different paths hote hain, for example:
+amazon.in/electric
+amazon.in/kitchen
+amazon.in/home
+
+to har route ke liye alag response ya functionality set karna Routing kehlata hai.
+
+Example:
+
+"/electric" → Electric products page
+"/kitchen" → Kitchen products page
+"/home" → Home products page
+
+Express.js mein routing ki help se hum different URLs ke liye different responses bhej sakte hain.
 
 
 
