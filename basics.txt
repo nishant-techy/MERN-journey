@@ -1650,7 +1650,12 @@ and text based hoti hai kyoki har jagah log server different different languages
 
 
 
+and for response, we have to use the ".send" method, so, we can continue our old segament -  
 
+app.use((req, res) => {      
+	console.log("Request recieved"); 
+	res.send("This is just an example of basic response");
+});
 
 
 
