@@ -1650,6 +1650,7 @@ and text based hoti hai kyoki har jagah log server different different languages
 
 
 
+
 and for response, we have to use the ".send" method, so, we can continue our old segament -  
 
 app.use((req, res) => {      
@@ -1657,6 +1658,26 @@ app.use((req, res) => {
 	res.send("This is just an example of basic response");
 });
 
-so, it will send the string this time, 
+so, it will send the string this time, but we can also change and make it like that, so, it can send other things also, whatever we wanted, as for now, we can also change it that it will send the response as the form of object,
+
+
+app.use((req, res) => {
+	console.log("request recieved");
+	res.send({
+		name:"apple",
+		color:"red",
+	});
+});
+
+this time it will send the response as an object form, so, whoever connect with our server will recieve that object, 
+
+and moreover, we can also send the HTML response, 
+
+app.use((req, res) => {
+	console.log("request recieved");
+	let code = "<h1>Fruits</h1><ul><li>Mango</li><li>Banana</li></ul>";
+});
+
+
 
 
