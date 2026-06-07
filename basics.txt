@@ -1953,4 +1953,17 @@ app.get("/", (req, res)=> {
 
 
 
-ab jo apna view engine hai, wo expect krta hai ki jo bhi hme template wgarah milenge wo hmare "views" naam ka koi folder hoga usi me milenge, to hme ek views naam ka folder bna lena chaiya aur uske hissab se krlena chaiya.
+ab jo apna view engine hai, wo expect krta hai ki jo bhi hme template wgarah milenge wo hmare "views" naam ka koi folder hoga usi me milenge, to hme ek views naam ka folder bna lena chaiya aur uske hissab se krlena chaiye.
+
+
+
+
+
+
+
+
+
+
+
+
+
