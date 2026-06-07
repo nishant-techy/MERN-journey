@@ -1967,4 +1967,4 @@ usko apne app normal form me convert krdega, actually, humne kahi bhi btaya nhi 
 
 
 
-to bhai agr hum kisi aur folder se server ko start kr rhe h like parent folder ya uske bhi parent folder se maine path deke server start kr diya to wo file ko render nhi kr payega kyoki 
+to bhai agr hum kisi aur folder se server ko start kr rhe h like parent folder ya uske bhi parent folder se maine path deke server start kr diya to wo file ko render nhi kr payega kyoki wo wahi pe "views" folder ko dhundhega jaha se server shuru kiya gya h jo hme iss case se bachne k liye 
