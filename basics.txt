@@ -1716,7 +1716,7 @@ app.get("/", (req, res) => {
 });
 
 
-app.get("/apple". (req, res)=> {
+app.get("/apple", (req, res)=> {
 	res.send("you contacted apple path");
 });
 
@@ -1732,6 +1732,7 @@ so, all of the defined path above work fine but what happened if user enter some
 app.get("*", (req, res) => {
 	res.send("this path does not exist. 404 page not found. ");
 });
+{{{{The important thing is that it should be written after all other routes, otherwise it will catch everything.}}}}
 
 
 
@@ -1750,4 +1751,19 @@ app.post("/", (req, res)=> {  // in this method, we handle the post request and 
 
 
 there's the software called "nodemon" which we can install in our system, so, we do not have to restart our node.js again and again after each changes, and whenever we change and save it, it'll automatically save those changes and restart our server.
-and we should install that globally, so, we can access that anywhere in our system, actually if we install that locally, we have to install that in each and every project seperately, so, instead of doing that, let's install that globally because that only helps us to 
+and we should install that globally, so, we can access that anywhere in our system, actually if we install that locally, we have to install that in each and every project seperately, so, instead of doing that, let's install that globally because that only helps us to use it in any project present in our system. 
+for that, we have to enter - "npm install -g nodemon", and 
+to use it, we have to enter - "nodemon file_name.js"
+
+
+
+
+
+
+
+
+
+
+
+
+
