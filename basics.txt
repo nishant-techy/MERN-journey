@@ -1967,4 +1967,20 @@ usko apne app normal form me convert krdega, actually, humne kahi bhi btaya nhi 
 
 
 
-to bhai agr hum kisi aur folder se server ko start kr rhe h like parent folder ya uske bhi parent folder se maine path deke server start kr diya to wo file ko render nhi kr payega kyoki wo wahi pe "views" folder ko dhundhega jaha se server shuru kiya gya h jo hme iss case se bachne k liye 
+to bhai agr hum kisi aur folder se server ko start kr rhe h like parent folder ya uske bhi parent folder se maine path deke server start kr diya to wo file ko render nhi kr payega kyoki wo wahi pe "views" folder ko dhundhega jaha se server shuru kiya gya h jo hme iss case se bachne k liye usko path define krna pdega, 
+
+const path = require("path");  //path bhi ek bahr ka hi package h to usko hme mangwana hi pdega to require krna pdega usko 
+
+app.set("views", path.join(_dirname, "views"));       //abhi uska path set krna h to ye aese hoga ki "views" ka hum path bta rhe hain aur jo hum path btayenge wahi jaake tum dhundhna kahi aur dekhne ki jarurat nhi h
+
+
+
+
+
+
+
+
+
+
+
+
