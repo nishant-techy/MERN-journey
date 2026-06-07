@@ -1956,6 +1956,9 @@ app.get("/", (req, res)=> {
 ab jo apna view engine hai, wo expect krta hai ki jo bhi hme template wgarah milenge wo hmare "views" naam ka koi folder hoga usi me milenge, to hme ek views naam ka folder bna lena chaiya aur uske hissab se krlena chaiye.
 
 
+to abhi hum "views" folder me jayenge aur "home.ejs" k name se file bnake usme HTML code likhenge jaise hum normally apna likhte hain aur 
+res.render("home.ejs"); 
+usko apne app normal form me convert krdega, actually, humne kahi bhi btaya nhi h ki hame konsi directory me jaakr dhundhni h file but usko phir bhi idea h ki kha jaana h aur wo "views" folder hi dhundhta h default and then wo jaake file ka name dhundhega ki exist krti h ya nhi. 
 
 
 
