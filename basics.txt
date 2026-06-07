@@ -1852,4 +1852,18 @@ and the value "viratkohli" will be stored inside the username variable.
 
 
 
--------------- from the same concept, he's using .get method and trying to create that 
+-------------- from the same concept, he's using .get method and trying to create that /search method and pass those HTML elements:- 
+app.get("/search", (req, res)=> {
+	let { q } = req.query;    // ye to hogya apna jab koi kuch username me search kre to kaise krna h but 
+what if someone didn't search anything, just open search and pass the unwanted or empty input then what, 
+	//so, we can do that
+	if(!q) {
+		res.send("<h1>Nothing searched.</h1>");
+	}
+	
+	res.send("<h1>Search result for query: ${q}</h1>");
+});
+
+
+
+
