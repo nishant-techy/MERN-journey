@@ -1771,4 +1771,22 @@ to use it, we have to enter - "nodemon file_name.js"
 
 Path parameters is the thing which passes in the url, for example, we are using instagram and we search and opened the profile for different-different person, every time we do that a variable kind of something is passing in the url, so, the browser or instagram can redirect the page and open that specific requested information, so, the same way, we are going to the last functionality of the express.js:
 
-D). Routes: Routes is g s
+D). Routes: Routes is the something that i just explain above, 
+so, how the server that those route thing is: 
+
+app.get ("/ig/:username", (req, res)=> {
+let username = req.params;    // req jo aayegi uske parameter hmne username variable me store kr liye, and why would we place those brackets in our account.
+	console.log(`This account belongs to @${username}`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
