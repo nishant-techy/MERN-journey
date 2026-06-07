@@ -1794,8 +1794,7 @@ Here, the username part changes every time, so we use a path parameter.
 
 2). Route vs Path Parameters
 
-You wrote:
-D). Routes: Routes is the something that i just explain above
+ Routes: Routes is the something that i just explain above
 Actually:
 Route → /ig/:username
 Path Parameter → :username
@@ -1803,7 +1802,54 @@ So the route contains a path parameter.
 
 
 
-3).
+Why are the curly braces used?
+You asked:
+why would we place those brackets around the variable?
+This is called object destructuring.
+
+Without destructuring:
+let username = req.params.username;
+
+With destructuring:
+let { username } = req.params;
+
+Both do exactly the same thing.
 
 
 
+
+
+
+
+
+
+
+In the above route:
+
+/ig/:username is the route.
+:username is the path parameter.
+
+req.params contains all path parameters.
+
+let { username } = req.params uses object destructuring to extract the username value.
+
+For example:
+/ig/viratkohli
+will result in:
+
+req.params = {
+    username: "viratkohli"
+}
+
+and the value "viratkohli" will be stored inside the username variable.
+
+
+
+
+
+
+
+
+
+
+-------------- from the same concept, he's using .get method and trying to create that 
