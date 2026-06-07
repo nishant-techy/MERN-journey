@@ -1876,3 +1876,5 @@ what if someone didn't search anything, just open search and pass the unwanted o
 
 
 ----------- EJS --------------
+EJS (embedded Javascript Template), is a popular template engine for JavaScript that allows you to generate dynamic HTML markup with plain JavaScript. It is widely used in Node.js and Express applications to fetch data from servers or databases and display it interactively on the webpage. 
+
