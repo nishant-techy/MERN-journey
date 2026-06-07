@@ -1621,6 +1621,7 @@ b). parse
 c). match response with routes
 d). response
 
+
 -------- let's discuss each one by one --------
 A). listen for incoming request: 
 so, whenever we send the request, for an example, we send the request in which we want to access any url, 
@@ -1766,4 +1767,8 @@ to use it, we have to enter - "nodemon file_name.js"
 
 
 
+------------------ Path Parameters ---------------------
 
+Path parameters is the thing which passes in the url, for example, we are using instagram and we search and opened the profile for different-different person, every time we do that a variable kind of something is passing in the url, so, the browser or instagram can redirect the page and open that specific requested information, so, the same way, we are going to the last functionality of the express.js:
+
+D). Routes: Routes is g s
