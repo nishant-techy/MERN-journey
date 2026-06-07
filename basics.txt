@@ -1984,3 +1984,22 @@ app.set("views", path.join(_dirname, "views"));       //abhi uska path set krna 
 
 
 
+--------- Interpolation Syntax -----------
+Interpolation refers to embedding expressions into marked up text. 
+
+mtlb ki koi code k andr apna kisi bhi tarah ka expression embed ya include ya mix krdena, like 
+agr m likhu 
+`` (template literal me)
+`This is a ${name}.`;
+
+eg: This is a apnacollege.
+mtlb ek variable include krdiya hmne string me 
+
+to aese hi chijo ko embed krna interpolation khlata hai. 
+
+
+aur ye to small example tha, we can do the whole JS or html code embeddation by the help of this method. 
+
+
+
+
