@@ -1775,18 +1775,35 @@ D). Routes: Routes is the something that i just explain above,
 so, how the server that those route thing is: 
 
 app.get ("/ig/:username", (req, res)=> {
-let username = req.params;    // req jo aayegi uske parameter hmne username variable me store kr liye, and why would we place those brackets in our account.
-	console.log(`This account belongs to @${username}`);
+let { username } = req.params;    // req jo aayegi uske parameter hmne username variable me store kr liye, and why would we place those brackets around the variable, we are initializing it, so, why would we need it.
+	res.send(`This account belongs to @${username}`);
 });
 
 
 
+----- cleaner definition -----
+
+1). Path Parameters are dynamic values passed inside the URL path. They allow us to create routes that can handle different values using a single route definition.
+
+Example:
+/ig/viratkohli
+/ig/cristiano
+/ig/selena_gomez
+Here, the username part changes every time, so we use a path parameter.
+
+
+2). Route vs Path Parameters
+
+You wrote:
+D). Routes: Routes is the something that i just explain above
+Actually:
+Route → /ig/:username
+Path Parameter → :username
+So the route contains a path parameter.
 
 
 
-
-
-
+3).
 
 
 
