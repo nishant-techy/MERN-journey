@@ -1878,3 +1878,80 @@ what if someone didn't search anything, just open search and pass the unwanted o
 ----------- EJS --------------
 EJS (embedded Javascript Template), is a popular template engine for JavaScript that allows you to generate dynamic HTML markup with plain JavaScript. It is widely used in Node.js and Express applications to fetch data from servers or databases and display it interactively on the webpage. 
 
+so, we have to setup everything before using it, so, open the terminal or cmd or git bash and enter the command:
+
+npm init -y (this command will automatically create the "package.json" file in my folder)
+
+npm i express (to install express) 
+
+npm i ejs (to install ejs) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+touch index.js
+------ index.js ------
+
+const express = require("express"); 
+const app = express();        //let's launch the application
+
+const port = 8080;
+
+app.listen(port, ()=> {
+	console.log("Listening on the port ${port}");
+});
+
+to start this file enter "nodemon index.js"
+
+
+
+
+
+
+
+
+
+to agr hum "ejs" ko apni file me acquire krna chate h to uske liye hme hmare enjine ko "ejs" pe set krna pdega, 
+like for express we did the 
+const express = require("express"), right but why we don't do the same for "ejs" 
+because both of them are packages, right..
+
+so, the reason behind it is that because Express automatically acquire the ejs whenever installed. 
+
+
+so, the line is 
+app.set("view engine", "ejs");
+
+view engine ka mtlb h ki jo engine hmari files ko render krne k kaam aayega, unko dikhane me use hoga wo hmne set krdiya "ejs".
+
+
+to whenever we do the 
+app.get("/", (req, res)=> {
+	res.send("<h1>Working perfectly.</h1>");
+});
+
+
+so, send function jo hm use krte h usse hm string, array, boolean, object, html parse kar skte hai but what about the bigger whole format like the whole page, aur hum us ek function me html, css js, sab kuch to likh nhi skte to, what about that?
+
+to, uske liye use hoya h "render" function ka 
+
+
+so, we have to do something like this - 
+
+app.get("/", (req, res)=> {
+	res.render("home.ejs");
+});
+
+
+
+
+
