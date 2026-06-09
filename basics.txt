@@ -1971,7 +1971,7 @@ to bhai agr hum kisi aur folder se server ko start kr rhe h like parent folder y
 
 const path = require("path");  //path bhi ek bahr ka hi package h to usko hme mangwana hi pdega to require krna pdega usko 
 
-app.set("views", path.join(_dirname, "views"));       //abhi uska path set krna h to ye aese hoga ki "views" ka hum path bta rhe hain aur jo hum path btayenge wahi jaake tum dhundhna kahi aur dekhne ki jarurat nhi h
+app.set("views", path.join(__dirname, "views"));       //abhi uska path set krna h to ye aese hoga ki "views" ka hum path bta rhe hain aur jo hum path btayenge wahi jaake tum dhundhna kahi aur dekhne ki jarurat nhi h
 
 
 
@@ -1997,7 +1997,6 @@ mtlb ek variable include krdiya hmne string me
 
 to aese hi chijo ko embed krna interpolation khlata hai. 
 
-
 aur ye to small example tha, we can do the whole JS or html code embeddation by the help of this method. 
 
 
@@ -2008,4 +2007,20 @@ aur ye to small example tha, we can do the whole JS or html code embeddation by 
 
 
 
-to bhai 
+
+so, now, it's time to write the dynamic HTML, i know, it can also render the normal HTML but we need the dynamic HTML here which can change according to our need and will work according to the input/output. 
+
+
+so, let's start from the basic:
+
+<%=  %>
+
+these are one of the signs that are used to write some dynamic code, 
+
+
+
+<%= ["hello", "bonjouur", "namaste"][1} %> 
+
+so, this is the method in which html are dynamic because it will print the 1st index element of array and 
+
+ 
