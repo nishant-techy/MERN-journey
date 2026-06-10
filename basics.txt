@@ -1660,11 +1660,11 @@ likewise, framework ek aesa pre-written code hai, jo btata hai ki software appli
 Node.js ka web application framework jo help krta hai to make web applications, and used for server side programming. 
 
 
-	 (request)
+	      (request)
        ------------>
 client                server
        <------------ 
-	 (response)
+	      (response)
 
 abhi tak hmne kiya tha ki client request bhejta hai server k pass aur response ko capture krta hai jo server se aata hai, aur ab express.js (server side language hai), jo hame dikhayegi/btayegi ki uss side kya chl rha h mtlb jo request hum aage se bhej rhe hai ab uska yaha aake kya ho rha h 
 
@@ -1676,11 +1676,10 @@ there are 4 major work of express.js -
 a). Listen for incoming request
 b). parse
 c). match response with routes
-d). response
-
+(d). response
 
 -------- let's discuss each one by one --------
-A). listen for incoming request: 
+(A). listen for incoming request: 
 so, whenever we send the request, for an example, we send the request in which we want to access any url, 
 that request goes to server, 
 server recieves it, but for server recieving that request we need to setup the server, so, the first thing is "let's listen when will user send the request to us", 
@@ -1702,8 +1701,8 @@ for further process, we just not have to recieve the request, we also have to re
 
 
 
-B). Parse: actually the data what user pass is in text form (like the https request we send it is always in text form), so, the express.js convert that data into object, so, that what the express did, this is what we call the "parsing". 
-and text based hoti hai kyoki har jagah log server different different languages (php, python, node, etc). me bna rhe h to text based sabko smjh bhi aa jati h aur sabhi usko apne according parse bhi kr skte hain aur user ko bhi kuch sochna nhi pdta.
+(B). Parse: actually the data what user pass is in text form (like the https request we send it is always in text form), so, the express.js convert that data into object, so, that what the express did, this is what we call the "parsing". 
+and request hmesha text based hoti hai kyoki har jagah log server different different languages (php, python, node, etc). me bna rhe h to text-based sabko smjh bhi aa jati h aur sabhi usko apne according parse bhi kr skte hain aur user ko bhi kuch sochna nhi pdta.
 
 
 
