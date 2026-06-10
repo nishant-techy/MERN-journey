@@ -924,7 +924,7 @@ as the same way the arrays are mutable, which can be changed by indexing.
 
 -------------- EVENT DELEGATION -----------------
 Event Delegation is the method in which some event/function which are supposed to apply on every element which only applies to those element which are already present in the DOM and not to the upcoming or later add-on ones, 
-i mean if we add the function to the every button who have the class "done", then if we create another button later by any other method without changing the code or something like that, then those function will not apply on these new buttons, 
+i mean if we want to add the function to the every button who have the class "done", then if we create another button later by any other method without changing the code (like dynamic buttons) or something like that, then those function will not apply on these new buttons, 
 but
 that event delegation is the thing where we solve this problem, it is kind of phenomenon where we use the bubbling property with the help of that we apply every function to every necessary elements (no matter if they are new coming or old ones), 
 aur isme kya hota h ki jo function/feature hme uss naye element pe lgana tha to uspe wo apply nhi hota to instead of doing on that, we'll apply the same for our parent element, 
@@ -1001,6 +1001,11 @@ the element is removed from DOM
 
     </div>
 </div>
+
+
+let child = document.querySelector("#child");
+let parent = document.querySelector("#parent");
+let grandparent = document.querySelector("#grandparent");
 
 child.addEventListener("click", () => {
     console.log("Child");
