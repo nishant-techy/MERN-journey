@@ -196,7 +196,7 @@ Bootstrap grid = 12 columns system
 
 Think:
 |----|----|----|------|-----|-----|-----|----|-----|-----|-----|-------|
- 1    2    3    4    5    6    7    8    9   10   11   12
+ 1     2    3     4      5     6     7     8    9    10     11    12
 Everything is about how many columns you occupy out of 12.
 
 🔍 What g-col-6 means
