@@ -171,11 +171,11 @@ and
 
 
 
-Selector	Meaning
-.logo > a	Direct child only
-.logo a	Any descendant (any depth)
-.logo + a	Adjacent sibling → the next <a> right after .logo
-.logo ~ a	General sibling → all <a> elements after .logo (same parent)
+Selector	  |       Meaning
+.logo > a		|      Direct child only
+.logo a		  |      Any descendant (any depth)
+.logo + a		|      Adjacent sibling → the next <a> right after .logo
+.logo ~ a		|      General sibling → all <a> elements after .logo (same parent)
 
 
 
