@@ -230,7 +230,7 @@ g-col-lg-4, it's for large screen sizes
 
 
 
-
+ 
 
 🔹 On small screens (<768px)
 Only this applies:
@@ -289,7 +289,7 @@ Bootstrap grid = 12 columns system
 Think:
 
 |----|----|----|------|-----|-----|-----|----|-----|-----|-----|-------|
-  1    2    3    4    5    6    7    8    9   10   11   12
+ 1     2    3     4      5     6     7     8    9    10     11    12
 Everything is about how many columns you occupy out of 12.
 
 🔍 What col-6 means
@@ -415,11 +415,11 @@ Always think:
 
 
 Path	                       Meaning
-image.png	            same folder
-./image.png	            same folder (explicit) [Look in the SAME folder as this file]
-assets/image.png    inside folder
-../image.png	             one level up
-/assets/image.png   from root
+image.png	 	        |      same folder
+./image.png	       	|      same folder (explicit) [Look in the SAME folder as this file]
+assets/image.png   	|      inside folder
+../image.png	      |      one level up
+/assets/image.png  	|      from root
 
 
 
@@ -487,12 +487,12 @@ Line-height: 2.5 (it means it'll be considered as the (2.5 × of the normal size
 
 *Font size units in css*
 
-Absolute               Relative 
-    *Px*                            *%*
-    Pt                             *em*
+Absolute                        Relative 
+   *Px*                            *%*
+    Pt                            *em*
     Pc                            *rem*
-    Cm                           ch 
-    mm                          vh
+    Cm                             ch 
+    mm                             vh
     in                             vw 
 
               etc, etc...
