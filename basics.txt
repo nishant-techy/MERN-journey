@@ -1,3 +1,38 @@
+Exact ROADMAP will be like: 
+HTML
+ ↓
+CSS
+ ↓
+JavaScript
+ ↓
+ES6 Modules
+ ↓
+DOM
+ ↓
+Git & GitHub
+ ↓
+React
+ ↓
+Node.js
+ ↓
+Express.js
+ ↓
+MongoDB
+ ↓
+Authentication (JWT)
+ ↓
+Deployment
+
+
+
+
+
+
+
+
+
+
+
 **Display:flex;**
 
 align-items:center;        sending the object from top to bottom (vertical)
@@ -1386,9 +1421,9 @@ to isme chije saari wahi rhengi, bs apna koi file se kisi aur file me koi proper
 module.export = 
 (ab ye return to object krta h default behaviour of node.js, but hm chaye to kuch bhi return kra skte h jaise 
 module.export = "hello";
-to string return krdi, 
+// to string return krdi, 
 module.export = 123;
-to number return krdiya, etc, etc. 
+// to number return krdiya, etc, etc. 
 
 so, the thing is agr kisi ek file me ek chij h aur uski wo chij waha se access krke mujhe apni dusri file me chaiye kyoki ek hi chij baar baar thodi likhoge, to hm iska use kr skte hain, like 
 
@@ -1450,7 +1485,7 @@ console.log(mathValue.PI);         // 3.14
 
 
 
----------------- ab ye to hogyi ek file se dusri file me property transfer krne ki baat, what about the big projects, jaha hundreds of files hongi to thodi hamesha ek file ek data dusre me aur teesre me bhejte rhenge, so, we name it as: "export in directories", mtlb puri directory me jitni 3,4,8,10,50 jitni files ho unka data agr kisi dusre file/folder me bhejna ho to kaise krenge ------------
+---------------- ab ye to hogyi ek file se dusri file me property transfer krne ki baat, what about the big projects, jaha hundreds of files hongi to thodi hamesha ek file ke ek data ko dusre me aur teesre me bhejte rhenge, so, we name it as: "export in directories", mtlb puri directory me jitni 3,4,8,10,50 jitni files ho unka data agr kisi dusre file/folder me bhejna ho to kaise krenge ------------
 so, let's assume we have 3 files - 
 apple.js, banana.js, orange.js in the folder of "fruits" and there is another file like script.js in the parent directory, sibling of Fruits folder, 
 so, if script.js wanted to access the data from these files, then how can we do that, 
@@ -1488,7 +1523,6 @@ const banana = require["./banana"];
 let fruit = [apple, orange, banana];
 
 module.exports = fruit;
-
 
 
 so, the main part is, we can use the information of index.js file - 
@@ -1551,20 +1585,38 @@ and file run successfully.
 
 
 
----------------- Import module ----------------
-before ES6 update, we used the method 'require', where we have to do the export the same way and then require the whole file, so, everything will load up, according to whatever we exported.
-so, they introduce the new feature, 
-The import module, it is the new technology and it gives few features like we do not have to import the whole file, we can just import the things of whatever is required for us, like if the file have thousands of line of code and we just need two to three function from it, so, we can just import those two to three function specifically but in that require case, we can't do that, we have to specifically load all of those functions in our project and it was not very efficient for memory.
+---------------- Import Module ----------------
 
-loading is synchronous for 'require' but can be asynchronous for 'import'
+Before the ES6 update, Node.js mainly used the `require()` method to import modules. When we use `require()`, the whole module file is loaded and executed. Even if we only need a few functions from that file, the complete module is loaded.
 
-but the most important part is, we can export and import the things from that normally, but we have to write 
+To improve module handling, ES6 introduced the `import` and `export` syntax.
+
+One advantage of `import` is that we can import only the things we need from a module. For example, if a file contains thousands of lines of code and many functions, but we only need two or three functions, we can import only those specific functions.
+
+```js
+import { add, subtract } from './math.js';
+```
+
+In CommonJS (`require`), we can also access specific functions, but ES6 modules allow tools like Webpack and Vite to perform tree shaking, which can remove unused code and make the final bundle smaller and more efficient.
+
+Another difference is that `require()` loads modules synchronously, while `import` supports asynchronous loading through dynamic imports.
+
+To use ES6 modules in Node.js, we need to add the following in the `package.json` file:
+
+```json
 {
-"type": "module"
-} 
-in our package.json file to use it. 
-and we do not have package.json file in our project, we can create it by the command with "npm init"
-and then we have to enter that module thing in our project to run this properly. 
+  "type": "module"
+}
+```
+
+
+If our project does not have a `package.json` file, we can create one by running:
+
+```bash
+npm init -y
+```
+
+After creating the `package.json` file, we can add `"type": "module"` and then use `import` and `export` syntax in our project properly.
 
 
 
