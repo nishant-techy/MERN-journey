@@ -1827,7 +1827,7 @@ to use it, we have to enter - "nodemon file_name.js"
 
 Path parameters is the thing which passes in the url, for example, we are using instagram and we search and opened the profile for different-different person, every time we do that a variable kind of something is passing in the url, so, the browser or instagram can redirect the page and open that specific requested information, so, the same way, we are going to the last functionality of the express.js:
 
-D). Routes: Routes is the something that i just explain above, 
+(D). Routes: Routes is the something that i just explain above, 
 so, how the server that those route thing is: 
 
 app.get ("/ig/:username", (req, res)=> {
@@ -2080,3 +2080,23 @@ these are one of the signs that are used to write some dynamic code,
 so, this is the method in which html are dynamic because it will print the 1st index element of array and 
 
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module.export - a special object jo bnaya hi chijon ko bhejne k liye hai, export krne k liye
+& 
+require - a built-in function to include external modules that exist in seperate files. 
