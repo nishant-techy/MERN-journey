@@ -2133,3 +2133,15 @@ app.use((req, res) => {
 });
 
 // to send use hota hai response ko send krne k liye aur bhejne k liye ki user ko actually me response dena kya h kisi chij ka har situation ko according alg alg
+
+app.use hota hai ki bhai request ko capture bhi krle aur response ko saath saath send bhi kr ske, to .use to ek tarah se dynamic thing hai ab uske andrr hme kya kya krna hai wo alg chij hai, 
+
+abhi isme ek chij aur aa rhi hai - 
+app.get(
+
+ye 
+
+
+
+
+
