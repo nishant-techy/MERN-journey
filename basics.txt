@@ -2100,3 +2100,36 @@ so, this is the method in which html are dynamic because it will print the 1st i
 module.export - a special object jo bnaya hi chijon ko bhejne k liye hai, export krne k liye
 & 
 require - a built-in function to include external modules that exist in seperate files. 
+
+
+
+
+
+
+
+
+const express = require("express"); //express bs ek framework hai jo help krti hai server ki functionalities ko define krne k liye, to hm phle express ko mngwa lete h ki bhai express me chl kya rha h aakhir, aur phir us function ko app naam k variable me store krwa lete hai, it's like default behaviour (not necessary but kinda cult)
+
+const app = express();
+
+
+// then will start the port to listen what is going on, is there any request coming from client side or what
+
+let port = 8080;
+
+
+app.listen(port, () => {
+	console.log(`app is listening on port ${port}`);
+});
+
+//ye to bta deta h ki haa bhai sun rhe h lekin agle aadmi ko bhi to btao bhai ki hum sun rhe h usko thodi pta lgega to jo usne maanga h wo return krdo ya kuch response send kro taaki user ko tasali hoye ki hua kya h?
+
+
+so,
+app.use((req, res) => {
+	console.log("request recieved");	
+	let code = "<h1>Fruits</h1><ul><li>Mango</li><li>Apple</li></ul>";
+	res.send(code);
+});
+
+// to send use hota hai response ko send krne k liye aur bhejne k liye ki user ko actually me response dena kya h kisi chij ka har situation ko according alg alg
