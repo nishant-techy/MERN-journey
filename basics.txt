@@ -2137,13 +2137,17 @@ app.use((req, res) => {
 app.use hota hai ki bhai request ko capture bhi krle aur response ko saath saath send bhi kr ske, to .use to ek tarah se dynamic thing hai ab uske andrr hme kya kya krna hai wo alg chij hai, 
 
 abhi isme ek chij aur aa rhi hai - 
-app.get(
 
-abhi k liye use ho rha h for routing purpose, mtlb
+
+app.get() GET request ke liye specific URL handle karta hai.
 
 app.get("/", (req, res) => {
-	res.send("hello");
+  res.send("Hello");
 });
+
+When user visits /, this function runs.
+
+
 
 app.get -- use hota h "/", "/product", etc, mtlb chijo ko redirect krne k liye, jaise hum kisi link pe click krte h to dusre page pe redirect ho jaate h aese chijo ko app.get me kr skte hai 
 aur sabse main h 
