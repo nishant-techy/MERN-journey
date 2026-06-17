@@ -2149,7 +2149,8 @@ When user visits /, this function runs.
 
 
 
-app.get -- use hota h "/", "/product", etc, mtlb chijo ko redirect krne k liye, jaise hum kisi link pe click krte h to dusre page pe redirect ho jaate h aese chijo ko app.get me kr skte hai 
+app.get() specific URL ke liye route define karta hai. Jab user us URL par GET request bhejta hai, tab corresponding callback function execute hota hai aur response send karta hai.
+jaise hum kisi link pe click krte h to dusre page pe redirect ho jaate h aese chijo ko app.get me kr skte hai 
 aur sabse main h 
 
 res.send()
@@ -2162,10 +2163,48 @@ app.get("/hello", (req, res) => {
 	res.send("Hi, how are you");
 });
 
-abhi res.send() me hum string, object, array, etc. send kr skte hai lekin agr hume main page hi according to information entered or alg tarike se dikhana ho to uske liye ek option h 
+abhi res.send() me hum string, object, HTML, array, etc. send kr skte hai lekin agr hume main page hi according to information entered or alg tarike se dikhana ho to uske liye ek option h 
 
 
 --- res.render(); 
+
+
+res.render("rolldice.ejs", { diceVal });
+
+Better explanation:
+res.render() template engine (EJS) ki file ko render karta hai aur data pass karta hai. EJS file us data ko use karke final HTML generate karti hai aur browser ko send kar deti hai.
+
+Example:
+app.get("/rolldice", (req, res) => {
+  let diceVal = Math.floor(Math.random() * 6) + 1;
+
+  res.render("rolldice.ejs", { diceVal });
+});
+
+
+
+*FLOW:*
+
+Browser
+   ↓
+/rolldice
+   ↓
+Express Route
+   ↓
+res.render("rolldice.ejs",{diceVal})
+   ↓
+EJS file receives diceVal
+   ↓
+HTML generated
+   ↓
+Browser displays page
+
+
+
+
+
+
+
 
 
 res.render(); use hota h pura page bhejne k liye, mtlb pura ka pura page aap export kr skte ho, like 
