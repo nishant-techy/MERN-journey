@@ -2139,9 +2139,35 @@ app.use hota hai ki bhai request ko capture bhi krle aur response ko saath saath
 abhi isme ek chij aur aa rhi hai - 
 app.get(
 
-ye 
+abhi k liye use ho rha h for routing purpose, mtlb
+
+app.get("/", (req, res) => {
+	res.send("hello");
+});
+
+app.get -- use hota h "/", "/product", etc, mtlb chijo ko redirect krne k liye, jaise hum kisi link pe click krte h to dusre page pe redirect ho jaate h aese chijo ko app.get me kr skte hai 
+aur sabse main h 
+
+res.send()
+jo btata hai ki send krna kya h, 
+
+res.send("hello");  --- to isme m bta skta hu ki kya chij return hogi aur wo kis url pe kya dikhana hai 
+iske baad baari aati hai dynamic things ki 
+
+app.get("/hello", (req, res) => {
+	res.send("Hi, how are you");
+});
+
+abhi res.send() me hum string, object, array, etc. send kr skte hai lekin agr hume main page hi according to information entered or alg tarike se dikhana ho to uske liye ek option h 
 
 
+--- res.render(); 
 
 
+res.render(); use hota h pura page bhejne k liye, mtlb pura ka pura page aap export kr skte ho, like 
 
+
+app.get("/rolldice", (req, res)=> {
+	let diceVal = Math.floor(Math.random() * 6) + 1;
+	res.render("rolldice.ejs", {diceVal});	
+});
