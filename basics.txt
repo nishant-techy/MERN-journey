@@ -2167,7 +2167,9 @@ abhi res.send() me hum string, object, array, etc. send kr skte hai lekin agr hu
 res.render(); use hota h pura page bhejne k liye, mtlb pura ka pura page aap export kr skte ho, like 
 
 
-app.get("/rolldice", (req, res)=> {
+app.get("/rolldice", (req, res)=> {       // ab isse ye pta chlta h ki ye rolldice jab koi access krega to ye response me bhejega koi dice ki value  
 	let diceVal = Math.floor(Math.random() * 6) + 1;
-	res.render("rolldice.ejs", {diceVal});	
+	res.render("rolldice.ejs", {diceVal});	  // jise ye page rolldice render ho rha h to waha iski value ko share kiya jayega aur jo bhi code uss rolldice.ejs file me likha h phir kaam uski taraf se kiya jayega 
 });
+
+
