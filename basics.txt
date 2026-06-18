@@ -2266,3 +2266,40 @@ let num = 10;          // Number
 let isTrue = true;     // Boolean
 let arr = [1, 2, 3];   // Array
 let obj = {name: "John"}; // Object
+
+
+
+
+
+
+
+
+
+
+
+
+
+🔹 Functions
+
+Functions are reusable blocks of code.
+
+function greet(name) {
+  return `Hello, ${name}`;
+}
+
+console.log(greet("Nishant"));
+
+Output:
+
+Hello, Nishant
+🔹 Arrays
+let fruits = ["Apple", "Mango", "Banana"];
+
+console.log(fruits[0]); // Apple
+
+Useful methods:
+
+fruits.push("Orange");
+fruits.pop();
+fruits.map();
+fruits.filter();
