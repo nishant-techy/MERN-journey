@@ -1,2 +1,3 @@
+ D node_project/knowledge.txt
  M temp.txt
-?? node_project/knowledge.txt
+?? node_project/basics.txt

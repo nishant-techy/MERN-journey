@@ -6,12 +6,13 @@ package.json ---
   "name": "node_project"
 }
 
-server.js --- 
+--- server.js --- 
+
 const express = require("express");
 ✅ No "type": "module" needed.
 
 
-ES Modules ---
+--- ES Modules ---
 
 package.json
 
@@ -20,8 +21,7 @@ package.json
   "type": "module"
 }
 
-server.js ---
+--- server.js --- 
 
 import express from "express";
-
 ✅ Works.
