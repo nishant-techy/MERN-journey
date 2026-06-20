@@ -12,5 +12,8 @@ app.listen(port, () => {
 // and app.get use for telling the exact destination, the exact route
 
 app.get("/", (req, res) => {
-  res.send("Request recieved"); // response send this and this
+  // res.send("Request recieved"); // response send
+  res.send("<h1>Request recieved with bold letters.</h1>");
 });
+
+// another new thing, the res.send should only be once, and do not use it again otherwise it'll throw the error.
