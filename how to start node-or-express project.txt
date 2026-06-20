@@ -1,0 +1,19 @@
+Create folder
+↓
+npm init -y
+↓
+npm install express
+↓
+Create .gitignore
+↓
+Write "node_modules/" or "whatever you want that should not upload on the github" inside it
+↓
+Create server.js
+↓
+Install nodemon  (npm install -g nodemon) to install it globally
+↓
+Start coding
+↓
+Create files and folders as needed
+↓
+Upload to GitHub
