@@ -46,3 +46,6 @@ It's similar to how:
 index.html is the starting point of a website.
 main() is the starting point of a C/C++ program.
 main.py is often the starting point of a Python project.
+
+Everything eventually connects back to the file that starts Node:
+node server.js
