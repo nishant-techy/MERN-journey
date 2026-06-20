@@ -1,3 +1,4 @@
+ M basics.txt
+ M node_project/package.json
  M temp.txt
-?? "how to start node-or-express project.txt"
-?? node_project/
+?? node_project/server.js
