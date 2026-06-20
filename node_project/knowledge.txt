@@ -1,0 +1,27 @@
+So these are the two options:
+
+CommonJS (what we're currently using):
+package.json ---
+{
+  "name": "node_project"
+}
+
+server.js --- 
+const express = require("express");
+✅ No "type": "module" needed.
+
+
+ES Modules ---
+
+package.json
+
+{
+  "name": "node_project",
+  "type": "module"
+}
+
+server.js ---
+
+import express from "express";
+
+✅ Works.
