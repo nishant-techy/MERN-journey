@@ -25,3 +25,24 @@ package.json
 
 import express from "express";
 ✅ Works.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Think of server.js as the main entry point of your backend.
+
+It's similar to how:
+
+index.html is the starting point of a website.
+main() is the starting point of a C/C++ program.
+main.py is often the starting point of a Python project.
