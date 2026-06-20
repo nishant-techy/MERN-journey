@@ -65,9 +65,9 @@ node server.js
 
 
 
------------ .ejs FILE extension ----------------
+----------- .ejs FILE extension -------------
 
-So what is .ejs?
+So, what is .ejs?
 EJS = Embedded JavaScript
 It is a template engine for Express.
 
@@ -98,3 +98,98 @@ If name = "Rahul":
 So EJS is basically:
 
 HTML + JavaScript inside HTML.
+
+
+
+
+
+
+
+
+
+
+
+
+ ----- What about React? ----- 
+React uses:
+.jsx
+
+Example:
+function App(){
+    return (
+        <h1>Hello</h1>
+    );
+}
+
+ ----- JSX means: ----- 
+JavaScript + HTML together.
+TypeScript
+
+You'll encounter:
+---- .ts ----- 
+let age:number = 25;
+
+and
+
+ ----- .tsx ----- 
+function App(){
+    return <h1>Hello</h1>;
+}
+JSON
+.json
+
+Stores data:
+
+{
+    "name":"Shaan",
+    "age":25
+}
+
+ ----- Examples: ----- 
+package.json
+tsconfig.json
+Database files
+
+ ----- SQLite: ----- 
+database.db
+
+MongoDB stores BSON internally.
+
+ ----- Environment files ----- 
+.env
+PORT=8080
+DB_PASSWORD=abc123
+
+Stores secrets.
+
+ ----- Markdown ----- 
+.md
+
+Example:
+
+# Project Title
+
+This is my first project.
+
+Used for README files.
+
+For MERN stack you'll mostly see:
+.html
+.css
+.js
+.ejs
+.jsx
+.ts
+.tsx
+.json
+.env
+.md
+
+
+ ----- & Regarding .ejs: ----- 
+Think of it as:
+HTML
++
+JavaScript
+=
+EJS
