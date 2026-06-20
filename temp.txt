@@ -1,6 +1,2 @@
- D node_project/portfolio/footer.ejs
- D node_project/portfolio/header.ejs
- D node_project/portfolio/page_1.ejs
- M node_project/server.js
+ M node_project/views/page_1.ejs
  M temp.txt
-?? node_project/views/
