@@ -21,12 +21,12 @@ So app.use() is mostly used for:
 */
 // and app.get use for telling the exact destination, the exact route
 
-app.get("/", (req, res) => {
-  // res.send("Request recieved"); // response send
-  res.send("<h1>Request recieved with bold letters.</h1>");
-});
-
 // another new thing, the res.send should only be once, and do not use it again otherwise it'll throw the error.
 app.get("/", (req, res) => {
-  res.render();
+  res.render("page_1.ejs");
 });
+
+// app.get("/", (req, res) => {
+//   // res.send("Request recieved"); // response send
+//   res.send("<h1>Request recieved with bold letters.</h1>");
+// });

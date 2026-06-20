@@ -213,7 +213,7 @@ EJS
 
 
 
-
+                                                                    
 Most Important Syntaxes (90% of usage)
 Syntax	Purpose
 <%= %>	Print value
@@ -431,5 +431,19 @@ Output:
 
 
 
+
+we should listen the request coming from the user side, so, use the listen
+app.use is the middleware, not for starting the server (app.use will use to do muliple things at once - 
+So app.use() is mostly used for:
+(
+✅ Middleware
+✅ Parsing JSON
+✅ Parsing forms
+✅ Serving static files
+✅ Mounting routers
+✅ Running code before routes
+)
+*/
+// and app.get use for telling the exact destination, the exact route
 
 
