@@ -1,1 +1,2 @@
+ M node_project/portfolio/page_1.ejs
  M temp.txt
