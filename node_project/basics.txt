@@ -193,3 +193,243 @@ HTML
 JavaScript
 =
 EJS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Most Important Syntaxes (90% of usage)
+Syntax	Purpose
+<%= %>	Print value
+<% %>	  Run JS code
+<%- %>	Render HTML/include files
+<%# %>	Comment
+
+
+-------- The real use case -----------
+
+1. <%= %> : Output (Print) a value
+
+Use when you want to display something on the page.
+
+server.js
+app.get("/", (req, res) => {
+    res.render("home.ejs", {
+        name: "Shaan"
+    });
+});
+home.ejs
+<h1>Hello <%= name %></h1>
+
+Output:
+
+<h1>Hello Shaan</h1>
+2. <% %> : Execute JavaScript
+
+Use when you want to write logic like:
+
+if statements
+loops
+variable declarations
+
+but don't want to display anything directly.
+
+Example:
+
+<%
+let age = 20;
+%>
+
+<h1>Age = <%= age %></h1>
+
+Output:
+
+<h1>Age = 20</h1>
+3. if-else
+
+Suppose:
+
+res.render("home.ejs", {
+    age: 19
+});
+home.ejs
+<% if(age >= 18){ %>
+
+    <h1>Adult</h1>
+
+<% } else { %>
+
+    <h1>Minor</h1>
+
+<% } %>
+
+Output:
+
+<h1>Adult</h1>
+4. for loop
+
+Suppose:
+
+res.render("home.ejs", {
+    fruits: ["Apple", "Banana", "Mango"]
+});
+home.ejs
+<ul>
+
+<% for(let fruit of fruits){ %>
+
+    <li><%= fruit %></li>
+
+<% } %>
+
+</ul>
+
+Output:
+
+<ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Mango</li>
+</ul>
+5. forEach
+<ul>
+
+<% fruits.forEach((fruit)=>{ %>
+
+    <li><%= fruit %></li>
+
+<% }) %>
+
+</ul>
+
+Same output.
+
+6. <%- %> : Unescaped HTML
+
+Suppose:
+
+res.render("home.ejs", {
+    heading: "<h1>Hello</h1>"
+});
+Using <%= %>
+<%= heading %>
+
+Output:
+
+&lt;h1&gt;Hello&lt;/h1&gt;
+
+Browser shows:
+
+<h1>Hello</h1>
+
+as text.
+
+Using <%- %>
+<%- heading %>
+
+Output:
+
+<h1>Hello</h1>
+
+Browser shows:
+
+Hello
+
+⚠️ Use <%- %> carefully because malicious HTML or JavaScript could be inserted.
+
+7. Comments
+
+Single-line:
+
+<%# This is a comment %>
+
+Nothing appears in HTML.
+
+8. Include another file
+
+Suppose:
+
+views/
+│
+├── home.ejs
+└── include/
+      ├── header.ejs
+      └── footer.ejs
+header.ejs
+<header>
+    My Website
+</header>
+home.ejs
+<%- include("include/header") %>
+
+<h1>Home Page</h1>
+
+<%- include("include/footer") %>
+
+This prevents repeating code.
+
+9. Nested objects
+
+Server:
+
+res.render("home.ejs", {
+    user: {
+        name: "Shaan",
+        age: 25
+    }
+});
+
+EJS:
+
+<h1><%= user.name %></h1>
+<h2><%= user.age %></h2>
+10. Ternary operator
+<h1>
+<%= age >= 18 ? "Adult" : "Minor" %>
+</h1>
+11. Array indexing
+<%= fruits[0] %>
+
+Output:
+
+Apple
+12. Mathematical expressions
+<%= 10 + 20 %>
+
+Output:
+
+30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
