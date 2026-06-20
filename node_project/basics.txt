@@ -49,3 +49,52 @@ main.py is often the starting point of a Python project.
 
 Everything eventually connects back to the file that starts Node:
 node server.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------- .ejs FILE extension ----------------
+
+So what is .ejs?
+EJS = Embedded JavaScript
+It is a template engine for Express.
+
+A normal HTML file is static:
+<h1>Hello User</h1>
+
+But suppose you want:
+User A → "Hello Shaan"
+User B → "Hello Rahul"
+
+You would need to generate HTML dynamically.
+That's where EJS comes in.
+
+Example:
+<h1>Hello <%= name %></h1>
+
+Express:
+res.render("home.ejs", {
+    name: "Shaan"
+});
+
+Output:
+<h1>Hello Shaan</h1>
+
+If name = "Rahul":
+<h1>Hello Rahul</h1>
+
+So EJS is basically:
+
+HTML + JavaScript inside HTML.
