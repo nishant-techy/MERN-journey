@@ -3,6 +3,8 @@ const app = express();
 
 let port = 8080;
 
+app.set("view engine", "ejs");
+
 app.listen(port, () => {
   console.log("We're listening to your request at the port: ", port);
 });

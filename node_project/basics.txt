@@ -433,7 +433,7 @@ Output:
 
 
 we should listen the request coming from the user side, so, use the listen
-app.use is the middleware, not for starting the server (app.use will use to do muliple things at once - 
+app.use is the middleware, not for starting the server (app.use will use to do muliple things at once) - 
 So app.use() is mostly used for:
 (
 ✅ Middleware
@@ -445,5 +445,44 @@ So app.use() is mostly used for:
 )
 */
 // and app.get use for telling the exact destination, the exact route
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+we also have to include "app.set("view engine", "ejs");" in the server.js, and also have to run this command on our project folder - "npm install ejs"
+
+
+then, Put your file inside the folder - "views"
+Express automatically looks for EJS files inside a folder named views
+
+node_project
+│
+├── server.js
+├── views
+│     └── page_1.ejs
+├── package.json
+└── node_modules
+
+
+Then:
+res.render("page_1");
+
+Notice:
+❌ No .ejs
+❌ No ./
+✅ Just the file name
+
+
+
 
 

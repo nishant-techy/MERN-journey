@@ -1,1 +1,6 @@
+ M node_project/basics.txt
+ M node_project/package-lock.json
+ M node_project/package.json
+ M node_project/portfolio/page_1.ejs
+ M node_project/server.js
  M temp.txt
