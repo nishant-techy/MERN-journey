@@ -41,7 +41,16 @@ body {
   justify-content: center;
 }
 
+/* second container */
 #container_2 {
   background-color: rgb(105, 96, 87);
   color: black;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#words {
+  font-size: 130px;
 }
