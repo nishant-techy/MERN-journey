@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
   let data = {
     name: "shaan",
     url: "https://nishantmade.netlify.app/css/image/color%20adjust%20Black%20background%20standing%20image.jpg",
-    age: 10,
+    age: 30,
   };
   res.render("page_1.ejs", { data });
 });

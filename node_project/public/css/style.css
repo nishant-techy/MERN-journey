@@ -21,8 +21,8 @@ body {
   height: 100vh;
 }
 
-.vw_container:nth-child(even) {
-  margin: 10px 0;
+.specially_for_margin :nth-child(even) {
+  margin: 20px 0;
 }
 
 #semi_container_1_1 {
@@ -39,4 +39,9 @@ body {
   width: 100%;
   height: 100%;
   justify-content: center;
+}
+
+#container_2 {
+  background-color: rgb(105, 96, 87);
+  color: black;
 }
