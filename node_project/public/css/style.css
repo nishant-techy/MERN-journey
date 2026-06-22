@@ -61,6 +61,10 @@ body {
   color: black;
 }
 
+#first {
+  /* margin-top: 30%; */
+  margin-left: 10%;
+}
 .about_container {
   width: 50%;
   border: 4px solid black;
