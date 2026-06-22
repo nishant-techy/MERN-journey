@@ -62,9 +62,9 @@ body {
 }
 
 .inside_container {
-  background-color: sienna;
   width: 100%;
   min-height: 100vh;
+  margin-top: 30%;
 }
 
 #first {
@@ -76,4 +76,8 @@ body {
   border: 4px solid black;
   padding: 20px;
   border-radius: 40px;
+}
+
+#second {
+  margin-left: 50%;
 }
