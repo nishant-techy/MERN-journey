@@ -59,6 +59,10 @@ body {
 #container_3 {
   background-color: white;
   color: black;
+  height: 100vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
 }
 
 .inside_container {
