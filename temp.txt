@@ -1,3 +1,2 @@
  M node_project/public/css/style.css
- M node_project/views/page_1.ejs
  M temp.txt

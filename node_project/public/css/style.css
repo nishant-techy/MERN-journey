@@ -33,7 +33,7 @@ body {
   text-align: center;
   justify-content: center;
   height: 100vh;
-  background-color: yellow;
+  background-color: grey;
 }
 #semi_container_1_2 {
   flex: 1;
