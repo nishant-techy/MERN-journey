@@ -109,6 +109,7 @@ body {
 #container_4 {
   background-color: black;
   color: white;
+  height: min-content;
 }
 
 .cards_playground {
@@ -135,5 +136,5 @@ body {
 .cards h2 {
   margin: 10px 0;
   font-weight: bold;
-  word-spacing: 5px;
+  word-spacing: 3px;
 }

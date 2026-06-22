@@ -49,6 +49,15 @@ app.get("/", (req, res) => {
       "https://nishantmade.netlify.app/images/project/gif/secure-password-generator.gif",
       "https://nishantmade.netlify.app/images/project/great-search-engines.png",
     ],
+    project_name: [
+      "Ubuntu inspired Portfolio",
+      "Encrypting Decrypting (Zerotrace)",
+      "Expense Tracker website",
+      "To-do daily task",
+      "TechMesh labs",
+      "Secure Password Generator",
+      "Search Engine website",
+    ],
   };
   res.render("page_1.ejs", { data });
 });
