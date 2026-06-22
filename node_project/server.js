@@ -27,8 +27,12 @@ So app.use() is mostly used for:
 
 // another new thing, the res.send should only be once, and do not use it again otherwise it'll throw the error.
 app.get("/", (req, res) => {
-  let name = "shaan";
-  res.render("page_1.ejs", { name });
+  let data = {
+    name: "shaan",
+    url: "https://nishantmade.netlify.app/css/image/color%20adjust%20Black%20background%20standing%20image.jpg",
+    age: 10,
+  };
+  res.render("page_1.ejs", { data });
 });
 
 // app.get("/", (req, res) => {
