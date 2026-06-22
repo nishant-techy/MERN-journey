@@ -21,7 +21,7 @@ body {
   height: 100vh;
 }
 
-.specially_for_margin :nth-child(even) {
+.specially_for_margin > :nth-child(even) {
   margin: 20px 0;
 }
 
