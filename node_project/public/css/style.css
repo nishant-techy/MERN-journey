@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
 }
 #personal_img {
-  width: 500px;
+  /* width: 500px; */
   /* position: absolute;
   right: 0;
   bottom: 0; */
@@ -26,12 +26,14 @@ body {
 #container_1 {
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
 #semi_container_1_1 {
   flex: 0 0 40%;
   text-align: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
   background-color: grey;
 }
