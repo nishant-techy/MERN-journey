@@ -68,20 +68,26 @@ body {
 .inside_container {
   width: 100%;
   min-height: 100vh;
-  margin-top: 30%;
 }
 
-#first {
+#first,
+#third,
+#fifth {
   margin-left: 10%;
 }
-.about_container {
-  margin-top: 30%;
-  width: 50%;
-  border: 4px solid black;
-  padding: 20px;
-  border-radius: 40px;
-}
 
-#second {
+#second,
+#fourth {
   margin-left: 50%;
+}
+.about_container {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 30%;
+  border: 4px solid black;
+  padding: 25px;
+  border-radius: 40px;
+  background-color: black;
+  color: white;
+  box-shadow: rgb(16, 27, 28) 1px 1px 10px;
 }
