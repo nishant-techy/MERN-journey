@@ -1,5 +1,2 @@
- M node_project/public/css/style.css
- M node_project/views/page_1.ejs
+ M node_project/views/page_3.ejs
  M temp.txt
-?? node_project/views/page_2.ejs
-?? node_project/views/page_3.ejs
