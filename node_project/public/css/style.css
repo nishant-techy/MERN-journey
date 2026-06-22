@@ -21,6 +21,10 @@ body {
   height: 100vh;
 }
 
+.vw_container:nth-child(even) {
+  margin: 10px 0;
+}
+
 #semi_container_1_1 {
   display: flex;
   flex: 0 0 40%;
@@ -28,7 +32,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: grey;
 }
 #semi_container_1_2 {
   display: flex;
