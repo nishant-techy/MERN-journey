@@ -31,6 +31,15 @@ app.get("/", (req, res) => {
     name: "shaan",
     url: "https://nishantmade.netlify.app/css/image/color%20adjust%20Black%20background%20standing%20image.jpg",
     age: 30,
+    project_link: [
+      "https://nishantstudio.netlify.app/",
+      "https://zerotracee.netlify.app/",
+      "https://expense-tracker-web-ap.web.app/",
+      "https://expense-tracker-web-ap.web.app/",
+      "https://techmesh-labs.xo.je/",
+      "https://encrypt-password-create.web.app/",
+      "https://searches.netlify.app/",
+    ],
   };
   res.render("page_1.ejs", { data });
 });
