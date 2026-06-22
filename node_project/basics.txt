@@ -578,4 +578,28 @@ Since header.ejs is included in every page, all pages automatically get the styl
 
 
 
+// --- node_project real structure looks like --- 
 
+
+node_project
+│
+├── node_modules
+│
+├── public
+│     ├── css
+│     │      style.css
+│     │
+│     ├── images
+│     │      logo.png
+│     │
+│     └── js
+│            script.js
+│
+├── views
+│     header.ejs
+│     footer.ejs
+│     page_1.ejs
+│
+├── server.js
+├── package.json
+└── package-lock.json
