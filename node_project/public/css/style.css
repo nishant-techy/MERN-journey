@@ -59,15 +59,17 @@ body {
 #container_3 {
   background-color: white;
   color: black;
-  height: 100vh;
+  height: 200vh;
   overflow-y: auto;
   position: sticky;
   top: 0;
 }
 
-.inside_container {
+.inside_sticky_container {
   width: 100%;
-  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
 
 #first,
