@@ -486,3 +486,96 @@ Notice:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// adding the stylesheet (CSS), apply the styling 
+
+node_project
+│
+├── node_modules
+├── views
+│   ├── header.ejs
+│   ├── footer.ejs
+│   └── page_1.ejs
+├── public
+│   └── css
+│       └── style.css
+├── package.json
+├── package-lock.json
+└── server.js
+
+
+
+
+1. Create a CSS file :--
+
+Create:
+public/css/style.css
+
+
+2. Tell Express to serve static files :--
+
+In server.js, add:
+const express = require("express");
+const app = express();
+
+app.use(express.static("public"));            // the main line 
+
+This makes everything inside public accessible.
+
+
+
+3. Link the CSS file :--
+
+Inside your HTML (preferably in header.ejs if it contains <head>), add:
+<link rel="stylesheet" href="/css/style.css">
+
+For example, header.ejs:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+
+
+4. Include header and footer :--
+
+page_1.ejs:
+<%- include("header.ejs") %>
+
+<h1>Hi, I am Nishant</h1>
+<h3>& you can call me - <%= name %></h3>
+
+<%- include("footer.ejs") %>
+
+How many files do you have to link?
+Only one link is needed if you put it in header.ejs:
+
+<link rel="stylesheet" href="/css/style.css">
+Since header.ejs is included in every page, all pages automatically get the styles.
+
+
+
+
+
+
+
+
+
+
+
+
+
