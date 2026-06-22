@@ -98,3 +98,9 @@ body {
   background-color: black;
   color: white;
 }
+
+.cards_playground {
+  padding: 10%;
+  display: flex;
+  flex-wrap: wrap;
+}
