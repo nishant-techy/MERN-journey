@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
   let data = {
     name: "shaan",
     url: "https://nishantmade.netlify.app/css/image/color%20adjust%20Black%20background%20standing%20image.jpg",
-    age: 30,
+    age: 23,
     project_link: [
       "https://nishantstudio.netlify.app/",
       "https://zerotracee.netlify.app/",
