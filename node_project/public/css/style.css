@@ -61,11 +61,17 @@ body {
   color: black;
 }
 
+.inside_container {
+  background-color: sienna;
+  width: 100%;
+  min-height: 100vh;
+}
+
 #first {
-  /* margin-top: 30%; */
   margin-left: 10%;
 }
 .about_container {
+  margin-top: 30%;
   width: 50%;
   border: 4px solid black;
   padding: 20px;
