@@ -45,9 +45,9 @@ app.get("/", (req, res) => {
       "https://nishantmade.netlify.app/images/project/gif/encrypting_decrypting_website.gif",
       "https://nishantmade.netlify.app/images/project/gif/expense-tracker-website.gif",
       "https://nishantmade.netlify.app/images/project/to-do-list.webp",
-      "https://nishantmade.netlify.app/images/project/to-do-list.webp",
+      "https://nishantmade.netlify.app/images/project/gif/techmesh-labs.gif",
       "https://nishantmade.netlify.app/images/project/gif/secure-password-generator.gif",
-      "https://nishantmade.netlify.app/images/project/gif/secure-password-generator.gif",
+      "https://nishantmade.netlify.app/images/project/great-search-engines.png",
     ],
   };
   res.render("page_1.ejs", { data });
