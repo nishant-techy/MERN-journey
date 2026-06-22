@@ -11,9 +11,9 @@ body {
 }
 #personal_img {
   width: 500px;
-  position: absolute;
+  /* position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 0; */
 }
 
 /* container 1 */
@@ -21,4 +21,20 @@ body {
   width: 100vw;
   height: 100vh;
   border-bottom: 1px solid grey;
+}
+
+#container_1 {
+  display: flex;
+  flex-direction: row;
+}
+
+#semi_container_1_1 {
+  flex: 0 0 40%;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: yellow;
+}
+#semi_container_1_2 {
+  flex: 1;
 }
