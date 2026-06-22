@@ -25,7 +25,8 @@ So app.use() is mostly used for:
 
 // another new thing, the res.send should only be once, and do not use it again otherwise it'll throw the error.
 app.get("/", (req, res) => {
-  res.render("page_1");
+  let name = "shaan";
+  res.render("page_1", { name });
 });
 
 // app.get("/", (req, res) => {
