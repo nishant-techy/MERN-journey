@@ -1,10 +1,26 @@
     <%- include("header.ejs") %>
     <body>
-        <h1>Hi, I am Nishant</h1>
-        <h3>& you can call me - <%= data.name %></h3>
-        <p>and the age is approx - <%= data.age %></p>
-        <img src="<%= data.url %>" alt="Portfolio image" id="personal_img">
-    <%- include("footer.ejs") %>
 
+<!-- 1st page -->
+        <div class="vw_container" id="container_1">
+            <h1>Hi, I am Nishant</h1>
+            <h3>& you can call me - <%= data.name %></h3>
+            <p>and the age is approx - <%= data.age %></p>
+            <img src="<%= data.url %>" alt="Portfolio image" id="personal_img">
+        </div>
+
+
+<!-- 2nd page -->
+         <div class="vw_container" id="container_2">
+            <h1>Hi, I am Nishant</h1>
+            <h3>& you can call me - <%= data.name %></h3>
+            <p>and the age is approx - <%= data.age %></p>
+            <img src="<%= data.url %>" alt="Portfolio image" id="personal_img">
+        </div>
+
+
+
+        
+            <%- include("footer.ejs") %>
     </body>
     </html>
