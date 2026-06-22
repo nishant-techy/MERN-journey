@@ -5,7 +5,9 @@
 }
 body {
   background-color: black;
+  padding: 20px;
   color: white;
+  overflow-x: hidden;
 }
 #personal_img {
   width: 500px;
