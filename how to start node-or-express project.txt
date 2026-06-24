@@ -17,3 +17,343 @@ Start coding
 Create files and folders as needed
 ↓
 Upload to GitHub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------
+Every Node + Express project has some boilerplate setup that you do almost every time before starting the actual work. Think of it as a checklist.
+
+1. Create the project
+mkdir node_project
+cd node_project
+npm init -y
+
+This creates:
+package.json
+
+----------------------------------------------------------------
+
+2. Install required packages
+
+Minimum:
+npm install express
+
+If using EJS:
+npm install ejs
+
+
+
+((((For auto-restart during development:
+npm install nodemon --save-dev
+
+		or 
+
+[i personally install the nodemon globally and run it], 
+[my commands will be like - 
+npm install -g nodemon 
+then 
+nodemon (file_name.js)
+))))
+
+
+
+
+Typical packages:
+npm install express ejs dotenv mongoose
+npm install nodemon --save-dev
+
+
+
+
+
+
+----------------------------------------------------------------
+
+3. Create folder structure
+
+I usually do:
+
+node_project
+│
+├── node_modules
+├── public
+│     ├── css
+│     ├── js
+│     └── images
+│
+├── views
+│
+├── routes
+├── controllers
+├── models
+├── middleware
+├── config
+│
+├── .env
+├── .gitignore
+├── server.js
+├── package.json
+└── package-lock.json
+
+(For small projects, you can skip routes/controllers/models).
+
+
+
+----------------------------------------------------------------
+
+4. Basic server.js:
+
+const express = require("express");
+const app = express();
+
+const PORT = 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
+
+
+----------------------------------------------------------------
+
+5. Parse form data
+Almost every project needs this:
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+These allow:
+req.body
+to work.
+
+
+
+----------------------------------------------------------------
+
+6. Serve static files:
+app.use(express.static("public"));
+
+Then:
+
+public
+     css
+          style.css
+     images
+          logo.png
+     js
+          script.js
+
+can be accessed as:
+
+<link rel="stylesheet" href="/css/style.css">
+
+<img src="/images/logo.png">
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+----------------------------------------------------------------
+
+7. Set view engine
+
+If using EJS:
+app.set("view engine", "ejs");
+
+
+Express automatically searches inside:
+views/
+
+
+Then:
+res.render("home");
+
+renders:
+views/home.ejs
+
+(No .ejs required.)
+
+
+
+
+----------------------------------------------------------------
+
+8. Create views
+views
+│
+├── partials
+│     ├── header.ejs
+│     └── footer.ejs
+│
+├── home.ejs
+└── about.ejs
+
+home.ejs
+<%- include("partials/header") %>
+
+<h1>Home Page</h1>
+
+<%- include("partials/footer") %>
+
+
+
+
+
+
+----------------------------------------------------------------
+
+9. Create routes
+
+Instead of putting everything in server.js:
+
+routes/userRoutes.js
+const express = require("express");
+const router = express.Router();
+
+router.get("/", (req,res)=>{
+    res.render("home");
+});
+
+module.exports = router;
+
+server.js
+
+const userRoutes = require("./routes/userRoutes");
+
+app.use("/", userRoutes);
+
+
+
+
+
+
+----------------------------------------------------------------
+
+10. Environment variables
+
+Install:
+
+npm install dotenv
+
+Create:
+
+.env
+PORT=3000
+DB_URL=mongodb://localhost:27017/mydb
+
+server.js
+
+require("dotenv").config();
+
+const PORT = process.env.PORT;
+
+
+
+
+
+
+
+----------------------------------------------------------------
+
+11. Add .gitignore
+
+Create:
+	.gitignore
+
+Add:
+
+node_modules
+.env
+
+Never upload those to GitHub.
+
+
+
+
+
+----------------------------------------------------------------
+
+12. Connect database (if needed)
+
+MongoDB:
+
+const mongoose = require("mongoose");
+
+mongoose.connect(process.env.DB_URL)
+.then(()=>{
+    console.log("Database connected");
+})
+.catch(err=>{
+    console.log(err);
+});
+13. Start server
+
+Normal:
+
+node server.js
+
+Using nodemon:
+
+package.json
+
+"scripts": {
+  "start": "node server.js",
+  "dev": "nodemon server.js"
+}
+
+Run:
+
+npm run dev
+My personal "Every Project Checklist"
+Create project
+npm init -y
+Install
+npm install express ejs dotenv mongoose
+npm install nodemon --save-dev
+Create folders
+public
+views
+routes
+controllers
+models
+config
+middleware
+Create files
+server.js
+.env
+.gitignore
+server.js essentials
+require("dotenv").config();
+
+const express = require("express");
+const app = express();
+
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+
+app.use(express.static("public"));
+
+app.set("view engine","ejs");
+
+app.listen(process.env.PORT);
