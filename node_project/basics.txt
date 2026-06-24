@@ -616,3 +616,37 @@ node_project
 
 
 
+
+so, the thing i understand is - 
+we have two methods GET & POST method: 
+
+GET method: visible in url, passes in url, uses like in search, view pages, etc.
+
+POST method: not visible or passes in url, use like form, login, signup, upload, etc. 
+
+these are the method where we do the thing like: 
+
+app.get("/register", (req, res) => {
+	let {user, password} = req.query;   // iska mtlb pta h kya h ki request.query k andr user aur password jaisi details h kyoki app.get me url me data pass hota h to hum unko req.query se extract kr skte h aur unko aage forward krne k liye hamne user, password me unko access kr liya then use it later.
+	
+	res.send(`GET response recieved. Welcome ${user}`);
+});
+
+
+
+
+
+
+
+aur yahi chij agr POST request me krni h jaha data url me pass nhi hota to chije thodi badal jaati h like - 
+
+app.use(express.urlencoded({ extended: true }));  // ye line phle likhi jayegi isse lekin isko likhne ka reson niche likha hua h 
+
+app.post("/register", (req, res) => {
+	let {user, password} = req.body;    // yaha req.body se access krni pdegi aur wo bhi directly access nhi ho skti kyoki aap to form me normal english likh rhe ho jo wo nhi smjh skta to ek line aur add krni pdegi (jo upr line likhi h wo wali { extended: true} wali)
+ 
+res.send(`POST response recieved. Welcome ${user}`); // to abhi hum isko access kr skte h kyoki now program can understand what we are talking about.
+});
+
+
+
