@@ -307,14 +307,19 @@ mongoose.connect(process.env.DB_URL)
 .catch(err=>{
     console.log(err);
 });
+
+
+
+
+
+----------------------------------------------------------------
+
 13. Start server
 
 Normal:
-
 node server.js
 
 Using nodemon:
-
 package.json
 
 "scripts": {
@@ -323,15 +328,27 @@ package.json
 }
 
 Run:
-
 npm run dev
-My personal "Every Project Checklist"
-Create project
+
+
+
+
+
+
+----------------------------------------------------------------My personal "Every Project Checklist"
+----------------------------------------------------------------
+
+Create project:
 npm init -y
-Install
+
+
+Install:
 npm install express ejs dotenv mongoose
 npm install nodemon --save-dev
-Create folders
+
+
+
+Create folders:
 public
 views
 routes
@@ -339,11 +356,17 @@ controllers
 models
 config
 middleware
-Create files
+
+
+Create files:
 server.js
 .env
 .gitignore
-server.js essentials
+
+
+
+---- server.js essentials: ----
+
 require("dotenv").config();
 
 const express = require("express");
