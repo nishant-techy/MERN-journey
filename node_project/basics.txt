@@ -620,7 +620,7 @@ node_project
 so, the thing i understand is - 
 we have two methods GET & POST method: 
 
-GET method: visible in url, passes in url, uses like in search, view pages, etc.
+GET method: visible in url, passes in url, use like in search, view pages, etc.
 
 POST method: not visible or passes in url, use like form, login, signup, upload, etc. 
 
@@ -650,3 +650,21 @@ res.send(`POST response recieved. Welcome ${user}`); // to abhi hum isko access 
 
 
 
+
+
+
+so, the whole code will be like - 
+
+------------ index.html ---------------
+
+const express = require("express");
+const app = express();
+const port = 8080;
+
+app.use(express.urlencoded({extended: true});
+app.use(express.json());
+
+app.get("/register", (req, res)=> {
+	let {user, password} = req.query;
+	res.send(`standard GET response. Welcome {$user}`);	
+});
