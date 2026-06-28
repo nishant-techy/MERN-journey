@@ -1,5 +1,1 @@
- D basics.txt
- D node_project/basics.txt
  M temp.txt
-?? "1). basics.txt"
-?? "node_project/2). basics.txt"
