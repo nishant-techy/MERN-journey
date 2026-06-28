@@ -1075,3 +1075,31 @@ When you ask for a property or method:
 JavaScript checks user.
 If it isn't there, it checks Object.prototype.
 If it's still not found, it continues up the prototype chain until it reaches null.
+
+
+
+
+
+
+
+
+
+
+
+to bhai pta nhi kya kya likh diya upr to ye par 100 baat ki ek baat h - 
+
+object prototype ek tarah se phle hi likhi gyi properties h jaise string k liye define kiye gye functions, array k liye bhi kiye jaane wale, etc, etc. everything is an object, 
+
+to unn already defined chijo ko prototype khdete h jise hum change bhi kr skte hain, for example, we have an array - 
+let arr = [1,2,3];
+arr.__proto__ (ye prototype access krne ka tareeka hai), 
+to arr.__proto__.push = (n) => {console.log(`Pushing number: {n}`)};
+
+to ab agr m 
+arr.push(5); run krunga to result hoga -
+Pushing number: 5, iska mtlb pta h kya h ki hmne push krne ki definition hi change krdi, phle number 5 add ho jaata array me but abhi wo bs print krega iss line ko and array would stay the same as [1,2,3];
+
+aur main chij ye hai ki arr.__proto__ sirf uske prototype ki ek copy bnake usko change krta hai real function ko nhi htata but if you want to access the real function, we have to write it - 
+Array.prototype (actual object) 
+String.prototype (this is the way to access the actual object) 
+
