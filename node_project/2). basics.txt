@@ -1088,12 +1088,25 @@ If it's still not found, it continues up the prototype chain until it reaches nu
 
 to bhai pta nhi kya kya likh diya upr to ye par 100 baat ki ek baat h - 
 
-object prototype ek tarah se phle hi likhi gyi properties h jaise string k liye define kiye gye functions, array k liye bhi kiye jaane wale, etc, etc. everything is an object, 
+object prototype ek tarah se phle hi likhi gyi properties h jaise string k liye define kiye gye functions, array k liye bhi kiye jaane wale, etc, etc. everything is an object, Most built-in objects like Arrays, Strings (through boxing), Functions, etc., use prototypes.
 
 to unn already defined chijo ko prototype khdete h jise hum change bhi kr skte hain, for example, we have an array - 
 let arr = [1,2,3];
 arr.__proto__ (ye prototype access krne ka tareeka hai), 
 to arr.__proto__.push = (n) => {console.log(`Pushing number: {n}`)};
+
+But...
+__proto__
+is deprecated.
+
+Nowadays we use
+
+Object.getPrototypeOf(arr)
+or
+Array.prototype
+
+Interview me bhi ye pucha jaata hai.
+
 
 to ab agr m 
 arr.push(5); run krunga to result hoga -
@@ -1104,10 +1117,13 @@ Array.prototype (actual object)
 String.prototype (this is the way to access the actual object) 
 
 
-so, the .prototype function is the property jo use hoti hai jisme koi property defined h to wo sabke liye hi defined h mtlb array k liye jo properties likhi hui h uske prototype me we sabhi uspe apply hone k liye tyaar baithi h bs hme command krne ki deri h like if we do, 
+so, the .prototype is the property jo use hoti hai jisme koi property defined h to wo sabke liye hi defined h mtlb array k liye jo properties likhi hui h uske prototype me we sabhi uspe apply hone k liye tyaar baithi h bs hme command krne ki deri h like if we do, 
 arr.push(3); 
 or 
 str.toUpperCase();
 
 to ye saare functions prototype me hi aate hai. 
+Prototype ek object hota hai jisme common methods aur properties store hoti hain.
+
+
 
