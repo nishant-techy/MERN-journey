@@ -1112,7 +1112,31 @@ to ab agr m
 arr.push(5); run krunga to result hoga -
 Pushing number: 5, iska mtlb pta h kya h ki hmne push krne ki definition hi change krdi, phle number 5 add ho jaata array me but abhi wo bs print krega iss line ko and array would stay the same as [1,2,3];
 
-aur main chij ye hai ki arr.__proto__ sirf uske prototype ki ek copy bnake usko change krta hai real function ko nhi htata but if you want to access the real function, we have to write it - 
+aur main chij ye hai ki arr.__proto__ main function ki ek reference copy bnata h jo point to original ko hi kr rhi hoti h jaise - 
+
+arr.__proto__
+is simply another reference pointing to
+Array.prototype
+
+Think like this:
+
+arr
+ │
+ │
+ ▼
+Array.prototype
+
+Both point to the same object.
+
+So
+
+arr.__proto__.push = ...
+and
+Array.prototype.push = ...
+are effectively the same thing.
+
+No copy is made.
+
 Array.prototype (actual object) 
 String.prototype (this is the way to access the actual object) 
 
