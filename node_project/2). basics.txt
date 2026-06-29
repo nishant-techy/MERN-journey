@@ -1141,13 +1141,25 @@ Array.prototype (actual object)
 String.prototype (this is the way to access the actual object) 
 
 
-so, the .prototype is the property jo use hoti hai jisme koi property defined h to wo sabke liye hi defined h mtlb array k liye jo properties likhi hui h uske prototype me we sabhi uspe apply hone k liye tyaar baithi h bs hme command krne ki deri h like if we do, 
+so, the .prototype is the property jo use hoti hai jisme koi property defined h to wo sabke liye hi defined h mtlb jab hum arr.push() ya arr.map() call karte hain aur wo method array ke andar directly nahi milta, to JavaScript prototype chain me Array.prototype ko check karta hai. Wahan method mil jaata hai, isliye wo execute ho jaata hai. like if we do, 
 arr.push(3); 
 or 
 str.toUpperCase();
 
 to ye saare functions prototype me hi aate hai. 
 Prototype ek object hota hai jisme common methods aur properties store hoti hain.
+
+----------- PROTOTYPE - as simple as that ----------------
+
+Prototype ek object hota hai jisme common methods aur properties store hoti hain. Jab kisi object par koi property ya method directly nahi milta, tab JavaScript prototype chain ke through uske prototype me search karta hai.
+
+
+
+
+
+
+
+
 
 
 
