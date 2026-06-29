@@ -1103,3 +1103,11 @@ aur main chij ye hai ki arr.__proto__ sirf uske prototype ki ek copy bnake usko 
 Array.prototype (actual object) 
 String.prototype (this is the way to access the actual object) 
 
+
+so, the .prototype function is the property jo use hoti hai jisme koi property defined h to wo sabke liye hi defined h mtlb array k liye jo properties likhi hui h uske prototype me we sabhi uspe apply hone k liye tyaar baithi h bs hme command krne ki deri h like if we do, 
+arr.push(3); 
+or 
+str.toUpperCase();
+
+to ye saare functions prototype me hi aate hai. 
+
