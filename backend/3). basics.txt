@@ -531,3 +531,152 @@ class Teacher extends Person {
 
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------- BASIC Q&A ----------------
+
+1). What is Object-Oriented Programming (OOP)?
+
+Object-Oriented Programming (OOP) is a way of writing code where we create objects from classes.
+
+Think of a class as a blueprint, and an object as the real thing made from that blueprint.
+
+::Real-life Example::
+
+Imagine you're building houses.
+* Blueprint → Class
+* Actual House → Object
+
+One blueprint can be used to build many houses.
+
+
+Similarly,
+
+class Car {
+    constructor(name, color) {
+        this.name = name;
+        this.color = color;
+    }
+}
+
+const car1 = new Car("BMW", "Black");
+const car2 = new Car("Audi", "White");
+
+Here,
+* Car → Class (Blueprint)
+* car1 and car2 → Objects
+
+
+Interview Answer:
+OOP is a programming style where we create classes and objects to organize code, making it reusable and easier to maintain.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Benefits of OOP
+
+Your sheet says:
+
+Improved code organization
+Reusability
+Maintainability
+Closeness to real-world objects
+
+Let's understand each.
+
+a) Better Code Organization
+
+Instead of writing everything in one file, we divide code into classes.
+
+Bad
+
+function login(){}
+function logout(){}
+function buyProduct(){}
+
+Better
+
+class User{
+   login(){}
+   logout(){}
+}
+
+Everything related to User stays together.
+
+b) Reusability
+
+Write once, use many times.
+
+Instead of writing login code again and again,
+
+class User{
+   login(){}
+}
+
+Now
+
+Admin
+Customer
+Seller
+
+can all use the same login function.
+
+c) Easy Maintenance
+
+Suppose login has a bug.
+
+Without OOP:
+
+You change it in 10 places.
+
+With OOP:
+
+You change it only once.
+
+d) Real-world Modeling
+
+Objects represent real things.
+
+Example
+
+Student
+
+Properties
+
+name
+age
+rollNo
+
+Methods
+
+study()
+attendClass()
