@@ -498,3 +498,35 @@ Parent: Vehicle
 Children: Car, Bike, Truck
 
 All vehicles have common features like start() and stop(), so instead of writing those methods repeatedly, the child classes inherit them.
+
+
+
+for example (if we create the class of student and teacher):
+
+class Person {
+	constructor(name, age) {
+		console.log("person class constructor");
+		this.name = name;
+		this.age = age;
+	}
+	talk() {
+		console.log(`Hi, I am ${this.name}`);
+	}
+}
+
+
+class Student extends Person {
+	constructor(name, age, marks) {
+		console.log("students class constructor");
+		super(name, age); // parent class constructor is being called
+		this.marks = marks;
+	}
+}
+
+
+class Teacher extends Person {
+	constructor(name, age, subject) {
+		super(name, age) // parent class constructor is being called
+		this.subject = subject;
+	}
+}
