@@ -1,0 +1,444 @@
+
+
+ ------------------------------------- let's dig deeper -----------------------------------------------
+
+
+
+
+Step 1: Everything in JavaScript is an Object ---
+
+When you write:
+
+const user = {
+    name: "Shaan"
+};
+
+You think you created this:
+
+user
+---------
+name : "Shaan"
+
+But JavaScript actually creates something like
+
+user
+---------
+name : "Shaan"
+
+      |
+      |
+      V
+Object Prototype
+
+That arrow is hidden.
+
+
+
+
+Step 2: What is Object Prototype?
+
+Think of Object Prototype as the father of every normal object.
+
+For example:
+const person = {};
+const car = {};
+const phone = {};
+
+All three secretly point to the same object.
+
+person ----\
+             \
+car ---------> Object Prototype
+             /
+phone -------/
+
+There is only one Object Prototype.
+Every ordinary object shares it.
+
+
+
+
+Step 3: What's inside Object Prototype?
+
+const person = {};
+console.log(person);
+
+Looks empty.
+{}
+
+But try
+console.log(person.toString());
+It works.
+
+Try
+console.log(person.hasOwnProperty("name"));
+Works.
+
+Try
+console.log(person.valueOf());
+Works.
+
+Where are these methods?
+Not inside person.
+They're inside Object Prototype.
+
+
+Think of it like this:
+Object Prototype
+--------------------
+toString()
+valueOf()
+hasOwnProperty()
+isPrototypeOf()
+propertyIsEnumerable()
+...
+Every object gets access to these methods.
+
+
+
+Step 4: Why?
+
+Imagine JavaScript did this.
+
+person
+
+name
+toString()
+valueOf()
+hasOwnProperty()
+
+car
+
+brand
+toString()
+valueOf()
+hasOwnProperty()
+
+phone
+
+model
+toString()
+valueOf()
+hasOwnProperty()
+
+Thousands of duplicate methods.
+
+Instead JavaScript says
+Let's keep only one copy.
+
+So
+
+person
+
+↓
+
+Object Prototype
+
+toString()
+valueOf()
+hasOwnProperty()
+
+
+
+
+Step 5: How JavaScript searches
+
+Suppose:
+const person = {
+    name: "Shaan"
+};
+
+console.log(person.hasOwnProperty("name"));
+
+JavaScript searches like this.
+
+First - 
+
+person
+name
+
+Does hasOwnProperty exist?
+No.
+
+So JavaScript follows the arrow.
+
+Object Prototype
+hasOwnProperty()
+
+Found.
+Execute it.
+
+
+
+Step 6: Another Example:
+
+const person = {
+    name: "Shaan"
+};
+console.log(person.toString());
+
+Search order
+
+person
+
+↓
+
+Object Prototype
+
+↓
+
+Found toString()
+
+
+
+Step 7: But where did Object Prototype come from?
+
+Now comes the interesting part.
+Everything in JavaScript is created using constructors.
+
+When you write
+const person = {};
+
+JavaScript internally behaves roughly like this:
+const person = new Object();
+
+So you're actually creating an instance of Object.
+And every instance of Object automatically gets linked to
+Object.prototype
+
+Notice the difference:
+
+Object          ← constructor function
+
+Object.prototype    ← an object
+
+People confuse these two all the time.
+
+
+
+Step 8: What is Object.prototype?
+
+It is literally an object.
+
+console.log(Object.prototype);
+
+You'll see something like
+
+{
+    constructor: Object,
+    hasOwnProperty(),
+    toString(),
+    valueOf(),
+    ...
+}
+
+That's the object every normal object inherits from.
+
+
+
+
+
+Step 9: Visual Diagram
+Object Constructor
+        │
+        │
+        ▼
+Object.prototype
+--------------------------------
+toString()
+valueOf()
+hasOwnProperty()
+isPrototypeOf()
+--------------------------------
+
+        ▲
+        │
+        │
+person
+{name:"Shaan"}
+
+car
+{brand:"BMW"}
+
+phone
+{model:"iPhone"}
+
+All arrows point to the same prototype object.
+
+
+
+
+
+
+
+Step 10: Let's prove it
+const person = {};
+const car = {};
+
+console.log(person.toString === car.toString);
+
+Output
+
+true
+
+Why?
+
+Because both are using the exact same function from Object.prototype.
+
+There aren't two copies.
+
+Step 11: One thing that surprises everyone
+
+You can actually add your own method to Object.prototype.
+
+
+Object.prototype.sayHello = function () {
+    console.log("Hello");
+};
+
+const person = {};
+const car = {};
+person.sayHello();
+car.sayHello();
+
+
+Output:
+
+Hello
+Hello
+
+Why?
+
+Because both objects inherit from Object.prototype.
+In practice, you should avoid modifying Object.prototype in real projects, because it affects every object in your program and can cause unexpected behavior. It's useful here only to demonstrate how inheritance through prototypes works.
+
+
+The big picture
+
+When you create a normal object:
+
+const user = {
+    name: "Shaan"
+};
+
+JavaScript secretly creates a hidden link like this:
+
+user
+{name:"Shaan"}
+
+        │
+        ▼
+
+Object.prototype
+--------------------------
+toString()
+valueOf()
+hasOwnProperty()
+...
+
+When you ask for a property or method:
+
+JavaScript checks user.
+If it isn't there, it checks Object.prototype.
+If it's still not found, it continues up the prototype chain until it reaches null.
+
+
+
+
+
+
+
+
+
+
+
+to bhai pta nhi kya kya likh diya upr to ye par 100 baat ki ek baat h - 
+
+object prototype ek tarah se phle hi likhi gyi properties h jaise string k liye define kiye gye functions, array k liye bhi kiye jaane wale, etc, etc. everything is an object, Most built-in objects like Arrays, Strings (through boxing), Functions, etc., use prototypes.
+
+to unn already defined chijo ko prototype khdete h jise hum change bhi kr skte hain, for example, we have an array - 
+let arr = [1,2,3];
+arr.__proto__ (ye prototype access krne ka tareeka hai), 
+to arr.__proto__.push = (n) => {console.log(`Pushing number: {n}`)};
+
+But...
+__proto__
+is deprecated.
+
+Nowadays we use
+
+Object.getPrototypeOf(arr)
+or
+Array.prototype
+
+Interview me bhi ye pucha jaata hai.
+
+
+to ab agr m 
+arr.push(5); run krunga to result hoga -
+Pushing number: 5, iska mtlb pta h kya h ki hmne push krne ki definition hi change krdi, phle number 5 add ho jaata array me but abhi wo bs print krega iss line ko and array would stay the same as [1,2,3];
+
+aur main chij ye hai ki arr.__proto__ main function ki ek reference copy bnata h jo point to original ko hi kr rhi hoti h jaise - 
+
+arr.__proto__
+is simply another reference pointing to
+Array.prototype
+
+Think like this:
+
+arr
+ │
+ │
+ ▼
+Array.prototype
+
+Both point to the same object.
+
+So
+
+arr.__proto__.push = ...
+and
+Array.prototype.push = ...
+are effectively the same thing.
+
+No copy is made.
+
+Array.prototype (actual object) 
+String.prototype (this is the way to access the actual object) 
+
+
+so, the .prototype is the property jo use hoti hai jisme koi property defined h to wo sabke liye hi defined h mtlb jab hum arr.push() ya arr.map() call karte hain aur wo method array ke andar directly nahi milta, to JavaScript prototype chain me Array.prototype ko check karta hai. Wahan method mil jaata hai, isliye wo execute ho jaata hai. like if we do, 
+arr.push(3); 
+or 
+str.toUpperCase();
+
+to ye saare functions prototype me hi aate hai. 
+Prototype ek object hota hai jisme common methods aur properties store hoti hain.
+
+----------- PROTOTYPE - as simple as that ----------------
+
+Prototype ek object hota hai jisme common methods aur properties store hoti hain. Jab kisi object par koi property ya method directly nahi milta, tab JavaScript prototype chain ke through uske prototype me search karta hai.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------- CLASSES ---------------
+classes are the template for creating objects.
+The constructor method is the special method of a class for creating and initializing object instance of that class.
