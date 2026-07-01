@@ -604,26 +604,25 @@ OOP is a programming style where we create classes and objects to organize code,
 
 2. Benefits of OOP
 
-Your sheet says:
+* Improved code organization
+* Reusability
+* Maintainability
+* Closeness to real-world objects
 
-Improved code organization
-Reusability
-Maintainability
-Closeness to real-world objects
+Let's understand each:
 
-Let's understand each.
-
-a) Better Code Organization
+a). Better Code Organization
 
 Instead of writing everything in one file, we divide code into classes.
 
-Bad
+Bad --
 
 function login(){}
 function logout(){}
 function buyProduct(){}
 
-Better
+
+Better -- 
 
 class User{
    login(){}
@@ -632,7 +631,9 @@ class User{
 
 Everything related to User stays together.
 
-b) Reusability
+
+
+b). Reusability
 
 Write once, use many times.
 
@@ -650,33 +651,46 @@ Seller
 
 can all use the same login function.
 
+
+
+
 c) Easy Maintenance
 
 Suppose login has a bug.
 
 Without OOP:
-
 You change it in 10 places.
 
 With OOP:
-
 You change it only once.
+
+
+
 
 d) Real-world Modeling
 
 Objects represent real things.
 
-Example
-
+Example - 
 Student
 
-Properties
-
+Properties - 
 name
 age
 rollNo
 
-Methods
-
+Methods - 
 study()
 attendClass()
+Exactly like a real student.
+
+
+
+
+
+
+
+
+
+
+
