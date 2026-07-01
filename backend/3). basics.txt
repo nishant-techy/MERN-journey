@@ -1000,3 +1000,55 @@ Instead of writing them three times, the child classes inherit them.
 
 
 
+9. What is super?
+
+super refers to the parent class.
+
+Example: 
+
+class Animal{
+    constructor(name){
+        this.name=name;
+    }
+}
+
+class Dog extends Animal{
+    constructor(name,breed){
+        super(name);
+        this.breed=breed;
+    }
+}
+
+const d = new Dog("Tommy","Labrador");
+console.log(d);
+
+
+
+Output -- 
+
+Dog {
+   name: "Tommy",
+   breed: "Labrador"
+}
+Why use super()?
+
+When a child class has its own constructor, it must call the parent constructor first (using super()) so the parent can initialize its part of the object.
+
+Think of it like this:
+* Parent class sets up the common details (like name).
+* Child class adds its own details (like breed).
+
+
+
+---------------- Quick Revision Table --------------
+Question	Easy Answer
+OOP	|     A way to write code using classes and objects.
+Class	|     Blueprint/template for creating objects.
+Object	 |        A real instance created from a class.
+Constructor	|        Special function that initializes an object when it's created.
+Constructor Function	|    The older JavaScript way of creating objects before ES6 classes.
+new	|     Creates a new object and links it to the constructor.
+Inheritance     |     A child class gets properties and methods from a parent class.
+extends	  |     Used to inherit from another class.
+super()	  |     Calls the parent class's constructor or methods.
+Prototype Chain   |     JavaScript's mechanism for finding properties/methods by looking up through linked prototypes.
