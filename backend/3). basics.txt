@@ -772,3 +772,231 @@ Classes are simply a cleaner syntax.
 
 
 
+5. What is Prototype Chain?
+
+This is one of the most confusing topics.
+
+Let's simplify it.
+
+Suppose:
+const person = {
+   name:"John"
+}
+
+You ask:
+
+person.toString()
+
+But...
+
+Did you create toString()?
+No.
+
+Then where did it come from?
+
+JavaScript looks here:
+
+person
+   ↓
+prototype
+   ↓
+Object.prototype
+   ↓
+null
+This searching process is called the Prototype Chain.
+JavaScript keeps moving upward until it finds the method.
+
+
+Think of it like asking for a book.
+
+You don't have it.
+
+↓
+
+Ask your friend.
+
+↓
+
+Friend doesn't have it.
+
+↓
+
+Ask the library.
+
+↓
+
+Found.
+
+That's exactly how the prototype chain works.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. Difference between Constructor and Class :-
+
+Constructor Function: 
+function Car(){}
+
+Class
+class Car{}
+
+Both create objects.
+
+
+Difference:
+Constructor Function
+* Old way (before ES6)
+
+Class
+* Modern way
+* Easier to read
+* Cleaner syntax
+
+That's why people say:
+|| Classes are syntactic sugar over constructor functions.
+
+Meaning:
+Internally JavaScript still uses prototypes, but classes make the code easier to write.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7. Why do we use new?
+
+Without new - 
+Student("Rahul")
+No new object is created.
+
+With new - 
+new Student("Rahul")
+
+JavaScript automatically:
+1). Creates a new object {}.
+2). Sets this to that object.
+3). Links the object to the prototype.
+4). Returns the object.
+
+
+Example: 
+
+function Student(name){
+   this.name=name;
+}
+const s1 = new Student("Rahul");
+
+
+Output:
+
+console.log(s1);
+{name:"Rahul"}
+
+Easy way to remember:
+new = "Create a new object."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8. What is Inheritance?
+
+Inheritance means
+A child class can use everything from the parent class.
+
+Example:
+
+Parent - 
+class Animal{
+    eat(){
+        console.log("Eating");
+    }
+}
+
+Child - 
+class Dog extends Animal{
+}
+
+Now - 
+const d = new Dog();
+d.eat();
+
+Output - 
+Eating
+
+
+Even though Dog doesn't have an eat() method, it inherits it from Animal.
+
+
+
+-> Real-life example:
+
+Vehicle
+   ↑
+Car
+Bike
+Truck
+
+Every vehicle has
+
+start()
+stop()
+
+Instead of writing them three times, the child classes inherit them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
