@@ -694,3 +694,81 @@ Exactly like a real student.
 
 
 
+
+
+
+3. Difference between Object and Class: 
+
+Think about mobile phones.
+Samsung designs a phone model.
+That design is the class.
+The phone you buy is the object.
+
+Class - 
+class Student{}
+No actual student yet.
+
+Object - 
+
+Actual student
+const student1 = new Student();
+Now student1 exists.
+
+Easy Trick -- 
+
+Class = Plan
+Object = Real Thing
+
+
+
+
+4. What is a Constructor Function?
+
+A constructor function creates objects.
+
+Before ES6 classes existed, JavaScript used constructor functions.
+
+Example: 
+function Student(name, age){
+    this.name = name;
+    this.age = age;
+}
+
+const s1 = new Student("Rahul",22);
+
+Output -- 
+s1.name
+Rahul
+
+Here
+new Student(...)
+creates the object.
+
+
+Same thing using Class:
+class Student{
+   constructor(name, age){
+      this.name = name;
+      this.age = age;
+   }
+}
+
+Both create objects.
+Classes are simply a cleaner syntax.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
