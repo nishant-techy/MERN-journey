@@ -442,3 +442,27 @@ Prototype ek object hota hai jisme common methods aur properties store hoti hain
 ------------- CLASSES ---------------
 classes are the template for creating objects.
 The constructor method is the special method of a class for creating and initializing object instance of that class.
+
+
+
+
+classes are like jo btata hai ki object actually dikhni kaisi chaiye, hm isko asli class ki tarah treat kr skte hai, jaise class hoti h aur usme bache hote hai.
+
+
+hm class ko define krte h as capital letters se (general convention, not necessary), and uske andr hum directly hi constructor likh k hi constructor function ko bna dete h, koi khel nhi khelte, 
+
+for eg (the real program looks like):
+
+
+class Person {
+	constructor(name, age) {
+		this.name = name;
+		this.age = age;
+	}
+	talk() {
+		console.log(`Hi, my name is ${this.name}`);
+	}
+}
+
+let p1 = new Person("adam", 24);
+let p2 = new Person("eve", 22);
