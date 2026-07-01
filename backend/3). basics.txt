@@ -466,3 +466,35 @@ class Person {
 
 let p1 = new Person("adam", 24);
 let p2 = new Person("eve", 22);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------ INHERITANCE -------
+
+Inheritance is the mechanism that allows us to create new classes on the basis of already existing classes. 
+
+
+Inheritance allows one class (called the child or derived class) to acquire the properties and methods of another class (called the parent or base class).
+
+Think of it like this:
+
+Parent: Vehicle
+Children: Car, Bike, Truck
+
+All vehicles have common features like start() and stop(), so instead of writing those methods repeatedly, the child classes inherit them.
