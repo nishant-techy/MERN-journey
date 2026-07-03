@@ -1118,8 +1118,16 @@ Create Read Update Delete
 
 CRUD operations:
 
-GET retrieves resources
-POST submit new data to the server
-PUT updates existing data
-PATCH update existing data partially (for example, agr koi data tha jisko add krte waqt email galat daal diya then we can update it partially)
-DELETE removes data
+* GET retrieves resources
+* POST submit new data to the server
+* PUT updates existing data
+* PATCH update existing data partially (for example, agr koi data tha jisko add krte waqt email galat daal diya then we can update it partially)
+* DELETE removes data
+
+
+
+
+
+
+
+
