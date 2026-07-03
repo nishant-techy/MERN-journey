@@ -14,9 +14,19 @@ const app = express();
 const port = 8080;
 const path = require("path");
 
+// ye line taaki jab form submit hota h to usme jo likha h usko hmari APIs smjh paaye
+app.use(express:urlencoded({extended: true}));
+
+
 //new lines (need to remember)
-app.set("view engine", "ejs");
-app.set("views", (path.join(__dirname, "public")));
+app.set("view engine", "ejs"); // there should be folder "views" exist in the directory
+app.set("views", (path.join(__dirname, "public")));  // there should be folder "public" exist in the directory
+
+
+//basic route to see if everything is working fine
+app.get("/", (req, res) => {
+	res.send("servicing working well");
+});
 
 app.listen(port, ()=> {
 	console.log(`listening to port: ${port}`);
