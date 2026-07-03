@@ -1116,4 +1116,10 @@ to ab RESTful APIs ka use hota h simply for 4 reasons: CRUD
 Create Read Update Delete
 
 
+CRUD operations:
 
+GET retrieves resources
+POST submit new data to the server
+PUT updates existing data
+PATCH update existing data partially (for example, agr koi data tha jisko add krte waqt email galat daal diya then we can update it partially)
+DELETE removes data
