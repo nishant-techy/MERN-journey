@@ -1,5 +1,52 @@
 
 
+--------- How to start the project of this node ----------
+
+start with the terminal: npm init -y
+
+now install the express: npm i express
+then install the ejs: npm i ejs 
+create the file: touch index.js
+
+:::::::::: index.js :::::::::::
+const express = require("express");
+const app = express();
+const port = 8080;
+
+app.listen(port, ()=> {
+	console.log(`listening to port: ${port}`);
+});
+
+ 
+and enter in the terminal: nodemon index.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  ------------------------------------- let's dig deeper -----------------------------------------------
 
 
@@ -1134,7 +1181,6 @@ POST       /posts        to add a new post
 GET        /posts/:id    to get one post (using id)
 PATCH	   /posts/:id    to update specific post
 DELETE	   /posts/:id    to delete specific post 
-
 
 
 
