@@ -1042,13 +1042,63 @@ Think of it like this:
 
 ---------------- Quick Revision Table --------------
 Question	Easy Answer
-OOP	|     A way to write code using classes and objects.
-Class	|     Blueprint/template for creating objects.
-Object	 |        A real instance created from a class.
+OOP		|     A way to write code using classes and objects.
+Class		|     Blueprint/template for creating objects.
+Object	 	|        A real instance created from a class.
 Constructor	|        Special function that initializes an object when it's created.
 Constructor Function	|    The older JavaScript way of creating objects before ES6 classes.
-new	|     Creates a new object and links it to the constructor.
+new		|     Creates a new object and links it to the constructor.
 Inheritance     |     A child class gets properties and methods from a parent class.
-extends	  |     Used to inherit from another class.
-super()	  |     Calls the parent class's constructor or methods.
-Prototype Chain   |     JavaScript's mechanism for finding properties/methods by looking up through linked prototypes.
+extends	  	|     Used to inherit from another class.
+super()	  	|     Calls the parent class's constructor or methods.
+Prototype Chain |     JavaScript's mechanism for finding properties/methods by looking up through linked prototypes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------- REST --------------------------
+
+REST: Recreational State Transfer
+
+REST is an architectural style that defines a set of constraints to be used for creating web services. 
+
+
+REST ek tarah ka format btane wala, style btane wala system hai with set of constraints/(rules) jo btata hai ki aakhir APIs ko likha kaise jaana chaiye, 
