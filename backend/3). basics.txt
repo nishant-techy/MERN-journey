@@ -1,5 +1,3 @@
-
-
 --------- How to start the project of this node ----------
 
 start with the terminal: npm init -y
@@ -15,7 +13,7 @@ const port = 8080;
 const path = require("path");
 
 // ye line taaki jab form submit hota h to usme jo likha h usko hmari APIs smjh paaye
-app.use(express:urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true}));
 
 
 //new lines (need to remember)
@@ -1196,6 +1194,7 @@ POST       /posts        to add a new post
 GET        /posts/:id    to get one post (using id)
 PATCH	   /posts/:id    to update specific post
 DELETE	   /posts/:id    to delete specific post 
+
 
 
 
