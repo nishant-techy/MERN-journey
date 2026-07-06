@@ -1207,3 +1207,17 @@ DELETE	   /posts/:id    to delete specific post
 
 
 
+
+
+
+
+***** let's create a system which have the functionality of Quora *****
+
+like - 
+we have the VIEW ALL POSTS (index page) 
+then we have CREATE NEW POSTS (page) // it should all have to connect means we do not have to do it anything like the developer, it should works for the normal Non-IT guy, 
+
+and create new post have two options: 
+1). it should have the form, where user can fill anything 
+2). then post it 
+and it will automatically add it to the main index page, it all should have done seamlessly.
