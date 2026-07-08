@@ -1,13 +1,16 @@
-<h2>Here is the post you asked for</h2>
+<%- include("header.ejs") %>
+<body>
+  <h2>Here is the post you asked for</h2>
 
-<p>Post id: <%= ${post.id} %></p>
+  <p>Post id: <%= post.id %></p>
 
-<!-- container for the specific post -->
-<div class="container">
-  <h2 class="user">@username</h2>
-  <p class="desc">Description</p>
-  <a href="/"><span>See in detail</span></a> ||
-  <a href="/"><span>Edit post </span></a>
-</div>
+  <!-- container for the specific post -->
+  <div class="container">
+    <h2 class="user">@username</h2>
+    <p class="desc">Description</p>
+    <a href="/"><span>See in detail</span></a> ||
+    <a href="/"><span>Edit post </span></a>
+  </div>
 
-<a href="/">Back to All Posts</a>
+  <a href="/">Back to All Posts</a>
+</body>

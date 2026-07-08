@@ -1,2 +1,2 @@
- M node_project/Quora_posts/views/page1.ejs
+ M node_project/Quora_posts/views/specific_post.ejs
  M temp.txt
