@@ -1,17 +1,4 @@
- M "backend/3). basics.txt"
- D node_project/.gitignore
- D node_project/11.17.0
- D node_project/npm
- D node_project/package-lock.json
- D node_project/package.json
- D node_project/public/css/style.css
- D node_project/server.js
- D node_project/views/footer.ejs
- D node_project/views/header.ejs
- D node_project/views/page_1.ejs
- D node_project/views/page_2.ejs
- D node_project/views/page_3.ejs
- D node_project/views/page_4.ejs
+ M node_project/Quora_posts/index.js
+ M node_project/Quora_posts/views/page1.ejs
+ M node_project/Quora_posts/views/specific_post.ejs
  M temp.txt
-?? node_project/Quora_posts/
-?? node_project/portfolio/
